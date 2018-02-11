@@ -1,0 +1,54 @@
+[user]
+  name = Jack Cuthbert
+  email = jckcthbrt@gmail.com
+[core]
+  ignorecase = false
+  excludesfile = /home/jack/.gitignore_global
+[push]
+  default = simple
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+[alias]
+  # https://gist.github.com/mwhite/6887990
+  l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=short
+  l1 = l -n 1
+  l3 = l -n 3
+  l5 = l -n 5
+  lr = log --branches --not --remotes
+  lc = !git ls master..HEAD
+  lp = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  a = add
+  ap = add -p
+  c = commit --verbose
+  ca = commit -a --verbose
+  cm = commit -m
+  cam = commit -a -m
+  m = commit --amend --verbose
+  d = diff
+  derp = reset
+  ds = diff --stat
+  dc = diff --cached
+  s = status -s
+  st = status
+  stat = status
+  co = checkout
+  cob = checkout -b
+  b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+  la = "!git config -l | grep alias | cut -c 7-"
+  mupm = !git checkout master && git pull && git checkout - && git merge master
+  purge = !git checkout master && git pull && git branch --merged | grep -Ev 'master' | xargs -n 1 git branch -d
+  pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
+  hard-pull = !git fetch && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
+  rasm = "rebase --autosquash master"
+  g="!exec git"
+  git="!exec git"
+[color "status"]
+  added = green
+  changed = red
+  untracked = magenta
+[commit]
+template = /home/jack/.gitmessage
