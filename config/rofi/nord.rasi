@@ -66,13 +66,13 @@
 // Selected entry
 #element.selected.normal {
     background-color: @base9;
-    text-color:       @base0;
+    text-color:       @base4;
 }
 
 // Active entry (open window)
 #element.selected.active {
   background-color: @base10;
-  text-color:       @base0;
+  text-color:       @base4;
 }
 #element.normal.active {
   background-color: @base14;
