@@ -13,3 +13,4 @@ alias dotfiles="cd ~/.dotfiles"
 alias record="asciinema rec"
 alias l="exa -ghl"
 alias la="exa -ghla"
+alias v=$EDITOR

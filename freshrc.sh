@@ -31,6 +31,13 @@ fresh config/redshift.conf --file=~/.config/redshift.conf
 fresh config/compton.conf --file=~/.config/compton.conf
 fresh config/dunst.conf --file=~/.config/dunst/dunstrc
 
+# .config for neovim
+fresh config/nvim/init.vim --file=~/.config/nvim/init.vim
+fresh-options --file=~/.config/nvim/init.vim --marker='"'
+  fresh config/nvim/settings/\*.vim
+  fresh config/nvim/plug-config/\*.vim
+fresh-options
+
 # .config files (rofi needs multiple files for themes)
 fresh config/rofi/rofi.conf --file=~/.config/rofi/config
 fresh config/rofi/nord.rasi --file=~/.config/rofi/nord.rasi

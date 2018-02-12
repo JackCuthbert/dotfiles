@@ -24,3 +24,10 @@ SAVEHIST=1000
 #######
 
 export PATH=/home/jack/bin:$PATH
+
+#######
+#
+# Generic env vars
+#
+#######
+export EDITOR=nvim
