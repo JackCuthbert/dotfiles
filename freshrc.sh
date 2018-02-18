@@ -25,11 +25,11 @@ fresh xinitrc --file
 fresh Xresources --file
 
 # .config files
+fresh config/compton.conf --file=~/.config/compton.conf
+fresh config/dunst.conf --file=~/.config/dunst/dunstrc
 fresh config/i3.conf --file=~/.config/i3/config
 fresh config/i3blocks.conf --file=~/.config/i3blocks/config
 fresh config/redshift.conf --file=~/.config/redshift.conf
-fresh config/compton.conf --file=~/.config/compton.conf
-fresh config/dunst.conf --file=~/.config/dunst/dunstrc
 
 # .config for neovim
 fresh config/nvim/init.vim --file=~/.config/nvim/init.vim
