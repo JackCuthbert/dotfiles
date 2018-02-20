@@ -3,8 +3,8 @@ URxvt.scrollBar: false
 URxvt.internalBorder: 20
 
 ! text rendering
-URxvt*font: xft:Hack:size=16
-URxvt*boldFont: xft:Hack:style=Bold:size=16
+URxvt*font: xft:Hack:size=14
+URxvt*boldFont: xft:Hack:style=Bold:size=14
 
 URxvt.letterSpace: 1
 Xft.dpi: 96
