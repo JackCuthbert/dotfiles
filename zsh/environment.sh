@@ -39,3 +39,10 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 #
 #######
 export MOZ_USE_XINPUT2=1
+
+#######
+#
+# Setup socket for ssh agent
+#
+#######
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
