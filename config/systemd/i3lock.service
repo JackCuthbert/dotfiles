@@ -1,0 +1,11 @@
+[Unit]
+Description=i3lock on suspend
+Before=sleep.target
+
+[Service]
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/home/jack/bin/screen-lock
+
+[Install]
+WantedBy=sleep.target
