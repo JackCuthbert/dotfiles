@@ -3,6 +3,7 @@ Description=i3lock on suspend
 Before=sleep.target
 
 [Service]
+User=jack
 Type=forking
 Environment=DISPLAY=:0
 ExecStart=/home/jack/bin/screen-lock

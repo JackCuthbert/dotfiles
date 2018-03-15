@@ -43,7 +43,7 @@ fresh-options
 fresh config/rofi/rofi.conf --file=~/.config/rofi/config
 fresh config/rofi/nord.rasi --file=~/.config/rofi/nord.rasi
 
-# Custom scrupts
+# Custom scripts
 fresh-options --bin
   fresh bin/\*
 fresh-options

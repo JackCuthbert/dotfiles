@@ -3,26 +3,15 @@
 # ZSH History File
 #
 #######
-
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
 #######
 #
-# HiDPI Scaling for GTK3 apps
-#
-#######
-
-#export GDK_SCALE=1
-#export GDK_DPI_SCALE=0
-
-#######
-#
 # Update local binary path
 #
 #######
-
 export PATH=/home/jack/bin:$PATH
 
 #######
@@ -46,3 +35,11 @@ export MOZ_USE_XINPUT2=1
 #
 #######
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+#######
+#
+# Fix VSCode not being able to send files to trash
+# https://github.com/Microsoft/vscode/issues/13189
+#
+#######
+export ELECTRON_TRASH=gio
