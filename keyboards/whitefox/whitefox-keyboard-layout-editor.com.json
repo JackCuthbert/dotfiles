@@ -1,0 +1,218 @@
+[
+  {
+    "backcolor": "#ffffff",
+    "name": "Whitefox Truefox",
+    "author": "Jack Cuthbert",
+    "background": {
+      "name": "Aluminium brushed",
+      "style": "background-image: url('/bg/metal/aluminum_texture1642.jpg');"
+    },
+    "radii": "15px",
+    "switchMount": "cherry",
+    "switchBrand": "cherry",
+    "switchType": "MX1A-D1xx",
+    "plate": true
+  },
+  [
+    {
+      "c": "#ffffff",
+      "t": "#525554",
+      "sm": "cherry",
+      "sb": "cherry",
+      "st": "MX1A-C1xx"
+    },
+    "~\nEsc\n\n\n`",
+    {
+      "c": "#525554",
+      "t": "#ffffff"
+    },
+    "!\n1\n\n\nF1",
+    "@\n2\n\n\nF2",
+    "#\n3\n\n\nF3",
+    "$\n4\n\n\nF4",
+    "%\n5\n\n\nF5",
+    "^\n6\n\n\nF6",
+    "&\n7\n\n\nF7",
+    {
+      "c": "#ffffff",
+      "t": "#525554"
+    },
+    "*\n8\n\n\nPlay",
+    "(\n9\n\n\nPrev",
+    ")\n0\n\n\nNext",
+    "_\n-\n\n\nVol-",
+    "+\n=\n\n\nVol+",
+    {
+      "c": "#525554",
+      "t": "#ffffff"
+    },
+    "\\\n|",
+    {
+      "c": "#ffffff",
+      "t": "#525554"
+    },
+    "PrSc\n\n\n\nF12",
+    "Game\n\n\n\n\n\nmode"
+  ],
+  [
+    {
+      "c": "#525554",
+      "t": "#ffffff",
+      "w": 1.5
+    },
+    "Tab",
+    "Q",
+    "W",
+    {
+      "c": "#ffffff",
+      "t": "#525554",
+      "a": 0
+    },
+    "E\n\n\n\n\nEnd",
+    {
+      "c": "#525554",
+      "t": "#ffffff",
+      "a": 4
+    },
+    "R",
+    "T",
+    "Y",
+    {
+      "c": "#ffffff",
+      "t": "#525554"
+    },
+    "U\n\n\n\nPgUp",
+    {
+      "c": "#525554",
+      "t": "#ffffff"
+    },
+    "I",
+    "O",
+    "P",
+    "{\n[",
+    "}\n]",
+    {
+      "c": "#ffffff",
+      "t": "#525554",
+      "w": 1.5
+    },
+    "Backspace\n\n\n\nDel",
+    "Mac\n\n\n\n\n\nmode"
+  ],
+  [
+    {
+      "w": 1.75
+    },
+    "Ctrl",
+    "A\n\n\n\nHome",
+    {
+      "c": "#525554",
+      "t": "#ffffff"
+    },
+    "S",
+    {
+      "c": "#ffffff",
+      "t": "#525554"
+    },
+    "D\n\n\n\nPgDn",
+    {
+      "c": "#525554",
+      "t": "#ffffff"
+    },
+    "F",
+    "G",
+    {
+      "c": "#ffffff",
+      "t": "#525554"
+    },
+    "H\n\n\n\nLeft",
+    "J\n\n\n\nDown",
+    "K\n\n\n\nUp",
+    "L\n\n\n\nRight",
+    {
+      "c": "#525554",
+      "t": "#ffffff"
+    },
+    ":\n;",
+    "\"\n'",
+    {
+      "w": 2.25
+    },
+    "Enter",
+    "PgUp"
+  ],
+  [
+    {
+      "w": 2.25
+    },
+    "Shift",
+    "Z",
+    "X",
+    "C",
+    "V",
+    "B",
+    "N",
+    "M",
+    "<\n,",
+    ">\n.",
+    "?\n/",
+    {
+      "w": 1.75
+    },
+    "Shift",
+    {
+      "c": "#ffffff",
+      "t": "#525554"
+    },
+    "Up\n\n\n\nLED+",
+    {
+      "c": "#525554",
+      "t": "#ffffff"
+    },
+    "PgDn"
+  ],
+  [
+    {
+      "c": "#ffffff",
+      "t": "#525554",
+      "w": 1.25
+    },
+    "Fn",
+    {
+      "w": 1.25
+    },
+    "Win\n\n\nOpt",
+    {
+      "w": 1.25
+    },
+    "Alt\n\n\nCmd",
+    {
+      "c": "#525554",
+      "t": "#ffffff",
+      "a": 7,
+      "w": 6.25
+    },
+    "",
+    {
+      "c": "#ffffff",
+      "t": "#525554",
+      "a": 4,
+      "w": 1.25
+    },
+    "Win\n\n\nCmd",
+    {
+      "w": 1.25
+    },
+    "Ctrl\n\n\nOpt",
+    {
+      "x": 0.5
+    },
+    "Left\n\n\n\nLED Off",
+    "Down\n\n\n\nLED-",
+    {
+      "c": "#525554",
+      "t": "#ffffff"
+    },
+    "Right"
+  ]
+]
