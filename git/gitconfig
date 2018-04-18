@@ -3,7 +3,7 @@
   email = jckcthbrt@gmail.com
 [core]
   ignorecase = false
-  excludesfile = /home/jack/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [push]
   default = simple
 [color]
@@ -51,4 +51,4 @@
   changed = red
   untracked = magenta
 [commit]
-template = /home/jack/.gitmessage
+template = ~/.gitmessage
