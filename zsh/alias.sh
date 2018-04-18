@@ -3,7 +3,6 @@
 # Alias
 #
 #######
-
 alias zshsource="source ~/.zshrc"
 alias clterm="clear && zshsource"
 alias v="nvim"
@@ -15,5 +14,6 @@ alias l="exa -ghl"
 alias la="exa -ghla"
 alias v=nvim
 
+# Arch Specific
 alias upgrade-aur="sudo aura -Akua"
 alias upgrade-pacman="sudo pacman -Syu"
