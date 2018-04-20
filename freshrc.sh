@@ -29,7 +29,7 @@ fresh config/compton.conf --file=~/.config/compton.conf
 fresh config/dunst.conf --file=~/.config/dunst/dunstrc
 fresh config/i3.conf --file=~/.config/i3/config
 fresh config/i3blocks.conf --file=~/.config/i3blocks/config
-fresh config/kitty.conf --file=~/.kitty/kitty.conf
+fresh config/kitty.conf --file=~/.config/kitty/kitty.conf
 fresh config/redshift.conf --file=~/.config/redshift.conf
 fresh config/ssh.conf --file=~/.ssh/config
 

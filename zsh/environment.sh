@@ -11,6 +11,7 @@ export PATH=/home/jack/bin:/home/jack/.yarn/bin:$PATH
 #
 #######
 export EDITOR=nvim
+export TERMINAL=kitty
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 #######
