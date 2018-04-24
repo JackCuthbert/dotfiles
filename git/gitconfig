@@ -43,7 +43,7 @@
   purge = !git checkout master && git pull && git branch --merged | grep -Ev 'master' | xargs -n 1 git branch -d
   pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
   hard-pull = !git fetch && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
-  rasm = "rebase --autosquash master"
+  rasm = "rebase -i --autosquash master"
   g="!exec git"
   git="!exec git"
 [color "status"]
