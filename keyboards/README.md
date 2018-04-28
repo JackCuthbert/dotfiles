@@ -18,14 +18,14 @@ N/A
 
 ## Whitefox
 
-Primarily used at home for gaming or light development. Requires firmware built by [The IC Configurator](https://input.club/configurator-whitefox/) or from scratch.
+Now using QMK firmware. Ensure `dfu-util` is available on `$PATH`
 
-Switches | Caps | Case
----------|------|-----
-Cherry MX Clear | Whitefox Stock (White) | Stock Aluminium (Silver)
+TODO: Layout images/ASCII
 
-![Whitefox Layout](whitefox/preview.png)
-
-### Known Issues
-
-I currently don't have a `~` key. I'm yet to compile my own firmware for this keyboard but as it mostly sits at home and is used for gaming this a lower priority for now. Possible fix [here](https://input.club/forums/topic/how-to-mapping-shift-esc-to/).
+1. `git clone git@github.com:qmk/qmk_firmware.git` to somewhere
+2. `make git-submodule` from within the qmk_firmware directory
+3. Copy `keymap.c` from dotfiles repo into `/path/to/qmk_firmware/keyboards/whitefox/keymaps/xs1mple/keymap.c`
+4. From the from within the qmk_firmware repo, run:  
+    ```docker run -e keymap=xs1mple -e keyboard=whitefox --rm -v $('pwd'):/qmk:rw edasque/qmk_firmware```
+5. Enter flashing mode on Whitefox Keyboard
+6. Run `sudo dfu-util -D .build/whitefox_xs1mple.bin`
