@@ -2,7 +2,7 @@
 let base16colorspace=256
 
 " Colors 🌈
-colorscheme nord
+colorscheme dracula
 let g:nord_italic_comments=1
 
 " Don't lose transparency
@@ -10,7 +10,7 @@ hi Normal ctermbg=none
 highlight NonText ctermbg=none
 
 " Airline
-let g:airline_theme='nord'
+let g:airline_theme='dracula'
 let g:airline_powerline_fonts=1
 
 " Indentline

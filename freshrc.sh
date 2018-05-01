@@ -42,7 +42,7 @@ fresh-options
 
 # .config files (rofi needs multiple files for themes)
 fresh config/rofi/rofi.conf --file=~/.config/rofi/config
-fresh config/rofi/nord.rasi --file=~/.config/rofi/nord.rasi
+fresh config/rofi/dracula.rasi --file=~/.config/rofi/dracula.rasi
 
 # Custom scripts
 fresh-options --bin
