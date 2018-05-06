@@ -1,31 +1,31 @@
-# Keyboard Layouts
-
-I change my keyboard layouts pretty frequently so it helps to have a visual reminder of what my bindings are. I used [Keyboard Layout Editor](https://keyboard-layout-editor.com) to build these mockups. Any config available is in keyboard's respective folders.
-
-## POK3R
-
-The daily driver, primarily used for work as I can map keybinds on the flow if I need to quickly.
+## DZ60
 
 Switches | Caps | Case
 ---------|------|-----
-Cherry MX Clear | Thick PBT Blanks (Dark Grey) | Stock Aluminium (Black)
+Zealio 67g | Dark Grey Thick PBT | KBDFans 5deg Grey
+  
+### Flashing
 
-![POK3R Layout](pok3r/preview.png)
+Build all firmware with `./build_firmwares.sh`
 
-### Known Issues
+Ensure `dfu-programmer` is available on `$PATH`
 
-N/A
+1. Build all keyboard firmware with `./build_firmwares.sh`
+2. Enter bootloader (hold spacebar + b when plugging in)
+3. `sudo dfu-programmer erase --force`
+4. `sudo dfu-programmer flash build/dz60_jackcuthbert.hex`
+5. `sudo dfu-programmer reset`
 
 ## Whitefox
 
-Now using QMK firmware. Ensure `dfu-util` is available on `$PATH`
+Switches | Caps | Case
+---------|------|-----
+Cherry MX Clear | Stock Whitefox | Stock Silver Aluminium
 
-TODO: Layout images/ASCII
+Ensure `dfu-util` is available on `$PATH`
 
-1. `git clone git@github.com:qmk/qmk_firmware.git` to somewhere
-2. `make git-submodule` from within the qmk_firmware directory
-3. Copy `keymap.c` from dotfiles repo into `/path/to/qmk_firmware/keyboards/whitefox/keymaps/xs1mple/keymap.c`
-4. From the from within the qmk_firmware repo, run:  
-    ```docker run -e keymap=xs1mple -e keyboard=whitefox --rm -v $('pwd'):/qmk:rw edasque/qmk_firmware```
-5. Enter flashing mode on Whitefox Keyboard
-6. Run `sudo dfu-util -D .build/whitefox_xs1mple.bin`
+### Flashing
+
+1. Build all keyboard firmware with `./build_firmwares.sh`
+2. Enter flashing mode on Whitefox Keyboard
+3. `sudo dfu-util -D build/whitefox_jackcuthbert.bin`
