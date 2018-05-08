@@ -12,9 +12,7 @@ Ensure `dfu-programmer` is available on `$PATH`
 
 1. Build all keyboard firmware with `./build_firmwares.sh`
 2. Enter bootloader (hold spacebar + b when plugging in)
-3. `sudo dfu-programmer erase --force`
-4. `sudo dfu-programmer flash build/dz60_jackcuthbert.hex`
-5. `sudo dfu-programmer reset`
+3. `./flash_dz60.sh`
 
 ## Whitefox
 
