@@ -14,12 +14,13 @@
   ui = true
 [alias]
   # https://gist.github.com/mwhite/6887990
-  l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=short
+  l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative master..HEAD
+  la = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative
   l1 = l -n 1
   l3 = l -n 3
-  l5 = l -n 5
+  l5 = l -n 6
   lr = log --branches --not --remotes
-  lc = !git ls master..HEAD
+  # lc = !git ls master..HEAD
   lp = log --graph --decorate --pretty=oneline --abbrev-commit --all
   a = add
   ap = add -p
@@ -38,7 +39,7 @@
   co = checkout
   cob = checkout -b
   b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
-  la = "!git config -l | grep alias | cut -c 7-"
+  alias = "!git config -l | grep alias | cut -c 7-"
   mupm = !git checkout master && git pull && git checkout - && git merge master
   purge = !git checkout master && git pull && git branch --merged | grep -Ev 'master' | xargs -n 1 git branch -d
   pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
