@@ -3,7 +3,21 @@ fresh freshshell/fresh bin/fresh --bin
 
 # Zsh config
 fresh-options --file=~/.zshrc --marker
-  fresh zsh/\*
+  fresh zsh/alias.sh
+  fresh zsh/alias.linux.sh
+
+  fresh zsh/env.linux.sh
+
+  fresh zsh/history.sh
+
+  fresh zsh/nvm.linux.sh
+
+  fresh zsh/startx.sh
+
+  fresh zsh/vi-mode.sh
+
+  fresh zsh/zplug-update-check.sh
+  fresh zsh/zplug.linux.sh
 fresh-options
 
 # Git config
