@@ -11,6 +11,7 @@ fresh-options --file=~/.zshrc --marker
   fresh zsh/history.sh
 
   fresh zsh/nvm.sh
+  fresh zsh/direnv.sh
 
   fresh zsh/startx.sh
 
@@ -18,6 +19,7 @@ fresh-options --file=~/.zshrc --marker
 
   fresh zsh/zplug.linux.sh
   fresh zsh/zplug-update-check.sh
+
 fresh-options
 
 # Git config
