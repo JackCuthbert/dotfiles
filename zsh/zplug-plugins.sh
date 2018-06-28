@@ -1,10 +1,3 @@
-#######
-#
-# ZPLUG
-#
-#######
-source /usr/share/zsh/scripts/zplug/init.zsh
-
 zplug "mafredri/zsh-async", from:github
 zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 zplug "plugins/thefuck", from:oh-my-zsh

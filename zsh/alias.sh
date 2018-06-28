@@ -13,5 +13,3 @@ alias l="exa -ghl"
 alias la="exa -ghla"
 alias v="nvim"
 
-# Disable rspec in-terminal screenshots
-alias rspec="CAPYBARA_INLINE_SCREENSHOT=artifact bundle exec rspec"
