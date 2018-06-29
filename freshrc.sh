@@ -1,5 +1,6 @@
 # Handle updating fresh
 fresh freshshell/fresh bin/fresh --bin
+fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
 ########
 #
@@ -30,6 +31,8 @@ fresh-options --file=~/.zshrc --marker
   # NOTE: Must be last
   fresh zsh/zplug-plugins.sh
   fresh zsh/zplug-update-check.sh
+
+  fresh bin/scripts/motd
 fresh-options
 
 
@@ -73,7 +76,7 @@ fresh-options
 ########
 fresh-options --file=~/.tmux.conf --marker
   if [[ "$(uname)" == "Darwin" ]]; then
-    fresh config/tmux.mac.conf
+    fresh config/tmux/tmux.mac.conf
   fi
 
   fresh config/tmux/plugins.conf
@@ -85,7 +88,15 @@ fresh config/ssh.conf --file=~/.ssh/config
 
 # Custom scripts
 fresh-options --bin
-  fresh bin/\*
+  if [[ "$(uname)" == "Darwin" ]]; then
+    fresh bin/mac/\*
+  fi
+
+  if [[ "$(uname)" == "Linux" ]]; then
+    fresh bin/linux/\*
+  fi
+
+  fresh bin/scripts/\*
 fresh-options
 
 # Git config
