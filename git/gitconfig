@@ -13,44 +13,56 @@
   interactive = auto
   ui = true
 [alias]
-  # https://gist.github.com/mwhite/6887990
-  l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative master..HEAD
-  la = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative
-  l1 = l -n 1
-  l3 = l -n 3
-  l5 = l -n 6
-  lr = log --branches --not --remotes
-  # lc = !git ls master..HEAD
-  lp = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  # Logging
+  l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative # minimal complete log
+  lb = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative master..HEAD # minimal log of commits on current branch
+  lr = log --branches --not --remotes # log unpushed commits
+  lp = log --graph --decorate --pretty=oneline --abbrev-commit --all # pretty log
+
+  # Committing
   a = add
-  ap = add -p
+  ap = add -p # add patch
   c = commit --verbose
-  ca = commit -a --verbose
-  cm = commit -m
-  cam = commit -a -m
-  m = commit --amend --verbose
-  d = diff
-  derp = reset
-  ds = diff --stat
-  dc = diff --cached
-  s = status -s
-  st = status
-  stat = status
-  co = checkout
-  cob = checkout -b
+  ca = commit -a --verbose # commit all
+  cm = commit -m # commit with message
+  cam = commit -a -m # commit all with message
+  m = commit --amend --verbose # ammend the last commit with the new one
+
+  # Diffing
+  d = diff # show the difference between unstaged and last commit
+  dc = diff --cached # show the difference between staged and last commit
+  ds = diff --stat # show the number of lines changed across unstaged files
+
+  # Staging
+  derp = reset # alias for unstaging files
+
+  # Status
+  s = status -s # minimal status
+  st = status # alias for status
+  stat = status # alias for status
+
+  # Checkout
+  co = checkout # alias for checkout
+  cob = checkout -b # checkout to a new branch
+
+  # Branches
   b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
   bp = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
-  alias = "!git config -l | grep alias | cut -c 7-"
-  mupm = !git checkout master && git pull && git checkout - && git merge master
-  purge = !git checkout master && git pull && git branch --merged | grep -Ev 'master' | xargs -n 1 git branch -d
-  pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
-  hard-pull = !git fetch && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
-  rasm = "rebase -i --autosquash master"
+
+  # Branching strategies
+  mupm = !git checkout master && git pull && git checkout - && git merge master # update master and merge into current branch
+  purge = !git checkout master && git pull && git branch --merged | grep -Ev 'master' | xargs -n 1 git branch -d # delete merged branches
+  pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\"" # push a branch and set up remote tracking
+  hard-pull = !git fetch && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD) # throw away all local changes/commits and reset back to remote's version of branch
+  rasm = "rebase -i --autosquash master" # interactive rebase with autosquash on master
+
+  # Aliases
   g="!exec git"
-  git="!exec git"
+  git="!exec git" # git git git git git status
+  alias = "!git config -l | grep alias | cut -c 7-" # list all aliases
 [color "status"]
   added = green
   changed = red
   untracked = magenta
 [commit]
-template = ~/.gitmessage
+  template = ~/.gitmessage
