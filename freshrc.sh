@@ -26,6 +26,7 @@ fresh-options --file=~/.zshrc --marker
     fresh zsh/env.mac.sh
     fresh zsh/alias.mac.sh
     fresh zsh/zplug-init.mac.sh
+    fresh zsh/ssh-init.mac.sh
   fi
 
   # NOTE: Must be last
@@ -58,6 +59,12 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh config/rofi/dracula.rasi --file=~/.config/rofi/dracula.rasi
 fi
 
+#######################
+#
+# Mac specific dotfiles
+#
+#######################
+
 ########
 #
 # neovim
@@ -83,10 +90,19 @@ fresh-options --file=~/.tmux.conf --marker
   fresh config/tmux/config/\*
 fresh-options
 
+##################
+#
+# universal config
+#
+##################
 fresh config/kitty.conf --file=~/.config/kitty/kitty.conf
 fresh config/ssh.conf --file=~/.ssh/config
 
+################
+#
 # Custom scripts
+#
+################
 fresh-options --bin
   if [[ "$(uname)" == "Darwin" ]]; then
     fresh bin/mac/\*
@@ -99,7 +115,11 @@ fresh-options --bin
   fresh bin/scripts/\*
 fresh-options
 
-# Git config
+#####
+#
+# Git
+#
+#####
 fresh-options --file
   fresh git/\*
 fresh-options
