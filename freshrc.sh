@@ -2,6 +2,7 @@
 fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
+
 ########
 #
 # .zshrc
@@ -59,11 +60,6 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh config/rofi/dracula.rasi --file=~/.config/rofi/dracula.rasi
 fi
 
-#######################
-#
-# Mac specific dotfiles
-#
-#######################
 
 ########
 #
@@ -75,6 +71,7 @@ fresh-options --file=~/.config/nvim/init.vim --marker='"'
   fresh config/nvim/settings/\*.vim
   fresh config/nvim/plug-config/\*.vim
 fresh-options
+
 
 ########
 #
@@ -90,13 +87,28 @@ fresh-options --file=~/.tmux.conf --marker
   fresh config/tmux/config/\*
 fresh-options
 
+
+########
+#
+# kitty.conf
+#
+########
+fresh-options --file==~/.config/kitty/kitty.conf --marker
+  fresh config/kitty/config/\*
+
+  if [[ "$(uname)" == "Darwin" ]]; then
+    fresh config/kitty/override.mac.conf
+  fi
+fresh-options
+
+
 ##################
 #
 # universal config
 #
 ##################
-fresh config/kitty.conf --file=~/.config/kitty/kitty.conf
 fresh config/ssh.conf --file=~/.ssh/config
+
 
 ################
 #
@@ -114,6 +126,7 @@ fresh-options --bin
 
   fresh bin/scripts/\*
 fresh-options
+
 
 #####
 #
