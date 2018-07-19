@@ -1,3 +1,62 @@
 #!/bin/bash
 
-figlet -f smslant $(hostname) | lolcat
+# Memory available
+function memory_available () {
+  if [[ $(uname) == "Darwin" ]]; then
+    installed_memory=$(sysctl -n hw.memsize)
+    installed_memory_in_gb=$(bc <<< "scale=2; $installed_memory/1024/1024/1000")
+    page_types=("wired down" "active" "inactive")
+    all_consumed=0
+    for page_type in "${page_types[@]}"; do
+      consumed=$(vm_stat | grep "Pages ${page_type}:" | awk -F: '{print $2}' | tr -d '[[:space:]]' | grep -e "[[:digit:]]*" -ho)
+      consumed_gb=$(bc <<< "scale=2; ($consumed*4096)/1024/1024/1000")
+      all_consumed=$(bc <<< "scale=2; $all_consumed+$consumed_gb")
+    done
+    printf "available memory: %.2fG\n" $(bc <<< "scale=2; $installed_memory_in_gb-$all_consumed")
+  fi
+
+  if [[ $(uname) == "Linux" ]]; then
+    echo "Memory info not implemented, see dotfiles"
+  fi
+}
+
+# ip addr
+function list_ips () {
+  if [[ $(command -v ifconfig) ]]; then
+    output=()
+    case $(uname) in
+      "Darwin" )
+        interface_list=$(ifconfig -lu)
+        match_pattern="inet [0-9.]\+"
+        delimeter=" "
+      ;;
+      "Linux" )
+        lines=$(ifconfig -s | wc -l)
+        interface_list=$(ifconfig -s | tail -n $(( $lines-1 )) | cut -f1 -d' ' | xargs)
+        match_pattern="inet addr:[0-9.]\+"
+        delimeter=":"
+        if [[ $WE_ARE_ON_GENTOO ]]; then
+          match_pattern="inet [0-9.]\+"
+          delimeter=" "
+        fi
+      ;;
+    esac
+
+    for iface in $interface_list; do
+      ip_address=$(ifconfig $iface | grep --colour=never -oe "$match_pattern" | cut -f2 -d"$delimeter")
+      if [[ $ip_address && $ip_address != "127.0.0.1" ]]; then
+        iface_and_ip=$(printf ",ip addr (%s): %s" "${iface}" "${ip_address}")
+        output+="${iface_and_ip}"
+      fi
+    done
+
+    if [[ $output ]]; then
+      printf "%s" "${output:1}"
+    else
+      printf "\xE2\x8C\x81 Offline"
+    fi
+  fi
+}
+
+{ figlet -f smslant $(hostname); memory_available; } | lolcat -p 4
+
