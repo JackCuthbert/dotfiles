@@ -18,21 +18,17 @@ fresh-options --file=~/.zshrc --marker
 
   if [[ "$(uname)" == "Linux" ]]; then
     fresh zsh/startx.sh
-    fresh zsh/alias.linux.sh
     fresh zsh/env.linux.sh
-    fresh zsh/zplug-init.linux.sh
+    fresh zsh/alias.linux.sh
   fi
 
   if [[ "$(uname)" == "Darwin" ]]; then
     fresh zsh/env.mac.sh
     fresh zsh/alias.mac.sh
-    fresh zsh/zplug-init.mac.sh
-    fresh zsh/ssh-init.mac.sh
   fi
 
   # NOTE: Must be last
-  fresh zsh/zplug-plugins.sh
-  fresh zsh/zplug-update-check.sh
+  fresh zsh/zplug.sh
 
   fresh bin/scripts/motd
 fresh-options
