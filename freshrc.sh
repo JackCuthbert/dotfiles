@@ -90,7 +90,15 @@ fresh-options
 #
 ########
 fresh-options --file==~/.config/kitty/kitty.conf --marker
-  fresh config/kitty/\*
+  if [[ "$(uname)" == "Linux" ]]; then
+    fresh config/kitty/font.linux.conf
+  fi
+
+  if [[ "$(uname)" == "Darwin" ]]; then
+    fresh config/kitty/font.mac.conf
+  fi
+
+  fresh config/kitty/config/\*
 fresh-options
 
 
