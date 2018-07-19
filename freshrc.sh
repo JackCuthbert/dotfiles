@@ -94,11 +94,7 @@ fresh-options
 #
 ########
 fresh-options --file==~/.config/kitty/kitty.conf --marker
-  fresh config/kitty/config/\*
-
-  if [[ "$(uname)" == "Darwin" ]]; then
-    fresh config/kitty/override.mac.conf
-  fi
+  fresh config/kitty/\*
 fresh-options
 
 
