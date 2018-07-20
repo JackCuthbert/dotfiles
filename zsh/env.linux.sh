@@ -10,7 +10,6 @@ export PATH=/home/jack/bin:/home/jack/.yarn/bin:$PATH
 # Generic env vars
 #
 #######
-export TERMINAL=kitty
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 #######

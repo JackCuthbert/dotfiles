@@ -10,6 +10,7 @@ zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
+zplug "djui/alias-tips"
 zstyle ":completion:*" matcher-list "m:{a-zA-Z}={A-Za-z}"
 
 # Load plugins
