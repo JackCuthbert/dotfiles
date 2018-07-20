@@ -14,11 +14,6 @@ if [[ $PWD != *"keyboards"* ]]; then
   exit 1
 fi
 
-function update_gitmodules {
-  git submodule sync --recursive
-  git submodule update --init --recursive
-}
-
 function clean_build_dir {
   rm -rf ./build
   mkdir -p ./build
@@ -68,7 +63,6 @@ function cleanup_paths {
 
 # script go!
 clean_build_dir
-update_gitmodules
 copy_keymaps
 build_dz60
 build_whitefox
