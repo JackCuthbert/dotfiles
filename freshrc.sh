@@ -52,6 +52,7 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh config/redshift.conf --file=~/.config/redshift.conf
   fresh config/mpd.conf --file=~/.config/mpd/mpd.conf
   fresh config/ncmpcpp.conf --file=~/.config/ncmpcpp/config
+  fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 
   # .config files (rofi needs multiple files for themes)
   fresh config/rofi/rofi.conf --file=~/.config/rofi/config
