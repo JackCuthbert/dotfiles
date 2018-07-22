@@ -50,6 +50,8 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh config/i3.conf --file=~/.config/i3/config
   fresh config/i3blocks.conf --file=~/.config/i3blocks/config
   fresh config/redshift.conf --file=~/.config/redshift.conf
+  fresh config/mpd.conf --file=~/.config/mpd/mpd.conf
+  fresh config/ncmpcpp.conf --file=~/.config/ncmpcpp/config
 
   # .config files (rofi needs multiple files for themes)
   fresh config/rofi/rofi.conf --file=~/.config/rofi/config
