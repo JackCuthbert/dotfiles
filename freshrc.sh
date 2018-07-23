@@ -17,14 +17,11 @@ fresh-options --file=~/.zshrc --marker
   fresh zsh/vi-mode.sh
 
   if [[ "$(uname)" == "Linux" ]]; then
-    fresh zsh/startx.sh
-    fresh zsh/env.linux.sh
-    fresh zsh/alias.linux.sh
+    fresh zsh/linux/\*
   fi
 
   if [[ "$(uname)" == "Darwin" ]]; then
-    fresh zsh/env.mac.sh
-    fresh zsh/alias.mac.sh
+    fresh zsh/mac/\*
   fi
 
   # NOTE: Must be last
@@ -44,10 +41,10 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh xinitrc --file
   fresh Xresources --file
 
+
   # .config files
   fresh config/compton.conf --file=~/.config/compton.conf
   fresh config/dunst.conf --file=~/.config/dunst/dunstrc
-  fresh config/i3.conf --file=~/.config/i3/config
   fresh config/i3blocks.conf --file=~/.config/i3blocks/config
   fresh config/redshift.conf --file=~/.config/redshift.conf
   fresh config/mpd.conf --file=~/.config/mpd/mpd.conf
@@ -58,6 +55,24 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh config/rofi/rofi.conf --file=~/.config/rofi/config
   fresh config/rofi/dracula.rasi --file=~/.config/rofi/dracula.rasi
 fi
+
+
+###################
+#
+# i3 window manager
+#
+###################
+fresh-options --file=~/.config/i3/config --marker
+  if [[ "$(hostname)" == "war-machine" ]]; then
+    fresh config/i3/war-machine/\*
+  fi
+
+  if [[ "$(hostname)" == "pepper" ]]; then
+    fresh config/i3/tars/\*
+  fi
+
+  fresh config/i3/general.conf
+fresh-options
 
 
 ########
@@ -93,15 +108,19 @@ fresh-options
 #
 ########
 fresh-options --file==~/.config/kitty/kitty.conf --marker
-  if [[ "$(uname)" == "Linux" ]]; then
-    fresh config/kitty/font.linux.conf
+  if [[ "$(hostname)" == "war-machine" ]]; then
+    fresh config/kitty/war-machine/\*
   fi
 
-  if [[ "$(uname)" == "Darwin" ]]; then
-    fresh config/kitty/font.mac.conf
+  if [[ "$(hostname)" == "pepper" ]]; then
+    fresh config/kitty/pepper/\*
   fi
 
-  fresh config/kitty/config/\*
+  if [[ "$(hostname)" == "tars" ]]; then
+    fresh config/kitty/tars/\*
+  fi
+
+  fresh config/kitty/general/\*
 fresh-options
 
 

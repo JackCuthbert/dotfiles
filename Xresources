@@ -9,12 +9,12 @@ URxvt.letterSpace: 1
 ! Text rendering
 ! --------------------------
 Xft.dpi: 96
-Xft.autohint: 0
-Xft.lcdfilter: lcddefault
-Xft.hintstyle: hintfull
-Xft.hinting: 1
-Xft.antialias: 1
 Xft.rgba: rgb
+Xft.antialias: true
+Xft.autohint: 0
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
 
 ! Dracula Xresources palette
 ! --------------------------
