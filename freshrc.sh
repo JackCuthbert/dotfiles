@@ -38,7 +38,24 @@ fresh-options
 #########################
 if [[ "$(uname)" == "Linux" ]]; then
   # Xorg config
-  fresh xinitrc --file
+  fresh-options --file=~/.xinitrc --marker
+    # NOTE: Must be first
+    # Load everything that the x server needs
+    fresh config/xinit/init.sh
+
+    if [[ "$(hostname)" == "war-machine" ]]; then
+      fresh config/xinit/war-machine/\*
+    fi
+
+    if [[ "$(hostname)" == "pepper" ]]; then
+      fresh config/xinit/pepper/\*
+    fi
+
+    # NOTE: Must be last
+    # start window manager
+    fresh config/xinit/start.sh
+  fresh-options
+
   fresh Xresources --file
 
 
