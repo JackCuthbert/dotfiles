@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# Dependencies:
+#   * scrot
+#   * imagemagick
 
 scrot /tmp/screen.png
 
