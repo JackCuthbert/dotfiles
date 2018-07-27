@@ -1,143 +1,113 @@
-/**
- * Base16 Dracula ROFI Color theme
- * User: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
- * Copyright: Andrea Scarpino
- */
+// Dracula colors
 * {
-    selected-normal-foreground:  @lightbg;
-    foreground:                  rgba ( 233, 233, 244, 100 % );
-    normal-foreground:           @foreground;
-    alternate-normal-background: @lightbg;
-    red:                         rgba ( 234, 81, 178, 100 % );
-    selected-urgent-foreground:  @background;
-    blue:                        rgba ( 98, 214, 232, 100 % );
-    urgent-foreground:           @red;
-    alternate-urgent-background: @lightbg;
-    active-foreground:           @blue;
-    lightbg:                     rgba ( 58, 60, 78, 100 % );
-    selected-active-foreground:  @background;
-    alternate-active-background: @lightbg;
-    background:                  rgba ( 40, 41, 54, 100 % );
-    alternate-normal-foreground: @foreground;
-    normal-background:           @background;
-    lightfg:                     rgba ( 241, 242, 248, 100 % );
-    selected-normal-background:  @lightfg;
-    border-color:                @foreground;
-    spacing:                     2;
-    separatorcolor:              @foreground;
-    urgent-background:           @background;
-    selected-urgent-background:  @red;
-    alternate-urgent-foreground: @red;
-    background-color:            rgba ( 40, 41, 54, 0 % );
-    alternate-active-foreground: @blue;
-    active-background:           @background;
-    selected-active-background:  @blue;
+    background:   rgba(40,  42,  54,  1);
+    current-line: rgba(68,  71,  90,  1);
+    selection: 	  rgba(68,  71,  90,  1);
+    foreground: 	rgba(248, 248, 242, 1);
+    comment:      rgba(98,  114, 164, 1);
+    cyan:         rgba(139, 233, 253, 1);
+    green:        rgba(80,  250, 123, 1);
+    orange:       rgba(255, 184, 108, 1);
+    pink:         rgba(255, 121, 198, 1);
+    purple:       rgba(189, 147, 249, 1);
+    red:          rgba(255, 85,  85,  1);
+    yellow:       rgba(241, 250, 140, 1);
 }
-window {
-    background-color: @background;
-    border:           1;
+* {
+    selected-normal-background:     @cyan;
+    normal-background:              @background;
+    normal-foreground:              @foreground;
+    alternate-normal-background:    @normal-background;
+    alternate-normal-foreground:    @foreground;
+    selected-normal-foreground:     @normal-background;
+    urgent-foreground:              @red;
+    urgent-background:              @normal-background;
+    alternate-urgent-background:    @urgent-background;
+    alternate-urgent-foreground:    @urgent-foreground;
+    selected-active-foreground:     @foreground;
+    selected-urgent-background:     @normal-background;
+    alternate-active-background:    @normal-background;
+    alternate-active-foreground:    @selected-active-foreground;
+    alternate-active-background:    @selected-active-background;
+    border-color:                   @selected-normal-background;
+    separatorcolor:                 @border-color;
+    spacing: 5;
+    background-color:               @normal-background;
+}
+#window {
+    border:           3;
     padding:          10;
 }
-mainbox {
+#mainbox {
+    background-color: inherit;
     border:  0;
     padding: 0;
 }
-message {
-    border:       1px solid 0px 0px ;
-    border-color: @separatorcolor;
-    padding:      1px ;
-}
-textbox {
+#textbox {
     text-color: @foreground;
 }
-listview {
-    fixed-height: 0;
-    border:       2px solid 0px 0px ;
-    border-color: @separatorcolor;
-    spacing:      2px ;
-    scrollbar:    true;
-    padding:      2px 0px 0px ;
-}
-element {
+#element {
     border:  0;
     padding: 5px ;
 }
-element normal.normal {
+#element.normal.normal {
     background-color: @normal-background;
     text-color:       @normal-foreground;
 }
-element normal.urgent {
+#element.normal.urgent {
     background-color: @urgent-background;
     text-color:       @urgent-foreground;
 }
-element normal.active {
+#element.normal.active {
     background-color: @active-background;
     text-color:       @active-foreground;
 }
-element selected.normal {
+#element.selected.normal {
     background-color: @selected-normal-background;
     text-color:       @selected-normal-foreground;
 }
-element selected.urgent {
+#element.selected.urgent {
     background-color: @selected-urgent-background;
     text-color:       @selected-urgent-foreground;
 }
-element selected.active {
+#element.selected.active {
     background-color: @selected-active-background;
     text-color:       @selected-active-foreground;
 }
-element alternate.normal {
+#element.alternate.normal {
     background-color: @alternate-normal-background;
     text-color:       @alternate-normal-foreground;
 }
-element alternate.urgent {
+#element.alternate.urgent {
     background-color: @alternate-urgent-background;
     text-color:       @alternate-urgent-foreground;
 }
-element alternate.active {
+#element.alternate.active {
     background-color: @alternate-active-background;
     text-color:       @alternate-active-foreground;
 }
-scrollbar {
-    width:        4px ;
+#scrollbar {
     border:       0;
-    handle-color: @normal-foreground;
-    handle-width: 8px ;
-    padding:      0;
 }
-sidebar {
-    border:       2px solid 0px 0px ;
-    border-color: @separatorcolor;
-}
-button {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
-button selected {
+#button.selected {
     background-color: @selected-normal-background;
     text-color:       @selected-normal-foreground;
 }
-inputbar {
-    spacing:    0px;
+#inputbar {
+    spacing:    0;
     text-color: @normal-foreground;
-    padding:    1px ;
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    background-color: inherit;
+    padding:    5px ;
 }
-case-indicator {
+#case-indicator {
+    spacing:    0;
+    text-color: @normal-background;
+}
+#entry {
     spacing:    0;
     text-color: @normal-foreground;
 }
-entry {
+#prompt {
     spacing:    0;
     text-color: @normal-foreground;
-}
-prompt {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
-textbox-prompt-colon {
-    expand:     false;
-    str:        ":";
-    margin:     0px 0.3000em 0.0000em 0.0000em ;
-    text-color: inherit;
 }
