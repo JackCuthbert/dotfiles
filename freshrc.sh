@@ -56,8 +56,17 @@ if [[ "$(uname)" == "Linux" ]]; then
     fresh config/xinit/start.sh
   fresh-options
 
-  fresh Xresources --file
+  fresh-options --file=~/.Xresources --marker
+    fresh config/xresources/general.conf
 
+    if [[ "$(hostname)" == "war-machine" ]]; then
+      fresh config/xresources/war-machine.conf
+    fi
+
+    if [[ "$(hostname)" == "pepper" ]]; then
+      fresh config/xresources/pepper.conf
+    fi
+  fresh-options
 
   # .config files
   fresh config/compton.conf --file=~/.config/compton.conf
@@ -90,15 +99,15 @@ fi
 #
 ###################
 fresh-options --file=~/.config/i3/config --marker
+  fresh config/i3/general.conf
+
   if [[ "$(hostname)" == "war-machine" ]]; then
-    fresh config/i3/war-machine/\*
+    fresh config/i3/war-machine.conf
   fi
 
   if [[ "$(hostname)" == "pepper" ]]; then
-    fresh config/i3/tars/\*
+    fresh config/i3/pepper.conf
   fi
-
-  fresh config/i3/general.conf
 fresh-options
 
 
@@ -135,16 +144,12 @@ fresh-options
 #
 ########
 fresh-options --file==~/.config/kitty/kitty.conf --marker
-  if [[ "$(hostname)" == "war-machine" ]]; then
-    fresh config/kitty/war-machine/\*
+  if [[ "$(uname)" == "Darwin" ]]; then
+    fresh config/kitty/mac.conf
   fi
 
-  if [[ "$(hostname)" == "pepper" ]]; then
-    fresh config/kitty/pepper/\*
-  fi
-
-  if [[ "$(hostname)" == "tars" ]]; then
-    fresh config/kitty/tars/\*
+  if [[ "$(uname)" == "Linux" ]]; then
+    fresh config/kitty/linux.conf
   fi
 
   fresh config/kitty/general/\*
