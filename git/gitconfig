@@ -15,8 +15,8 @@
 [alias]
   # Logging
   l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative # minimal complete log
-  lb = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative master..HEAD # minimal log of commits on current branch
-  lr = log --branches --not --remotes # log unpushed commits
+  lbc = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative master..HEAD # minimal log of commits on current branch
+  lnr = log --branches --not --remotes # log unpushed commits
   lp = log --graph --decorate --pretty=oneline --abbrev-commit --all # pretty log
 
   # Committing
@@ -24,8 +24,8 @@
   ap = add -p # add patch
   c = commit --verbose
   ca = commit -a --verbose # commit all
-  cm = commit -m # commit with message
-  cam = commit -a -m # commit all with message
+  # cm = commit -m # commit with message
+  # cam = commit -a -m # commit all with message
   m = commit --amend --verbose # ammend the last commit with the new one
 
   # Diffing
@@ -38,7 +38,6 @@
 
   # Status
   s = status -s # minimal status
-  st = status # alias for status
   stat = status # alias for status
 
   # Checkout
