@@ -73,6 +73,16 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh config/rofi/dracula.rasi --file=~/.config/rofi/dracula.rasi
 fi
 
+#######################
+#
+# Mac specific dotfiles
+#
+#######################
+if [[ "$(uname)" == "Darwin" ]]; then
+  fresh config/chunkwm/chunkwmrc.sh --file=~/.chunkwmrc
+  fresh config/chunkwm/skhdrc.sh --file=~/.skhdrc
+fi
+
 
 ###################
 #
