@@ -1,9 +1,9 @@
 ## DZ60
 
-Switches | Caps | Case
----------|------|-----
-Zealio 67g | Dark Grey Thick PBT | KBDFans 5deg Grey
-  
+Switches | Caps | Case | Cable
+---------|------|------|------
+Zealio 67g | Purple + Black DSA custom set | KBDFans 5deg Grey | ZapCables MDPC-X Vivid Violet
+
 ### Flashing
 
 Build all firmware with `./build_firmwares.sh`
@@ -16,9 +16,9 @@ Ensure `dfu-programmer` is available on `$PATH`
 
 ## Whitefox
 
-Switches | Caps | Case
----------|------|-----
-Cherry MX Clear | Stock Whitefox | Stock Silver Aluminium
+Switches | Caps | Case | Cable
+---------|------|------|------
+Cherry MX Clear | Stock Whitefox | Stock Silver Aluminium | Stock Whitefox
 
 Ensure `dfu-util` is available on `$PATH`
 
