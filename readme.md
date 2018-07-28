@@ -1,8 +1,21 @@
-## dotfiles
+# dotfiles
 
-### installation
+Supports Arch Linux and macOS.
 
-#### homebrew (macOS)
+![arch linux preview](preview.png)
+
+## setup
+
+Install some base packages (Arch):
+
+
+```bash
+sudo pacman -S git vim neovim zsh
+```
+
+> TODO: Complete package list for pacman + Aura
+
+Install some base packages (macOS):
 
 ```bash
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log`
@@ -10,35 +23,33 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /t
 brew bundle
 ```
 
-#### fresh
+> TODO: Complete package list for homebrew
+
+Install zplug and fresh:
 
 ```bash
-curl -sL https://get.freshshell.com | bash
+# zplug
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
-# Link `.freshrc` to home folder
+# fresh
+bash -c "`curl -sL https://get.freshshell.com`"
+
+# remove the auto-generated freshrc and link new one
+rm ~/.freshrc
 ln -s "~/.dotfiles/freshrc.sh" "~/.freshrc"
 ```
 
-#### zplug
-```bash
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-```
-
-#### NVM 
+Install version managers for tools:
 
 ```bash
+# NVM
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash`
-```
 
-#### TPM
-
-```bash
+# TPM
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
 
-#### VimPlug
-
-```bash
+# VimPlug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
+
