@@ -68,8 +68,20 @@ if [[ "$(uname)" == "Linux" ]]; then
     fi
   fresh-options
 
+  # compton config
+  fresh-options --file=~/.config/compton.conf --marker
+    fresh config/compton/common.conf
+
+    if [[ "$(hostname)" == "war-machine" ]]; then
+      fresh config/compton/war-machine.conf
+    fi
+
+    if [[ "$(hostname)" == "pepper" ]]; then
+      fresh config/compton/pepper.conf
+    fi
+  fresh-options
+
   # .config files
-  fresh config/compton.conf --file=~/.config/compton.conf
   fresh config/dunst.conf --file=~/.config/dunst/dunstrc
   fresh config/i3blocks.conf --file=~/.config/i3blocks/config
   fresh config/redshift.conf --file=~/.config/redshift.conf
