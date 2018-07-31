@@ -70,7 +70,7 @@ if [[ "$(uname)" == "Linux" ]]; then
 
   # compton config
   fresh-options --file=~/.config/compton.conf --marker
-    fresh config/compton/common.conf
+    fresh config/compton/window-settings.conf
 
     if [[ "$(hostname)" == "war-machine" ]]; then
       fresh config/compton/war-machine.conf
