@@ -3,7 +3,7 @@
 # Alias
 #
 #######
-alias zshsource="source ~/.zshrc"
+alias reload="source ~/.zshrc && clear && motd"
 alias clterm="clear && zshsource"
 alias cl="clear"
 alias g="git"
