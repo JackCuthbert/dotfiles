@@ -35,6 +35,7 @@
     background-color:               @normal-background;
 }
 #window {
+    width:            800;
     border:           3;
     padding:          10;
 }
