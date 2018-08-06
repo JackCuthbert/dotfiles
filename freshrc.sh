@@ -41,7 +41,7 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh-options --file=~/.xinitrc --marker
     # NOTE: Must be first
     # Load everything that the x server needs
-    fresh config/xinit/init.sh
+    fresh config/xinit/pre.sh
 
     if [[ "$(hostname)" == "war-machine" ]]; then
       fresh config/xinit/war-machine/\*
@@ -53,7 +53,7 @@ if [[ "$(uname)" == "Linux" ]]; then
 
     # NOTE: Must be last
     # start window manager
-    fresh config/xinit/start.sh
+    fresh config/xinit/post.sh
   fresh-options
 
   fresh-options --file=~/.Xresources --marker
