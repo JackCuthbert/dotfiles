@@ -1,0 +1,127 @@
+# Sound
+alsa-utils
+pavucontrol
+pulseaudio
+pulseaudio-alsa
+
+
+# Bluetooth Support
+bluez
+bluez-utils
+pulseaudio-bluetooth
+
+
+# Theming
+ant-nebula-gtk-theme
+compton
+lxappearance
+papirus-icon-theme
+
+
+# Desktop Applications
+arandr
+bitwarden-bin
+chromium
+discord
+evince
+firefox
+gucharmap
+kitty
+picard
+slack-desktop
+steam
+steam-native-runtime
+telegram-desktop
+visual-studio-code-bin
+
+
+# Keyboard programming
+dfu-programmer
+dfu-util
+
+
+# Window Management
+dunst
+i3-gaps
+i3blocks
+i3lock
+imagemagick
+libappindicator-gtk3 # hard dependency for many electron apps
+redshift
+rofi
+
+# Networking
+network-manager-applet
+networkmanager
+networkmanager-openvpn # see pia-nm.sh script
+
+# Media Playback
+mpd
+mpdscribble
+mpv
+ncmpcpp
+
+# Fonts
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+otf-fira-code
+otf-font-awesome # Required for i3blocks
+ttf-font-awesome-4 # Required for i3blocks
+ttf-liberation
+ttf-ms-fonts
+
+# File Management
+exfat-utils
+gvfs
+ntfs-3g
+ranger
+syncthing
+
+# Drivers + Hardware
+dkms
+intel-ucode
+lib32-nvidia-utils
+linux-headers
+nvidia
+nvidia-settings
+
+
+# Shell + Development
+aws-cli
+bat
+direnv
+docker
+docker-compose
+exa
+feh
+figlet
+git
+htop
+lolcat
+neofetch
+neovim
+openssh
+scrot
+thefuck
+unzip
+vim
+w3m
+wget
+zsh
+
+
+# Clipboard
+clipit
+xclip
+
+
+# Xorg
+xorg-server
+xorg-xinit
+xorg-xinput
+xorg-xset
+
+
+# Package Management
+aura-bin
