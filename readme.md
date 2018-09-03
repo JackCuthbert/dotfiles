@@ -14,9 +14,11 @@ Download and install the latest version of macOS from the Mac App Store.
 
 Arch Linux installs currently requires a little bit of research to get up and running. See the [Packagelist](./Packagelist) for which packages I've installed previously.
 
+See [this gist](https://gist.github.com/njam/85ab2771b40ccc7ddcef878eb82a0fe9) for the laptop install guide.
+
 > Todo: Arch Linux desktop install guide
 
-See [this gist](https://gist.github.com/njam/85ab2771b40ccc7ddcef878eb82a0fe9) for the laptop install guide.
+See the [Brewfile](./Brewfile) and [CaskFile](./Caskfile) for installed macOS applications.
 
 Install Aura:
 
