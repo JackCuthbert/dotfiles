@@ -1,21 +1,4 @@
 #!/bin/bash
 
-# Memory available
-function memory_available () {
-  if [[ $(uname) == "Darwin" ]]; then
-    installed_memory=$(sysctl -n hw.memsize)
-    installed_memory_in_gb=$(bc <<< "scale=2; $installed_memory/1024/1024/1000")
-    page_types=("wired down" "active" "inactive")
-    all_consumed=0
-    for page_type in "${page_types[@]}"; do
-      consumed=$(vm_stat | grep "Pages ${page_type}:" | awk -F: '{print $2}' | tr -d '[[:space:]]' | grep -e "[[:digit:]]*" -ho)
-      consumed_gb=$(bc <<< "scale=2; ($consumed*4096)/1024/1024/1000")
-      all_consumed=$(bc <<< "scale=2; $all_consumed+$consumed_gb")
-    done
-    printf "available memory: %.2fG\n" $(bc <<< "scale=2; $installed_memory_in_gb-$all_consumed")
-  fi
-}
-
-
-{ figlet -f smslant $(hostname); memory_available; } | lolcat -p 4
+figlet -f smslant $(hostname) | lolcat -p 4
 
