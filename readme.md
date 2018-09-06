@@ -96,6 +96,7 @@ Install AppImage applications (See [Packagelist](./Packagelist)):
 ```bash
 # Download and move to /usr/bin
 sudo wget -O /usr/bin/MyApp.AppImage https://myapp.com/MyApp.appimage
+sudo chmod 755 /usr/bin/MyApp.AppImage
 sudo chmod +x /usr/bin/MyApp.AppImage
 
 # Run it
