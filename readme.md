@@ -90,3 +90,15 @@ sudo ./pia-nm.sh
 # Restart NetworkManager
 sudo systemctl restart NetworkManager.service
 ```
+
+Install AppImage applications (See [Packagelist](./Packagelist)):
+
+```bash
+# Download and move to /usr/bin
+sudo wget -O /usr/bin/MyApp.AppImage https://myapp.com/MyApp.appimage
+sudo chmod +x /usr/bin/MyApp.AppImage
+
+# Run it
+/usr/bin/MyApp.AppImage
+```
+

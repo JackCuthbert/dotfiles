@@ -1,15 +1,20 @@
+#############################
+#                           #
+#   Managed by Pacman/AUR   #
+#                           #
+#############################
+
+
 # Sound
 alsa-utils
 pavucontrol
 pulseaudio
 pulseaudio-alsa
 
-
 # Bluetooth Support
 bluez
 bluez-utils
 pulseaudio-bluetooth
-
 
 # Theming
 ant-nebula-gtk-theme
@@ -31,14 +36,11 @@ picard
 slack-desktop
 steam
 steam-native-runtime
-telegram-desktop
 visual-studio-code-bin
-
 
 # Keyboard programming
 dfu-programmer
 dfu-util
-
 
 # Window Management
 dunst
@@ -87,7 +89,6 @@ linux-headers
 nvidia
 nvidia-settings
 
-
 # Shell + Development
 aws-cli
 bat
@@ -111,11 +112,9 @@ w3m
 wget
 zsh
 
-
 # Clipboard
 clipit
 xclip
-
 
 # Xorg
 xorg-server
@@ -123,6 +122,14 @@ xorg-xinit
 xorg-xinput
 xorg-xset
 
-
 # Package Management
 aura-bin
+
+
+########################
+#                      #
+#   Managed AppImage   #
+#                      #
+########################
+
+wire-desktop # https://wire.com/download
