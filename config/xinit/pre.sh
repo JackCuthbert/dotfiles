@@ -7,9 +7,6 @@ systemctl --user import-environment DISPLAY
 # set fast keyboard repeat rate
 xset r rate 200 100
 
-# disable mouse acceleration
-xset m 0 0
-
 # disable blanking and enable dpms features
 xset s off
 xset s no blank
