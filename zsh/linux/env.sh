@@ -33,3 +33,10 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 #
 #######
 export ELECTRON_TRASH=gio
+
+######
+#
+# i3blocks script directory
+#
+######
+export SCRIPT_DIR="/home/jack/Repos/i3blocks-contrib"
