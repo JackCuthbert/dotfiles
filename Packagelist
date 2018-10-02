@@ -45,10 +45,11 @@ dfu-util
 # Window Management
 dunst
 i3-gaps
-i3blocks
 i3lock
 imagemagick
+jsoncpp # required by polybar
 libappindicator-gtk3 # hard dependency for many electron apps
+polybar
 redshift
 rofi
 
@@ -68,9 +69,8 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 otf-fira-code
-otf-font-awesome # Required for i3blocks
-ttf-font-awesome-4 # Required for i3blocks
 ttf-liberation
+ttf-material-icons
 ttf-ms-fonts
 
 # File Management
