@@ -56,7 +56,7 @@ if [[ "$(uname)" == "Linux" ]]; then
     fresh config/xinit/post.sh
   fresh-options
 
-  fresh-options --file=~/.Xresources --marker
+  fresh-options --file=~/.Xresources --marker="!"
     fresh config/xresources/general.conf
 
     if [[ "$(hostname)" == "war-machine" ]]; then
