@@ -1,114 +1,133 @@
-// Dracula colors
+/*
+ * ROFI color theme
+ *
+ * Based on Base16 Material Color Scheme (https://github.com/ntpeters/base16-materialtheme-scheme)
+ *
+ * User: Tomaszal
+ * Copyright: Tomas Zaluckij
+ */
+
 * {
-    background:   rgba(40,  42,  54,  1);
-    current-line: rgba(68,  71,  90,  1);
-    selection: 	  rgba(68,  71,  90,  1);
-    foreground: 	rgba(248, 248, 242, 1);
-    comment:      rgba(98,  114, 164, 1);
-    cyan:         rgba(139, 233, 253, 1);
-    green:        rgba(80,  250, 123, 1);
-    orange:       rgba(255, 184, 108, 1);
-    pink:         rgba(255, 121, 198, 1);
-    purple:       rgba(189, 147, 249, 1);
-    red:          rgba(255, 85,  85,  1);
-    yellow:       rgba(241, 250, 140, 1);
+  base00: #263238;
+  base01: #2E3C43;
+  base02: #314549;
+  base03: #546E7A;
+  base04: #B2CCD6;
+  base05: #EEFFFF;
+  base06: #EEFFFF;
+  base07: #FFFFFF;
+  base08: #F07178;
+  base09: #F78C6C;
+  base0A: #FFCB6B;
+  base0B: #C3E88D;
+  base0C: #89DDFF;
+  base0D: #ff79c6;
+  base0E: #C792EA;
+  base0F: #FF5370;
+
+  /*base0D: #00BCD4;*/
+
+  spacing: 0;
+  background-color: #1e1f29;
+
+  /* font: "Comfortaa Light 12"; */
 }
-* {
-    selected-normal-background:     @cyan;
-    normal-background:              @background;
-    normal-foreground:              @foreground;
-    alternate-normal-background:    @normal-background;
-    alternate-normal-foreground:    @foreground;
-    selected-normal-foreground:     @normal-background;
-    urgent-foreground:              @red;
-    urgent-background:              @normal-background;
-    alternate-urgent-background:    @urgent-background;
-    alternate-urgent-foreground:    @urgent-foreground;
-    selected-active-foreground:     @foreground;
-    selected-urgent-background:     @normal-background;
-    alternate-active-background:    @normal-background;
-    alternate-active-foreground:    @selected-active-foreground;
-    alternate-active-background:    @selected-active-background;
-    border-color:                   @selected-normal-background;
-    separatorcolor:                 @border-color;
-    spacing: 5;
-    background-color:               @normal-background;
+
+window {
+  transparency: "real";
+  /*fullscreen: true;*/
+  background-color: #263238CC; /*base00 + CC (80% opacity)*/
+  width: 900px;
 }
-#window {
-    width:            800;
-    border:           3;
-    padding:          10;
+
+mainbox {
+  children: [inputbar, message, sidebar, listview];
+  spacing: 16px;
+  /*margin: 20%;*/
+  padding: 16px 0;
+  border: 2px;
+  border-color: #4c4e66;
 }
-#mainbox {
-    background-color: inherit;
-    border:  0;
-    padding: 0;
+
+inputbar {
+  padding: 0 30px;
+  children: [prompt, textbox-prompt-colon, entry, case-indicator];
 }
-#textbox {
-    text-color: @foreground;
+
+prompt {
+  text-color: @base0D;
 }
-#element {
-    border:  0;
-    padding: 5px ;
+
+textbox-prompt-colon {
+  expand: false;
+  str: " :";
+  margin: 0 1ch 0 0;
+  text-color: @base0D;
 }
-#element.normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
+
+entry {
+  text-color: @base07;
 }
-#element.normal.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
+
+case-indicator {
+  text-color: @base0F;
 }
-#element.normal.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
+
+sidebar, message {
+  border: 1px 0;
+  border-color: @base0D;
 }
-#element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+
+button, textbox {
+  background-color: #393b4d;
+  text-color: #ff79c6;
+  padding: 5px;
 }
-#element.selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
+
+button selected {
+  background-color: #393b4d;
 }
-#element.selected.active {
-    background-color: @selected-active-background;
-    text-color:       @selected-active-foreground;
+
+listview {
+  scrollbar: true;
+  margin: 0 10px 0 30px;
 }
-#element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
+
+scrollbar {
+  background-color: #393b4d;
+  handle-color: @base0D;
+  handle-width: 4px;
+  border: 0 0px;
+  border-color: @base0D;
+  margin: 0 0 0 20px;
 }
-#element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @alternate-urgent-foreground;
+
+element {
+  padding: 5px;
+  highlight: bold underline;
 }
-#element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @alternate-active-foreground;
+
+element normal {
+  background-color: transparent;
 }
-#scrollbar {
-    border:       0;
+
+element selected {
+  background-color: #393b4d;
 }
-#button.selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+
+element alternate {
+  /*background-color: @base03;*/
 }
-#inputbar {
-    spacing:    0;
-    text-color: @normal-foreground;
-    background-color: inherit;
-    padding:    5px ;
+
+element normal normal, element selected normal, element alternate normal {
+  text-color: #ffffff;
 }
-#case-indicator {
-    spacing:    0;
-    text-color: @normal-background;
+
+element normal urgent, element selected urgent, element alternate urgent {
+  text-color: @base0F;
 }
-#entry {
-    spacing:    0;
-    text-color: @normal-foreground;
+
+element normal active, element selected active, element alternate active {
+  text-color: #ff79c6;
 }
-#prompt {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
+
