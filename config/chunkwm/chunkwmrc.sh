@@ -86,7 +86,7 @@ chunkc set mouse_move_window             \"alt 1\"
 chunkc set mouse_resize_window           \"alt 2\"
 chunkc set mouse_motion_interval         35
 
-chunkc set preselect_border_color        0xffff5555
+chunkc set preselect_border_color        0xff50FA7B
 chunkc set preselect_border_width        5
 
 #
@@ -104,7 +104,7 @@ chunkc set window_use_cgs_move           0
 # NOTE: the following are config variables for the chunkwm-border plugin.
 #
 
-chunkc set focused_border_color          0xff50fa7b
+chunkc set focused_border_color          0xffBD93F9
 chunkc set focused_border_width          5
 chunkc set focused_border_radius         0
 chunkc set focused_border_skip_floating  0
