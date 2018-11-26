@@ -1,0 +1,14 @@
+[Unit]
+Description=Audio NFS Mount
+Requires=systemd-networkd.service
+After=network-online.target
+Wants=network-online.target
+
+[Mount]
+What=192.168.1.11:/volume1/Audio/Lossless
+Where=/nfs/audio
+Type=nfs
+Options=_netdev,auto
+
+[Install]
+WantedBy=multi-user.target
