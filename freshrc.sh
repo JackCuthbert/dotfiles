@@ -69,27 +69,20 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh-options
 
   # compton config
-  fresh-options --file=~/.config/compton.conf --marker
-    fresh config/compton/window-settings.conf
-
-    if [[ "$(hostname)" == "war-machine" ]]; then
-      fresh config/compton/war-machine.conf
-    fi
-
-    if [[ "$(hostname)" == "pepper" ]]; then
-      fresh config/compton/pepper.conf
-    fi
-  fresh-options
+  if [[ "$(hostname)" == "pepper" ]]; then
+    fresh-options --file=~/.config/compton.conf --marker
+      fresh config/compton/window-settings.conf
+      fresh config/compton/vsync.conf
+    fresh-options
+  fi
 
   # .config files
   fresh config/dunst.conf --file=~/.config/dunst/dunstrc
-  fresh config/i3blocks.conf --file=~/.config/i3blocks/config
   fresh config/i3status.conf --file=~/.i3status.conf
   fresh config/redshift.conf --file=~/.config/redshift.conf
   fresh config/mpd.conf --file=~/.config/mpd/mpd.conf
   fresh config/ncmpcpp.conf --file=~/.config/ncmpcpp/config
   fresh config/ranger.conf --file=~/.config/ranger/rc.conf
-  fresh config/polybar.ini --file=~/.config/polybar/config
 
   # .config files (rofi needs multiple files for themes)
   fresh config/rofi/rofi.conf --file=~/.config/rofi/config
@@ -113,14 +106,20 @@ fi
 #
 ###################
 fresh-options --file=~/.config/i3/config --marker
-  fresh config/i3/general.conf
+  fresh i3/colors.conf # NOTE: Must be first!
+
+  fresh i3/default.conf
+  fresh i3/bar.conf
+
+  fresh i3/modes/\*.conf
+  fresh i3/keybindings/\*.conf
 
   if [[ "$(hostname)" == "war-machine" ]]; then
-    fresh config/i3/war-machine.conf
+    fresh i3/overrides/war-machine.conf
   fi
 
   if [[ "$(hostname)" == "pepper" ]]; then
-    fresh config/i3/pepper.conf
+    fresh i3/overrides/pepper.conf
   fi
 fresh-options
 
