@@ -84,6 +84,7 @@ if [[ "$(uname)" == "Linux" ]]; then
   # .config files
   fresh config/dunst.conf --file=~/.config/dunst/dunstrc
   fresh config/i3blocks.conf --file=~/.config/i3blocks/config
+  fresh config/i3status.conf --file=~/.i3status.conf
   fresh config/redshift.conf --file=~/.config/redshift.conf
   fresh config/mpd.conf --file=~/.config/mpd/mpd.conf
   fresh config/ncmpcpp.conf --file=~/.config/ncmpcpp/config
