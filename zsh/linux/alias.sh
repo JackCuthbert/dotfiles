@@ -12,6 +12,3 @@ alias pacman-list="comm -23 <(pacman -Qeq | sort) <(pacman -Qgq base base-devel 
 
 # becuase who wants to type that
 alias music="ncmpcpp"
-
-# open an image in feh in a sane way
-alias feh-view="feh --scale-down --image-bg black --sort name --no-menus --conversion-timeout 1 --force-aliasing --title '[%u/%l] %n (%wx%h)'"
