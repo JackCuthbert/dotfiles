@@ -36,7 +36,7 @@ export ELECTRON_TRASH=gio
 
 ######
 #
-# i3blocks script directory
+# Go environment path
 #
 ######
-export SCRIPT_DIR="/home/jack/Repos/i3blocks-contrib"
+export GOPATH="/home/jack/Projects/go"
