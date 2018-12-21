@@ -69,12 +69,10 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh-options
 
   # compton config
-  if [[ "$(hostname)" == "pepper" ]]; then
-    fresh-options --file=~/.config/compton.conf --marker
-      fresh config/compton/window-settings.conf
-      fresh config/compton/vsync.conf
-    fresh-options
-  fi
+  fresh-options --file=~/.config/compton.conf --marker
+    fresh config/compton/window-settings.conf
+    fresh config/compton/vsync.conf
+  fresh-options
 
   # .config files
   fresh config/dunst.conf --file=~/.config/dunst/dunstrc
