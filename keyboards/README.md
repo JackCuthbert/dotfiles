@@ -18,7 +18,7 @@ Ensure `dfu-programmer` is available on `$PATH`
 
 Switches | Caps | Case | Cable
 ---------|------|------|------
-Cherry MX Clear | Stock Whitefox | Stock Silver Aluminium | Stock Whitefox
+Cherry MX Clear | Canvas XDA (betas + bauhaus + icons) | Stock Silver Aluminium | Stock Whitefox
 
 Ensure `dfu-util` is available on `$PATH`
 
