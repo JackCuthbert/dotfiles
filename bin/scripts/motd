@@ -1,4 +1,2 @@
 #!/bin/bash
-
-figlet -f smslant $(hostname) | lolcat -p 4
-
+# Run something here on startup

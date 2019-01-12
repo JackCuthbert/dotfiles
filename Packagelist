@@ -97,10 +97,8 @@ docker
 docker-compose
 exa
 feh
-figlet
 git
 htop
-lolcat
 neofetch
 neovim
 openssh
@@ -113,7 +111,6 @@ wget
 zsh
 
 # Clipboard
-clipit
 xclip
 
 # Xorg
