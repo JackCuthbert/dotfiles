@@ -1,3 +1,6 @@
+# Scale up non xorg manage applications
+export GDK_DPI_SCALE=1.25
+
 # Remap caps to control
 setxkbmap -option ctrl:nocaps
 

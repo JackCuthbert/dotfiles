@@ -3,7 +3,7 @@
 # Update local binary path
 #
 #######
-export PATH=/home/jack/bin:/home/jack/.yarn/bin:$PATH
+export PATH=/home/jack/bin:$PATH
 
 #######
 #

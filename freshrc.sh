@@ -57,15 +57,7 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh-options
 
   fresh-options --file=~/.Xresources --marker="!"
-    fresh config/xresources/general.conf
-
-    if [[ "$(hostname)" == "war-machine" ]]; then
-      fresh config/xresources/war-machine.conf
-    fi
-
-    if [[ "$(hostname)" == "pepper" ]]; then
-      fresh config/xresources/pepper.conf
-    fi
+    fresh config/xresources/\*
   fresh-options
 
   # compton config
