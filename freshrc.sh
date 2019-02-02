@@ -56,6 +56,10 @@ if [[ "$(uname)" == "Linux" ]]; then
     fresh config/xinit/post.sh
   fresh-options
 
+  # Global Xorg startup config
+  fresh config/xserverrc.conf --file=~/.xserverrc
+
+  # Colours and font configureation for Xorg
   fresh-options --file=~/.Xresources --marker="!"
     fresh config/xresources/\*
   fresh-options

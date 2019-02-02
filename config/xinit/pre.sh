@@ -1,13 +1,10 @@
-# i3 needs this
+# X and i3 need a DISPLAY environment variable
 systemctl --user import-environment DISPLAY
 
 # Setup Xresources for term
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
-# set fast keyboard repeat rate
-xset r rate 200 100
-
-# disable blanking and enable dpms features
+# disable blanking and enable dpms features, 5 min timeouts
 xset s off
 xset s no blank
 xset dpms 300 300 300
