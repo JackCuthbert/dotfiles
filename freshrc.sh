@@ -60,14 +60,31 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh config/xserverrc.conf --file=~/.xserverrc
 
   # Colours and font configureation for Xorg
-  fresh-options --file=~/.Xresources --marker="!"
-    fresh config/xresources/\*
-  fresh-options
+  fresh config/xresources.conf --file=~/.Xresources
 
   # compton config
   fresh-options --file=~/.config/compton.conf --marker
     fresh config/compton/window-settings.conf
     fresh config/compton/vsync.conf
+  fresh-options
+
+  # i3 config
+  fresh-options --file=~/.config/i3/config --marker
+    fresh i3/colors.conf # NOTE: Must be first!
+
+    fresh i3/default.conf
+    fresh i3/bar.conf
+
+    fresh i3/modes/\*.conf
+    fresh i3/keybindings/\*.conf
+
+    if [[ "$(hostname)" == "war-machine" ]]; then
+      fresh i3/overrides/war-machine.conf
+    fi
+
+    if [[ "$(hostname)" == "pepper" ]]; then
+      fresh i3/overrides/pepper.conf
+    fi
   fresh-options
 
   # .config files
@@ -93,30 +110,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
   fresh config/chunkwm/chunkwmrc.sh --file=~/.chunkwmrc
   fresh config/chunkwm/skhdrc.sh --file=~/.skhdrc
 fi
-
-
-###################
-#
-# i3 window manager
-#
-###################
-fresh-options --file=~/.config/i3/config --marker
-  fresh i3/colors.conf # NOTE: Must be first!
-
-  fresh i3/default.conf
-  fresh i3/bar.conf
-
-  fresh i3/modes/\*.conf
-  fresh i3/keybindings/\*.conf
-
-  if [[ "$(hostname)" == "war-machine" ]]; then
-    fresh i3/overrides/war-machine.conf
-  fi
-
-  if [[ "$(hostname)" == "pepper" ]]; then
-    fresh i3/overrides/pepper.conf
-  fi
-fresh-options
 
 
 ########

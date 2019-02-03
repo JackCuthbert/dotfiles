@@ -1,9 +1,6 @@
 # X and i3 need a DISPLAY environment variable
 systemctl --user import-environment DISPLAY
 
-# Force 96DPI
-xrandr --dpi 96
-
 # Setup Xresources for term
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
