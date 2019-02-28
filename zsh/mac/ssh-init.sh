@@ -1,2 +1,1 @@
 ssh-add -K
-clear
