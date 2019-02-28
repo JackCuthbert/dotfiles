@@ -144,7 +144,7 @@ fresh-options
 # kitty.conf
 #
 ########
-fresh-options --file==~/.config/kitty/kitty.conf --marker
+fresh-options --file=~/.config/kitty/kitty.conf
   if [[ "$(uname)" == "Darwin" ]]; then
     fresh config/kitty/mac.conf
   fi
