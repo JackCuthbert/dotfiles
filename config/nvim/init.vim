@@ -5,37 +5,67 @@ Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'travisjeffery/vim-auto-mkdir'
 
-" Syntax
-Plug 'sheerun/vim-polyglot'
+" Motion
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 
-" Fixes
-Plug 'ntpeters/vim-better-whitespace'
+" Autocomplete
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+" Language Support
+" ----------------
+" NOTE: Requires:
+"   npm install neovim -g
+"   pip3 install --user pynvim
+
+" TypeScript
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'}
+
+" JavaScript
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 " Editor
+" ------
+
+" Support editor config files
 Plug 'editorconfig/editorconfig-vim'
+
+" Show line indents
 Plug 'Yggdroot/indentLine'
 
-" Tmux
-Plug 'sjl/vitality.vim'
-Plug 'vim-utils/vim-husk'
+" Highlight and strip whitespace
+Plug 'ntpeters/vim-better-whitespace'
 
 " Search
-Plug 'mhinz/vim-grepper'
+Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 
 " Git
-Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+
+" Linting
+Plug 'w0rp/ale'
 
 " Themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-" Linting
-Plug 'w0rp/ale'
+" Tmux integration
+" ----------------
+"
+" Plug 'sjl/vitality.vim'
+" Plug 'vim-utils/vim-husk'
 
 call plug#end()
+
