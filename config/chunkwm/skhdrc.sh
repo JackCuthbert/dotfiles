@@ -1,46 +1,68 @@
-# enter fullscreen mode for the focused container
-alt - z : chunkc tiling::window --toggle fullscreen
+# add an on_enter command to the default mode
+:: default : chunkc border::color 0xffBD93F9
 
-# change focus between tiling / floating windows
-shift + alt - space : chunkc tiling::window --toggle float
+# defines a new mode 'resize' with an on_enter command, that captures keypresses
+:: resize @ : chunkc border::color 0xffFFB86C
 
-# change layout of desktop
-alt - e : chunkc tiling::desktop --layout bsp
-alt - s : chunkc tiling::desktop --layout monocle
+# from 'default' mode, activate mode 'resize'
+# (this is the key combination you want to use to enter resize mode)
+default < shift + alt - r ; resize  
 
-# kill focused window
-shift + alt - q : chunkc tiling::window --close
+# from 'resize' mode, activate mode 'default'
+# (this is the keypress required to leave resize mode)
+resize < escape ; default
 
-# change focus
-alt - h : chunkc tiling::window --focus west
-alt - j : chunkc tiling::window --focus south
-alt - k : chunkc tiling::window --focus north
-alt - l : chunkc tiling::window --focus east
-
-alt - p : chunkc tiling::window --focus prev
-alt - n : chunkc tiling::window --focus next
-
-# move focused window
-shift + alt - h : chunkc tiling::window --warp west
-shift + alt - j : chunkc tiling::window --warp south
-shift + alt - k : chunkc tiling::window --warp north
-shift + alt - l : chunkc tiling::window --warp east
-
-# alt - r : chunkc tiling::desktop --rotate 90
-
-# move focused container to workspace
-shift + alt - m : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop)
-shift + alt - p : chunkc tiling::window --send-to-desktop prev
-shift + alt - n : chunkc tiling::window --send-to-desktop next
-shift + alt - 1 : chunkc tiling::window --send-to-desktop 1
-shift + alt - 2 : chunkc tiling::window --send-to-desktop 2
-shift + alt - 3 : chunkc tiling::window --send-to-desktop 3
-shift + alt - 4 : chunkc tiling::window --send-to-desktop 4
-shift + alt - 5 : chunkc tiling::window --send-to-desktop 5
-shift + alt - 6 : chunkc tiling::window --send-to-desktop 6
+# resize window in different directions
+# TODO: This doesn't work amazingly well for center windows
+resize < h : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east;
+resize < j : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north;
+resize < k : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south;
+resize < l : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west;
 
 # set splitmodes like i3
 # NOTE: This is a one-time insertion point change!
 # You are "marking" an insertion point based on the currently selected window
-alt - v : chunkc tiling::window -i south
-shift + alt - v : chunkc tiling::window -i east
+default < alt - v : chunkc tiling::window -i south
+default < shift + alt - v : chunkc tiling::window -i east
+
+# enter fullscreen mode for the focused container
+default < alt - z : chunkc tiling::window --toggle fullscreen
+
+# change focus between tiling / floating windows
+default < shift + alt - space : chunkc tiling::window --toggle float
+
+# change layout of desktop
+default < alt - e : chunkc tiling::desktop --layout bsp
+default < alt - s : chunkc tiling::desktop --layout monocle
+
+# open terminal
+default < alt - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
+
+# kill focused window
+default < shift + alt - q : chunkc tiling::window --close
+
+# change focus
+default < alt - h : chunkc tiling::window --focus west
+default < alt - j : chunkc tiling::window --focus south
+default < alt - k : chunkc tiling::window --focus north
+default < alt - l : chunkc tiling::window --focus east
+
+default < alt - p : chunkc tiling::window --focus prev
+default < alt - n : chunkc tiling::window --focus next
+
+# move focused window
+default < shift + alt - h : chunkc tiling::window --warp west
+default < shift + alt - j : chunkc tiling::window --warp south
+default < shift + alt - k : chunkc tiling::window --warp north
+default < shift + alt - l : chunkc tiling::window --warp east
+
+# move focused container to workspace
+default < shift + alt - m : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop)
+default < shift + alt - p : chunkc tiling::window --send-to-desktop prev
+default < shift + alt - n : chunkc tiling::window --send-to-desktop next
+default < shift + alt - 1 : chunkc tiling::window --send-to-desktop 1
+default < shift + alt - 2 : chunkc tiling::window --send-to-desktop 2
+default < shift + alt - 3 : chunkc tiling::window --send-to-desktop 3
+default < shift + alt - 4 : chunkc tiling::window --send-to-desktop 4
+default < shift + alt - 5 : chunkc tiling::window --send-to-desktop 5
+default < shift + alt - 6 : chunkc tiling::window --send-to-desktop 6
