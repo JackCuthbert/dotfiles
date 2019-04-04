@@ -14,10 +14,10 @@ resize < escape ; default
 
 # resize window in different directions
 # TODO: This doesn't work amazingly well for center windows
-resize < h : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east;
-resize < j : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north;
-resize < k : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south;
-resize < l : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west;
+resize < h : chunkc tiling::window --use-temporary-ratio -0.03 --adjust-window-edge west; chunkc tiling::window --use-temporary-ratio -0.03 --adjust-window-edge east;
+resize < j : chunkc tiling::window --use-temporary-ratio -0.03 --adjust-window-edge south; chunkc tiling::window --use-temporary-ratio -0.03 --adjust-window-edge north;
+resize < k : chunkc tiling::window --use-temporary-ratio 0.03 --adjust-window-edge north; chunkc tiling::window --use-temporary-ratio 0.03 --adjust-window-edge south;
+resize < l : chunkc tiling::window --use-temporary-ratio 0.03 --adjust-window-edge east; chunkc tiling::window --use-temporary-ratio 0.03 --adjust-window-edge west;
 
 # set splitmodes like i3
 # NOTE: This is a one-time insertion point change!
