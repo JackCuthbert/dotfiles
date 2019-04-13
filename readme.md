@@ -80,7 +80,7 @@ passwd jack
 Use `visudo` to allow `wheel` group to execute `sudo` commands:
 
 ```bash
-sudo aura -S sudo
+sudo pacman -S sudo
 visudo
 ```
 
