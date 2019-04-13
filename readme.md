@@ -90,7 +90,7 @@ Install some pre-requisite software and update the system to allow further dotfi
 
 > By this point you should have set up an internet connection with `netctl` so we can download packages. We will be installing `NetworkManager` instead to manage connections going forward.
 
-This is by no means a comprehensive list and more software may be required later installed via AUR. This is the bare minumum for my configuration to work as I expect.
+This is by no means a comprehensive list and more software may be required later (like nvidia or intel drivers, system-specific tweaks, and software, etc).
 
 ```bash
 sudo pacman -Syu \
