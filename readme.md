@@ -1,105 +1,199 @@
-# dotfiles
+![header](header.jpg)
 
-![arch linux preview](preview.png)
+## Setup OS
 
-## os
+* Arch Linux
+  1. [Download Arch Linux](https://www.archlinux.org/download/)
+  2. [USB flash installation media](https://wiki.archlinux.org/index.php/USB_flash_installation_media)
+  3. [Installation Guide](https://wiki.archlinux.org/index.php/Installation_Guide)
+  4. [GitHub Gist](https://gist.github.com/njam/85ab2771b40ccc7ddcef878eb82a0fe9)
+* macOS
+  1. [Download macOS](http://appstore.com/mac/macoshighsierra)
+  2. [How to create a bootable installer for macOS](https://support.apple.com/en-us/HT201372)
+  3. Hold `opt` during boot
 
-Download and install Arch Linux from the [official mirrors](https://www.archlinux.org/download/). Follow various installation guides on the Wiki/saved gists.
+### Partitions
 
-Download and install the latest version of macOS from the Mac App Store.
+Use `fdisk` to create partitions:
 
-## setup
-
-> Note: All installation instructions assume Arch Linux unless specified.
-
-Arch Linux installs currently requires a little bit of research to get up and running. See the [Packagelist](./Packagelist) for which packages I've installed previously.
-
-See [this gist](https://gist.github.com/njam/85ab2771b40ccc7ddcef878eb82a0fe9) for the laptop install guide.
-
-> Todo: Arch Linux desktop install guide
-
-See the [Brewfile](./Brewfile) and [CaskFile](./Caskfile) for installed macOS applications.
-
-Install Aura:
+> This section does **not** implement LUKs encryption. Refer to the GitHub Gist installation for details on how to set this up.
 
 ```bash
-mkdir aura-bin && wget -O PKGBUILD https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=aura-bin
-
-cd aura-bin
-makepkg --install
+fdisk /dev/sdX
 ```
 
-Install homebrew (macOS):
+partition | mount point        | type            | size
+----------|--------------------|-----------------|-------------
+1         | `/boot`            | `ef00`          | `512M`
+2         | `[swap]`           | `8200`          | `8G`
+3         | `/`                | `8300`          | rest of disk
+3a        | `/@root` (`/`)     | btrfs subvolume |
+3b        | `/@var` (`/var`)   | btrfs subvolume |
+3c        | `/@home` (`/home`) | btrfs subvolume |
+
+Create filesystems:
 
 ```bash
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log`
-
-brew bundle
+mkfs.fat -F32 /dev/sdX1
+mkswap /dev/sdX2
+mkfs.btrfs -L btrfs_root /dev/sdX3
 ```
 
-> Todo: Complete package list for homebrew
+Create btrfs subvolumes:
 
-Grab dotfiles:
+```bash
+mount -t btrfs /dev/sdX2 /mnt
+btrfs subvolume create /mnt/@root
+btrfs subvolume create /mnt/@var
+btrfs subvolume create /mnt/@home
+```
+
+Mount volumes:
+
+```bash
+umount /mnt
+mount -o subvol=@root /dev/sdX /mnt
+mkdir /mnt/{boot,var,home}
+mount -o subvol=@var /dev/sdX3 /mnt/var
+mount -o subvol=@home /dev/sdX3 /mnt/home
+mount /dev/sdX1 /mnt/boot
+```
+
+Install system:
+
+> Refer to the installation guide after setting up and mounting partitions/subvolumes
+
+```bash
+vim /etc/pacman.d/mirrorlist # order mirrorlist
+pacstrap /mnt base btrfs-progs zsh vim git sudo efibootmgr
+```
+
+### Users
+
+Create main user and add to `wheel` group:
+
+```bash
+useradd -m -g users -G wheel -s /bin/zsh jack
+passwd jack
+```
+
+Use `visudo` to allow `wheel` group to execute `sudo` commands:
+
+```bash
+sudo aura -S sudo
+visudo
+```
+
+## Software
+
+Install some pre-requisite software and update the system to allow further dotfiles setup.
+
+> By this point you should have set up an internet connection with `netctl` so we can download packages. We will be installing `NetworkManager` instead to manage connections going forward.
+
+This is by no means a comprehensive list and more software may be required later installed via AUR. This is the bare minumum for my configuration to work as I expect.
+
+```bash
+sudo pacman -Syu \
+  # gui
+  i3-gaps \
+  i3lock \
+  i3status \
+  redshift \
+  xautolock \
+  xorg-server \
+  xorg-xinit \
+  # networking
+  network-manager-applet \
+  networkmanager \
+  # sound
+  alsa-utils \
+  pulseaudio \
+  pulseaudio-alsa \
+  # cli
+  direnv \
+  exa \
+  feh \
+  imagemagick \
+  kitty \
+  neovim \
+  openssh \
+  scrot \
+  # fonts
+  noto-fonts \
+  noto-fonts-cjk \
+  noto-fonts-emoji \
+  otf-fira-code \
+  otf-san-francisco \
+  ttf-liberation \
+  # apps
+  firefox \
+  gnome-screenshot \
+  thunar
+
+sudo netctl stop-all
+sudo systemctl enable NetworkManager.service
+sudo systemctl start NetworkManager.service
+```
+
+* See [systemd configuration](./systemd) for custom unit files
+* See [xorg configruation](./xorg) for X11 configuration
+
+### Aura
+
+Install [Aura](https://github.com/aurapm/aura) to manage [AUR](https://aur.archlinux.org) packages:
+
+```bash
+wget -O PKGBUILD https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=aura-bin && \
+  makepkg --install && \
+  rm PKGBUILD
+```
+
+### Homebrew (macOS)
+
+Install [Homebrew](https://brew.sh/) to manage packages on macOS:
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+## Dotfiles
+
+Clone this dotfiles repo and install [fresh](https://freshshell.com):
 
 ```bash
 git clone https://gitlab.com/JackCuthbert/dotfiles.git ~/.dotfiles
+
+bash -c "`curl -sL https://get.freshshell.com`" && \
+  rm ~/.freshrc && \
+  ln -s "~/.dotfiles/freshrc.sh" "~/.freshrc"
 ```
 
-Install zplug and fresh:
+Install [zplug](https://github.com/zplug/zplug):
 
 ```bash
-# zplug
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-
-# fresh
-bash -c "`curl -sL https://get.freshshell.com`"
-
-# remove the auto-generated freshrc and link new one
-rm ~/.freshrc
-ln -s "~/.dotfiles/freshrc.sh" "~/.freshrc"
 ```
 
-Install version managers for tools:
+Install [nvm](https://github.com/creationix/nvm):
 
 ```bash
-# NVM
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash`
+```
 
-# TPM
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# VimPlug
+Install [neovim](https://neovim.io/) and [vimplug](https://github.com/junegunn/vim-plug):
+```
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-Install OpenVPN + PIA:
+
+## Optional software
+
+Install [OpenVPN](https://openvpn.net/) + [PIA](https://privateinternetaccess.com/) servers:
 
 ```bash
-# Download install script
-wget -O pia-nm.sh http://www.privateinternetaccess.com/installer/pia-nm.sh
-
-# CHECK CONTENTS!
-
-# Mark script as executable and run it
-chmod +x pia-nm.sh
-sudo ./pia-nm.sh
-
+wget -O pia-nm.sh https://www.privateinternetaccess.com/installer/pia-nm.sh
+chmod +x pia-nm.sh && sudo ./pia-nm.sh
 # Select UDP and strong encryption
-
-# Restart NetworkManager
 sudo systemctl restart NetworkManager.service
 ```
-
-Install AppImage applications (See [Packagelist](./Packagelist)):
-
-```bash
-# Download and move to /usr/bin
-sudo wget -O /usr/bin/MyApp.AppImage https://myapp.com/MyApp.appimage
-sudo chmod 755 /usr/bin/MyApp.AppImage
-sudo chmod +x /usr/bin/MyApp.AppImage
-
-# Run it
-/usr/bin/MyApp.AppImage
-```
-
