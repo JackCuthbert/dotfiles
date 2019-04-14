@@ -192,12 +192,15 @@ fresh-options --file
   fresh git/\*
 fresh-options
 
-# Global gitignores
 fresh-options --file=~/.gitignore_global --marker
+  # Global ignores
   fresh github/gitignore Global/macOS.gitignore
   fresh github/gitignore Global/Vagrant.gitignore
   fresh github/gitignore Global/Vim.gitignore
   fresh github/gitignore Global/VisualStudioCode.gitignore
   fresh github/gitignore Global/Windows.gitignore
   fresh github/gitignore Global/Xcode.gitignore
+
+  # Language specific
+  fresh github/gitignore Node.gitignore
 fresh-options
