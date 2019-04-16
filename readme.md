@@ -61,12 +61,12 @@ mount /dev/sdX1 /mnt/boot
 
 Install system:
 
-> Refer to the installation guide after setting up and mounting partitions/subvolumes
-
 ```bash
 vim /etc/pacman.d/mirrorlist # order mirrorlist
-pacstrap /mnt base btrfs-progs zsh vim git sudo efibootmgr
+pacstrap /mnt base base-devel btrfs-progs zsh vim git sudo efibootmgr
 ```
+
+> Refer back to the installation guide here
 
 ### Users
 
@@ -180,7 +180,8 @@ Install [nvm](https://github.com/creationix/nvm):
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash`
 ```
 
-Install [neovim](https://neovim.io/) and [vimplug](https://github.com/junegunn/vim-plug):
+Install [vimplug](https://github.com/junegunn/vim-plug) for [neovim](https://neovim.io/):
+
 ```
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
