@@ -162,10 +162,8 @@ Clone this dotfiles repo and install [fresh](https://freshshell.com):
 
 ```bash
 git clone https://gitlab.com/JackCuthbert/dotfiles.git ~/.dotfiles
-
-bash -c "`curl -sL https://get.freshshell.com`" && \
-  rm ~/.freshrc && \
-  ln -s "~/.dotfiles/freshrc.sh" "~/.freshrc"
+ln -s "~/.dotfiles/freshrc.sh" "~/.freshrc"
+bash -c "`curl -sL https://get.freshshell.com`"
 ```
 
 Install [zplug](https://github.com/zplug/zplug):
