@@ -47,9 +47,10 @@ if [[ "$(uname)" == "Linux" ]]; then
       fresh config/xinit/war-machine/\*
     fi
 
-    if [[ "$(hostname)" == "pepper" ]]; then
-      fresh config/xinit/pepper/\*
-    fi
+    # NOTE: No overrides for pepper at this time
+    # if [[ "$(hostname)" == "pepper" ]]; then
+    #   fresh config/xinit/pepper/\*
+    # fi
 
     # NOTE: Must be last
     # start window manager
