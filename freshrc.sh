@@ -71,7 +71,7 @@ if [[ "$(uname)" == "Linux" ]]; then
 
   # i3 config
   fresh-options --file=~/.config/i3/config --marker
-    fresh i3/colors.conf # NOTE: Must be first!
+    fresh i3/colors.conf # NOTE: Should be first!
 
     fresh i3/default.conf
     fresh i3/bar.conf
@@ -86,6 +86,8 @@ if [[ "$(uname)" == "Linux" ]]; then
     if [[ "$(hostname)" == "pepper" ]]; then
       fresh i3/overrides/pepper.conf
     fi
+
+    fresh i3/startup.conf # NOTE: Should be last!
   fresh-options
 
   # .config files
