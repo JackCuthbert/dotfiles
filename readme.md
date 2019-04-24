@@ -127,7 +127,8 @@ sudo pacman -Syu \
   ttf-liberation \
   # apps
   firefox \
-  gnome-screenshot \
+  xclip \
+  maim \
   thunar
 
 sudo netctl stop-all
