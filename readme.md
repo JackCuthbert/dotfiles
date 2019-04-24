@@ -115,9 +115,11 @@ sudo pacman -Syu \
   feh \
   imagemagick \
   kitty \
+  maim \
   neovim \
   openssh \
   scrot \
+  xclip \
   # fonts
   noto-fonts \
   noto-fonts-cjk \
@@ -127,8 +129,6 @@ sudo pacman -Syu \
   ttf-liberation \
   # apps
   firefox \
-  xclip \
-  maim \
   thunar
 
 sudo netctl stop-all
