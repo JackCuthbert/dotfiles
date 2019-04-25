@@ -8,8 +8,8 @@ if [[ "$(hostname)" == "war-machine" ]]; then
     `# Don't lock when there's audio playing` \
     --not-when-audio \
     `# Lock after 5 minutes` \
-    --timer primary 600 \
-      'screen-lock' \
+    --timer primary 300 \
+      '/home/jack/bin/screen-lock' \
       ''
 fi
 
@@ -19,13 +19,13 @@ if [[ "$(hostname)" == "pepper" ]]; then
     --not-when-fullscreen \
     `# Don't lock when there's audio playing` \
     --not-when-audio \
-    `# Dim the screen after 2 minutes, undim if user becomes active` \
-    --timer normal 120 \
-      'light -I; light -S 1' \
-      'light -O' \
+    `# Dim the screen after 60 seconds, undim if user becomes active` \
+    --timer normal 60 \
+      'light -O; light -S 1' \
+      'light -I' \
     `# Undim & lock after 5 more minutes` \
-    --timer primary 600 \
-      'light -O; screen-lock' \
+    --timer primary 300 \
+      'light -I; /home/jack/bin/screen-lock' \
       '' \
     `# Finally, suspend half an hour after it locks` \
     --timer normal 1800 \
