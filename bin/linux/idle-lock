@@ -9,8 +9,8 @@ if [[ "$(hostname)" == "war-machine" ]]; then
     --not-when-fullscreen \
     `# Don't lock when there's audio playing` \
     --not-when-audio \
-    `# Lock after 5 minutes` \
-    --timer primary 300 \
+    `# Lock after 5 minutes (same as dpms screen blank setting)` \
+    --timer normal 300 \
       '/home/jack/bin/screen-lock' \
       ''
 fi
@@ -25,12 +25,12 @@ if [[ "$(hostname)" == "pepper" ]]; then
     --timer normal 60 \
       'light -O && light -S 1' \
       'light -I' \
-    `# Undim & lock after 5 more minutes` \
-    --timer primary 300 \
+    `# Undim and lock after 4 more minutes (same as dpms screen blank setting)` \
+    --timer primary 240 \
       'light -I && /home/jack/bin/screen-lock' \
       '' \
-    `# Finally, suspend half an hour after it locks` \
-    --timer normal 1800 \
+    `# Finally, suspend 15 minutes after it locks` \
+    --timer normal 900 \
       'systemctl suspend' \
       ''
 fi
