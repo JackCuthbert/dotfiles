@@ -1,6 +1,8 @@
 #!/bin/bash
 # Requires `sudo aura -Aa xidlehook`
 
+killall xidlehook
+
 if [[ "$(hostname)" == "war-machine" ]]; then
   xidlehook \
     `# Don't lock when there's a fullscreen application` \
