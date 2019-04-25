@@ -31,6 +31,8 @@ partition | mount point        | type            | size
 3b        | `/@var` (`/var`)   | btrfs subvolume |
 3c        | `/@home` (`/home`) | btrfs subvolume |
 
+TODO: Next time I reinstall arch update this with LUKs + swap file
+
 Create filesystems:
 
 ```bash
