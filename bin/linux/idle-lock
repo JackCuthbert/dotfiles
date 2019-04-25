@@ -1,0 +1,34 @@
+#!/bin/bash
+# Requires `sudo aura -Aa xidlehook`
+
+if [[ "$(hostname)" == "war-machine" ]]; then
+  xidlehook \
+    `# Don't lock when there's a fullscreen application` \
+    --not-when-fullscreen \
+    `# Don't lock when there's audio playing` \
+    --not-when-audio \
+    `# Lock after 5 minutes` \
+    --timer primary 600 \
+      'screen-lock' \
+      ''
+fi
+
+if [[ "$(hostname)" == "pepper" ]]; then
+  xidlehook \
+    `# Don't lock when there's a fullscreen application` \
+    --not-when-fullscreen \
+    `# Don't lock when there's audio playing` \
+    --not-when-audio \
+    `# Dim the screen after 2 minutes, undim if user becomes active` \
+    --timer normal 120 \
+      'light -I; light -S 1' \
+      'light -O' \
+    `# Undim & lock after 5 more minutes` \
+    --timer primary 600 \
+      'light -O; screen-lock' \
+      '' \
+    `# Finally, suspend half an hour after it locks` \
+    --timer normal 1800 \
+      'systemctl suspend' \
+      ''
+fi

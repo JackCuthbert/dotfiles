@@ -102,6 +102,7 @@ sudo pacman -Syu \
   xautolock \
   xorg-server \
   xorg-xinit \
+  xorg-xrandr \
   # networking
   network-manager-applet \
   networkmanager \

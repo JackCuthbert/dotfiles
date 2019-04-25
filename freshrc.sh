@@ -79,14 +79,6 @@ if [[ "$(uname)" == "Linux" ]]; then
     fresh i3/modes/\*.conf
     fresh i3/keybindings/\*.conf
 
-    if [[ "$(hostname)" == "war-machine" ]]; then
-      fresh i3/overrides/war-machine.conf
-    fi
-
-    if [[ "$(hostname)" == "pepper" ]]; then
-      fresh i3/overrides/pepper.conf
-    fi
-
     fresh i3/startup.conf # NOTE: Should be last!
   fresh-options
 
