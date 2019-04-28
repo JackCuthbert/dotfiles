@@ -23,14 +23,10 @@ if [[ "$(hostname)" == "pepper" ]]; then
     --not-when-audio \
     `# Dim the screen after 60 seconds, undim if user becomes active` \
     --timer normal 60 \
-      'light -O && light -S 1' \
+      'light -O; light -S 1' \
       'light -I' \
-    `# Undim and lock after 4 more minutes (same as dpms screen blank setting)` \
+    `# Undim and suspend (with lock) after 4 more minutes (same as dpms screen blank setting)` \
     --timer primary 240 \
-      'light -I && /home/jack/bin/screen-lock' \
-      '' \
-    `# Finally, suspend 15 minutes after it locks` \
-    --timer normal 900 \
-      'systemctl suspend' \
+      'light -I; sleep 1; systemctl suspend' \
       ''
 fi
