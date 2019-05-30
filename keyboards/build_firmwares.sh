@@ -35,8 +35,7 @@ function copy_keymaps {
 function build_whitefox {
   cd qmk_firmware
 
-  docker run -e keymap=$USERNAME -e keyboard=whitefox --rm -v $('pwd'):/qmk:rw edasque/qmk_firmware
-  cp -r .build/* ../build/
+  sudo ./util/docker_build.sh whitefox:$USERNAME
   echo "Whitefox firmeware built!"
 
   cd ..
@@ -47,8 +46,7 @@ function build_whitefox {
 function build_dz60 {
   cd qmk_firmware
 
-  docker run -e keymap=$USERNAME -e keyboard=dz60 --rm -v $('pwd'):/qmk:rw edasque/qmk_firmware
-  cp -r .build/* ../build/
+  sudo ./util/docker_build.sh dz60:$USERNAME
   echo "DZ60 firmeware built!"
 
   cd ..
