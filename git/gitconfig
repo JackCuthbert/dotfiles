@@ -15,7 +15,8 @@
 [alias]
   # Logging
   l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative # minimal complete log
-  lbc = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative master..HEAD # minimal log of commits on current branch
+  lbm = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative master..HEAD      # minimal log of commits on current branch compared with master
+  lbd = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative development..HEAD # minimal log of commits on current branch compated with development
   lnr = log --branches --not --remotes # log unpushed commits
   lp = log --graph --decorate --pretty=oneline --abbrev-commit --all # pretty log
 
@@ -53,7 +54,8 @@
   purge = !git checkout master && git pull && git branch --merged | grep -Ev 'master' | xargs -n 1 git branch -d # delete merged branches
   pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\"" # push a branch and set up remote tracking
   hard-pull = !git fetch && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD) # throw away all local changes/commits and reset back to remote's version of branch
-  rasm = "rebase -i --autosquash master" # interactive rebase with autosquash on master
+  rasm = "rebase -i --autosquash master"      # interactive rebase with autosquash on master
+  rasd = "rebase -i --autosquash development" # interactive rebase with autosquash on development
 
   # Aliases
   g="!exec git"
