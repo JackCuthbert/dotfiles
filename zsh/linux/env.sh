@@ -1,12 +1,5 @@
 #######
 #
-# Update local binary path
-#
-#######
-export PATH=/home/jack/bin:$PATH
-
-#######
-#
 # Generic env vars
 #
 #######
@@ -33,10 +26,3 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 #
 #######
 export ELECTRON_TRASH=gio
-
-######
-#
-# Go environment path
-#
-######
-export GOPATH="/home/jack/Projects/go"

@@ -10,3 +10,9 @@ export THEFUCK_EXCLUDE_RULES='git_pull:git_push'
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
 
 export DISABLE_AUTO_TITLE="true" # tmux window titles
+
+# Local binary paths
+export PATH=$HOME/bin:$PATH
+
+# Local gopath
+export GOPATH=$HOME/go
