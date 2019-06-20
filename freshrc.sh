@@ -80,6 +80,14 @@ if [[ "$(uname)" == "Linux" ]]; then
     fresh i3/keybindings/\*.conf
 
     fresh i3/startup.conf # NOTE: Should be last!
+
+    if [[ "$(hostname)" == "war-machine" ]]; then
+      fresh i3/override/war-machine.conf
+    fi
+
+    if [[ "$(hostname)" == "pepper" ]]; then
+      fresh i3/override/pepper.conf
+    fi
   fresh-options
 
   # .config files
