@@ -14,3 +14,5 @@ alias l="exa -ghl"
 alias la="exa -ghla"
 alias v="nvim"
 alias vs="vscodium"
+alias c='docker-compose'
+alias d='docker'
