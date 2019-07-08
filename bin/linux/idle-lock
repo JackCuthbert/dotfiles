@@ -25,8 +25,12 @@ if [[ "$(hostname)" == "pepper" ]]; then
     --timer normal 60 \
       'light -O; light -S 1' \
       'light -I' \
+    `# lock the screen after 3 minutes` \
+    --timer primary 180 \
+      'light -I; sleep 1; /home/jack/bin/screen-lock' \
+      '' \
     `# Undim and suspend (with lock) after 4 more minutes (same as dpms screen blank setting)` \
-    --timer primary 240 \
-      'light -I; sleep 1; systemctl suspend' \
+    --timer normal 60 \
+      'sleep 1; systemctl suspend' \
       ''
 fi
