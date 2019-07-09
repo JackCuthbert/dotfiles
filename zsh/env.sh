@@ -1,6 +1,6 @@
 export NVM_LAZY_LOAD="true"
 export EDITOR="nvim"
-export TERMINAL=kitty
+export TERMINAL="alacritty"
 
 # thefuck plugin from zplug
 export THEFUCK_REQUIRE_CONFIRMATION="false"
@@ -16,3 +16,6 @@ export PATH=$HOME/bin:$PATH
 
 # Local gopath
 export GOPATH=$HOME/go
+
+# Disable scaling for alacritty
+export WINIT_HIDPI_FACTOR=1

@@ -143,19 +143,11 @@ fresh-options
 
 ########
 #
-# kitty.conf
+# alacritty.yml
 #
 ########
-fresh-options --file=~/.config/kitty/kitty.conf
-  if [[ "$(uname)" == "Darwin" ]]; then
-    fresh config/kitty/mac.conf
-  fi
-
-  if [[ "$(uname)" == "Linux" ]]; then
-    fresh config/kitty/linux.conf
-  fi
-
-  fresh config/kitty/general/\*
+fresh-options --file=~/.config/alacritty/alacritty.yml --marker=#
+  fresh config/alacritty/\*
 fresh-options
 
 

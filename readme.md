@@ -37,11 +37,11 @@ sudo pacman -Syu \
   pulseaudio \
   pulseaudio-alsa \
   # cli
+  alacritty \
   direnv \
   exa \
   feh \
   imagemagick \
-  kitty \
   maim \
   neovim \
   openssh \
@@ -51,7 +51,6 @@ sudo pacman -Syu \
   noto-fonts \
   noto-fonts-cjk \
   noto-fonts-emoji \
-  otf-fira-code \
   otf-san-francisco \
   ttf-liberation \
   # apps
