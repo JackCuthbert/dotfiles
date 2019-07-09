@@ -1,5 +1,0 @@
-#!/bin/bash
-# Always clear terminal on start
-clear
-
-# Run something here on startup

@@ -9,10 +9,6 @@ I've written [my own guide on installing Arch Linux](https://jackcuthbert.gitlab
   2. [USB flash installation media](https://wiki.archlinux.org/index.php/USB_flash_installation_media)
   3. [Installation Guide](https://wiki.archlinux.org/index.php/Installation_Guide)
   4. [GitHub Gist](https://gist.github.com/njam/85ab2771b40ccc7ddcef878eb82a0fe9)
-* macOS
-  1. [Download macOS](http://appstore.com/mac/macoshighsierra)
-  2. [How to create a bootable installer for macOS](https://support.apple.com/en-us/HT201372)
-  3. Hold `opt` during boot
 
 ## Software
 
@@ -73,14 +69,6 @@ Install [Aura](https://github.com/aurapm/aura) to manage [AUR](https://aur.archl
 wget -O PKGBUILD https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=aura-bin && \
   makepkg --install && \
   rm PKGBUILD
-```
-
-### Homebrew (macOS)
-
-Install [Homebrew](https://brew.sh/) to manage packages on macOS:
-
-```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 ## Dotfiles
