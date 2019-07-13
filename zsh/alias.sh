@@ -34,6 +34,6 @@ alias music="ncmpcpp"
 # alias l="exa -ghl"
 # alias la="exa -ghla"
 
-# Until then, just use coreutils ls.
-alias l='ls --color=auto --group-directories-first -l'
-alias la='ls --color=auto --group-directories-first -l --all'
+# Until then use lsd.
+alias l='lsd -lF --group-dirs=first --date=relative --icon=never'
+alias la='l -A'
