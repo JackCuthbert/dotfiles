@@ -3,7 +3,7 @@
 
 killall xidlehook
 
-if [[ "$(hostname)" == "war-machine" ]]; then
+if [[ "$(hostname)" == "kanade" ]]; then
   xidlehook \
     `# Don't lock when there's a fullscreen application` \
     --not-when-fullscreen \

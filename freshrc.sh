@@ -42,8 +42,8 @@ fresh-options --file=~/.xinitrc --marker
   fresh config/xinit/pre.sh
 
   # Overrides for desktop
-  if [[ "$(hostname)" == "war-machine" ]]; then
-    fresh config/xinit/war-machine/\*
+  if [[ "$(hostname)" == "kanade" ]]; then
+    fresh config/xinit/kanade/\*
   fi
 
   # NOTE: Must be last
@@ -89,8 +89,8 @@ fresh-options --file=~/.config/i3/config --marker
 
   fresh i3/startup.conf # NOTE: Should be last!
 
-  if [[ "$(hostname)" == "war-machine" ]]; then
-    fresh i3/override/war-machine.conf
+  if [[ "$(hostname)" == "kanade" ]]; then
+    fresh i3/override/kanade.conf
   fi
 
   if [[ "$(hostname)" == "pepper" ]]; then
