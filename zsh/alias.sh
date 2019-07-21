@@ -30,10 +30,5 @@ alias pacman-list="comm -23 <(pacman -Qeq | sort) <(pacman -Qgq base base-devel 
 # becuase who wants to type that
 alias music="ncmpcpp"
 
-# Commented until exa is fixed: https://github.com/ogham/exa/issues/517
-# alias l="exa -ghl"
-# alias la="exa -ghla"
-
-# Until then use lsd.
-alias l='lsd -lF --group-dirs=first --date=relative --icon=never'
-alias la='l -A'
+alias l="exa --group-directories-first -gl"
+alias la="l -a"
