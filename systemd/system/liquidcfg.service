@@ -1,0 +1,12 @@
+[Unit]
+Description=AIO startup service
+
+[Service]
+Type=oneshot
+ExecStart=liquidctl set pump speed 35 70  40 80  45 85  50 90  55 95  60 100
+ExecStart=liquidctl set fan speed  20 30  30 50  40 60  45 70  50 80  55 90  60 100
+ExecStart=liquidctl set ring color marquee-3 ffffff
+ExecStart=liquidctl set logo color breathing ffffff
+
+[Install]
+WantedBy=default.target
