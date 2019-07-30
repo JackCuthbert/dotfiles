@@ -25,3 +25,8 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
 
 # Disable scaling for alacritty
 export WINIT_HIDPI_FACTOR=1
+
+# fff configuration
+export FFF_COL1=2 # green directories
+export FFF_COL2=5 # pink statusbar
+export FFF_COL3=3 # yellow selection
