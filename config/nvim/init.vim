@@ -11,7 +11,13 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 
 " Language Support
-Plug 'sheerun/vim-polyglot'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+" Autocomplete
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Editor
 " ------

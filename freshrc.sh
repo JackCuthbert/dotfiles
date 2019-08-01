@@ -125,6 +125,7 @@ fresh config/ssh.conf --file=~/.ssh/config
 # ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 #
 fresh config/nvim/init.vim --file=~/.config/nvim/init.vim
+fresh config/nvim/coc-settings.json --file=~/.config/nvim/coc-settings.json
 fresh-options --file=~/.config/nvim/init.vim --marker='"'
   fresh config/nvim/settings/\*.vim
   fresh config/nvim/plug-config/\*.vim
