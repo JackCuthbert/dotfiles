@@ -8,3 +8,5 @@ set tabstop=2           " number of visual spaces per TAB
 set softtabstop=2       " number of spaces in tab when editing
 
 set showmatch           " highlight matching [{()}]
+
+let mapleader=";"       " remap leader to ';'

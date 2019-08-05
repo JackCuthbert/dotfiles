@@ -38,6 +38,9 @@ Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
+" Source browsing
+Plug 'majutsushi/tagbar'
+
 " Linting
 Plug 'w0rp/ale'
 
@@ -46,11 +49,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-" Tmux integration
-" ----------------
-"
-" Plug 'sjl/vitality.vim'
-" Plug 'vim-utils/vim-husk'
 
 call plug#end()
 
