@@ -66,8 +66,7 @@ fresh config/xresources.conf --file=~/.Xresources
 #  ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝        ╚═╝    ╚═════╝ ╚═╝  ╚═══╝
 #
 fresh-options --file=~/.config/compton.conf --marker
-  fresh config/compton/window-settings.conf
-  fresh config/compton/vsync.conf
+  fresh config/compton/\*.conf
 fresh-options
 
 #
@@ -88,14 +87,6 @@ fresh-options --file=~/.config/i3/config --marker
   fresh i3/keybindings/\*.conf
 
   fresh i3/startup.conf # NOTE: Should be last!
-
-  if [[ "$(hostname)" == "kanade" ]]; then
-    fresh i3/override/kanade.conf
-  fi
-
-  if [[ "$(hostname)" == "pepper" ]]; then
-    fresh i3/override/pepper.conf
-  fi
 fresh-options
 
 #
