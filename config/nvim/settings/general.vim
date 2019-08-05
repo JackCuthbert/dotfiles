@@ -9,4 +9,9 @@ set softtabstop=2       " number of spaces in tab when editing
 
 set showmatch           " highlight matching [{()}]
 
-let mapleader=";"       " remap leader to ';'
+" remap leader to ';'
+let mapleader=";"
+
+" Disable line wrapping, set toggle to ';w'
+set nowrap
+nnoremap <silent> <leader>w :set wrap! wrap?<CR>
