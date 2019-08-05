@@ -15,3 +15,8 @@ let mapleader=";"
 " Disable line wrapping, set toggle to ';w'
 set nowrap
 nnoremap <silent> <leader>w :set wrap! wrap?<CR>
+
+" Add rulers at 80 and 120 chars
+highlight ColorColumn ctermbg=8
+nnoremap <silent> <leader>r :execute "set colorcolumn="
+                  \ . (&colorcolumn == "" ? "80,120" : "")<CR>

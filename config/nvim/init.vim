@@ -11,10 +11,16 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 
 " Language Support
+" ----------------
+
+" TypeScript + JavaScript
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+" Rust
+Plug 'rust-lang/rust.vim'
 
 " Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
