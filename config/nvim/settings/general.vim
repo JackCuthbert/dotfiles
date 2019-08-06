@@ -9,6 +9,10 @@ set softtabstop=2       " number of spaces in tab when editing
 
 set showmatch           " highlight matching [{()}]
 
+" natural split directions
+set splitbelow
+set splitright
+
 " remap leader to ';'
 let mapleader=";"
 
