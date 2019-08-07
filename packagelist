@@ -1,0 +1,73 @@
+# programming/cli
+feh
+git
+htop
+httpie
+jre8-openjdk
+neofetch
+neovim
+openssh
+python
+rustup
+unzip
+vim
+vscodium-bin
+wget
+zsh
+
+# fonts
+nerd-fonts-hack
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+otf-san-francisco
+ttf-liberation
+
+# hardware drivers/utils
+lib32-nvidia-utils # for steam under nvidia graphics
+mesa               # for intel graphics
+nvidia             # for nvidia graphics
+nvidia-settings    # for nvidia graphics
+nvidia-utils       # for nvidia graphics
+python-liquidctl   # for kraken x52 cooler
+xf86-video-intel   # for intel graphics
+
+# desktop experience and theming
+fff
+i3-gaps
+i3lock
+i3status
+lxappearance
+network-manager-applet
+networkmanager
+papirus-icon-theme
+qt5-base # for multimc
+redshift
+rofi
+rsync
+thefuck
+w3m
+xdotool
+xidlehook
+xorg-xinit
+
+# applications
+firefox
+lib32-vulkan-icd-loader # for proton/lutris
+megasync
+slack-desktop
+steam
+teamspeak3
+
+# screenshots
+imagemagick
+maim
+scrot
+xclip
+
+# sound
+pavucontrol
+pulseaudio
+pulseaudio-alsa
+pulseaudio-bluetooth
+

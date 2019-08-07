@@ -12,54 +12,9 @@ I've written [my own guide on installing Arch Linux](https://jackcuthbert.gitlab
 
 ## Software
 
-This is by no means a comprehensive list and more software may be required later (like nvidia or intel drivers, system-specific tweaks, and software, etc).
-
-```bash
-sudo pacman -Syu \
-  # gui
-  i3-gaps \
-  i3lock \
-  i3status \
-  redshift \
-  xautolock \
-  xorg-server \
-  xorg-xinit \
-  xorg-xrandr \
-  # networking
-  network-manager-applet \
-  networkmanager \
-  # sound
-  alsa-utils \
-  pulseaudio \
-  pulseaudio-alsa \
-  # cli
-  alacritty \
-  direnv \
-  exa \
-  feh \
-  imagemagick \
-  maim \
-  neovim \
-  openssh \
-  scrot \
-  xclip \
-  # fonts
-  noto-fonts \
-  noto-fonts-cjk \
-  noto-fonts-emoji \
-  otf-san-francisco \
-  ttf-liberation \
-  # apps
-  firefox \
-  thunar
-
-sudo netctl stop-all
-sudo systemctl enable NetworkManager.service
-sudo systemctl start NetworkManager.service
-```
-
+* See [`packagelist`](./packagelist) for complete software list
 * See [systemd configuration](./systemd) for custom unit files
-* See [xorg configruation](./xorg) for X11 configuration
+* See [xorg configuration](./xorg) for X11 configuration
 
 ### Aura
 
@@ -84,7 +39,8 @@ bash -c "`curl -sL https://get.freshshell.com`"
 Install [zplug](https://github.com/zplug/zplug):
 
 ```bash
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+curl -sL --proto-redir -all,https \
+  https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 ```
 
 Install [nvm](https://github.com/creationix/nvm):
