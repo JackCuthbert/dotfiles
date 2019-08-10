@@ -9,6 +9,9 @@ set softtabstop=2       " number of spaces in tab when editing
 
 set showmatch           " highlight matching [{()}]
 
+" support hot-reloading in parcel/webpack
+set backupcopy=yes
+
 " natural split directions
 set splitbelow
 set splitright
