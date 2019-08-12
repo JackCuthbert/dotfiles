@@ -23,6 +23,9 @@ export THEFUCK_EXCLUDE_RULES='git_pull:git_push'
 # alias tips
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
 
+# auto suggestions config
+export ZSH_AUTOSUGGEST_USE_ASYNC="true"
+
 # Disable scaling for alacritty
 export WINIT_HIDPI_FACTOR=1
 
