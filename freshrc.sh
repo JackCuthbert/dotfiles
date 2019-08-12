@@ -1,3 +1,5 @@
+# NOTE: Headings done with http://www.patorjk.com/software/taag/#p=display&f=ANSI Shadow&t=SOME_TEXT
+
 #
 # ███████╗██████╗ ███████╗███████╗██╗  ██╗
 # ██╔════╝██╔══██╗██╔════╝██╔════╝██║  ██║
