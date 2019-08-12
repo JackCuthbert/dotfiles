@@ -35,9 +35,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Support editor config files
 Plug 'editorconfig/editorconfig-vim'
 
-" Show line indents
-Plug 'Yggdroot/indentLine'
-
 " Highlight and strip whitespace
 Plug 'ntpeters/vim-better-whitespace'
 
