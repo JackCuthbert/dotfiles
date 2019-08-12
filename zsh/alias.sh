@@ -24,7 +24,7 @@ alias pacman-cleanup="sudo pacman -Rns $(pacman -Qtdq)"
 alias pacman-list="comm -23 <(pacman -Qeq | sort) <(pacman -Qgq base base-devel | sort) | less"
 
 # becuase who wants to type that
-alias music="ncmpcpp"
+alias music="ncmpcpp -b ~/.config/ncmpcpp/bindings"
 
 # file listing
 alias l="exa --group-directories-first -gl"

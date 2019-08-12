@@ -100,12 +100,22 @@ fresh-options
 fresh config/dunst.conf --file=~/.config/dunst/dunstrc
 fresh config/i3status.conf --file=~/.i3status.conf
 fresh config/mpd.conf --file=~/.config/mpd/mpd.conf
-fresh config/ncmpcpp.conf --file=~/.config/ncmpcpp/config
 fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 fresh config/redshift.conf --file=~/.config/redshift.conf
 fresh config/rofi/dracula.rasi --file=~/.config/rofi/dracula.rasi
 fresh config/rofi/rofi.conf --file=~/.config/rofi/config
 fresh config/ssh.conf --file=~/.ssh/config
+
+#
+# ███╗   ██╗ ██████╗███╗   ███╗██████╗  ██████╗██████╗ ██████╗
+# ████╗  ██║██╔════╝████╗ ████║██╔══██╗██╔════╝██╔══██╗██╔══██╗
+# ██╔██╗ ██║██║     ██╔████╔██║██████╔╝██║     ██████╔╝██████╔╝
+# ██║╚██╗██║██║     ██║╚██╔╝██║██╔═══╝ ██║     ██╔═══╝ ██╔═══╝
+# ██║ ╚████║╚██████╗██║ ╚═╝ ██║██║     ╚██████╗██║     ██║
+# ╚═╝  ╚═══╝ ╚═════╝╚═╝     ╚═╝╚═╝      ╚═════╝╚═╝     ╚═╝
+#
+fresh config/ncmpcpp/config.conf --file=~/.config/ncmpcpp/config
+fresh config/ncmpcpp/bindings.conf --file=~/.config/ncmpcpp/bindings
 
 #
 # ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
