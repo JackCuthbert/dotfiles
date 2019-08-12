@@ -19,10 +19,14 @@ Plug 'mxw/vim-jsx'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
+" MDX
+Plug 'jxnblk/vim-mdx-js'
+
 " Rust
 Plug 'rust-lang/rust.vim'
 
 " Autocomplete
+" ------------
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Editor

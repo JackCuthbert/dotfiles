@@ -23,6 +23,9 @@ let mapleader=";"
 set nowrap
 nnoremap <silent> <leader>w :set wrap! wrap?<CR>
 
+" Copy to system clipboard register with ';y' in visual mode
+vnoremap <leader>y "+y
+
 " Add rulers at 80 and 120 chars
 highlight ColorColumn ctermbg=8
 nnoremap <silent> <leader>r :execute "set colorcolumn="
