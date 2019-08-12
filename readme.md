@@ -36,11 +36,11 @@ ln -s "~/.dotfiles/freshrc.sh" "~/.freshrc"
 bash -c "`curl -sL https://get.freshshell.com`"
 ```
 
-Install [zplug](https://github.com/zplug/zplug):
+Install [zplugin](https://github.com/zdharma/zplugin):
 
 ```bash
-curl -sL --proto-redir -all,https \
-  https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+mkdir ~/.zplugin
+git clone https://github.com/zdharma/zplugin.git ~/.zplugin/bin
 ```
 
 Install [nvm](https://github.com/creationix/nvm):

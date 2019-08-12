@@ -25,7 +25,7 @@ fresh-options --file=~/.zshrc --marker
   fresh zsh/direnv.sh
   fresh zsh/vi-mode.sh
   fresh zsh/startx.sh
-  fresh zsh/zplug.sh # NOTE: Zplug must be last
+  fresh zsh/zplugin.sh # NOTE: zplugin must be last
 fresh-options
 
 #
