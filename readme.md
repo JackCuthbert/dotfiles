@@ -43,12 +43,6 @@ mkdir ~/.zplugin
 git clone https://github.com/zdharma/zplugin.git ~/.zplugin/bin
 ```
 
-Install [nvm](https://github.com/creationix/nvm):
-
-```bash
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash`
-```
-
 Install [vimplug](https://github.com/junegunn/vim-plug) for [neovim](https://neovim.io/):
 
 ```
