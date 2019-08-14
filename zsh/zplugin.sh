@@ -25,7 +25,5 @@ zplugin snippet OMZ::plugins/git/git.plugin.zsh
 zplugin ice wait"1" lucid
 zplugin light laggardkernel/zsh-thefuck
 
-
 # Theme
-zplugin ice pick"async.zsh" src"pure.zsh"
-zplugin light sindresorhus/pure
+zplugin light subnixr/minimal

@@ -33,3 +33,7 @@ export WINIT_HIDPI_FACTOR=1
 export FFF_COL1=2 # green directories
 export FFF_COL2=5 # pink statusbar
 export FFF_COL3=3 # yellow selection
+
+# configure nothing theme
+export MNML_NORMAL_CHAR=''
+export MNML_INSERT_CHAR=''
