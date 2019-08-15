@@ -7,6 +7,7 @@ zplugin ice silent wait"0" atinit"zpcompinit; zpcdreplay"
 zplugin light zdharma/fast-syntax-highlighting
 
 # Suggestions/completions
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zplugin ice silent wait"0" blockf
 zplugin light zsh-users/zsh-completions
 zplugin ice silent wait"0" atload"_zsh_autosuggest_start"
