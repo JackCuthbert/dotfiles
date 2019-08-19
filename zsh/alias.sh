@@ -27,7 +27,7 @@ alias pacman-list="comm -23 <(pacman -Qeq | sort) <(pacman -Qgq base base-devel 
 alias music="ncmpcpp -b ~/.config/ncmpcpp/bindings"
 
 # file listing
-alias l="exa --group-directories-first -gl"
+alias l="exa --group-directories-first -gl --git"
 alias la="l -a"
 
 # file browser
