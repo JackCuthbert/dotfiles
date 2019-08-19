@@ -2,5 +2,33 @@
   "coc.preferences.diagnostic.displayByAle": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "rust"
-  ]
+  ],
+  "typescript.suggest.autoImports": true,
+  "suggest.completionItemKindLabels": {
+    "keyword": "Keyword",
+    "variable": "Variable",
+    "value": "Value",
+    "operator": "Operator",
+    "function": "Function",
+    "reference": "Reference",
+    "constant": "Const",
+    "method": "Method",
+    "struct": "Struct",
+    "class": "Class",
+    "interface": "Interface",
+    "text": "Text",
+    "enum": "Enum",
+    "enumMember": "Enum Member",
+    "module": "Module",
+    "color": "Color",
+    "property": "Property",
+    "field": "Field",
+    "unit": "Unit",
+    "event": "Event",
+    "file": "File",
+    "folder": "Folder",
+    "snippet": "Snippet",
+    "typeParameter": "Type Param",
+    "default": "Default"
+  }
 }
