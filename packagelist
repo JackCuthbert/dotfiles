@@ -33,13 +33,13 @@ python-liquidctl   # for kraken x52 cooler
 xf86-video-intel   # for intel graphics
 
 # desktop experience and theming
-fff
 i3-gaps
 i3lock
 i3status
 lxappearance
 network-manager-applet
 networkmanager
+nnn
 papirus-icon-theme
 qt5-base # for multimc
 redshift

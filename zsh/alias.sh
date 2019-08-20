@@ -31,4 +31,4 @@ alias l="exa --group-directories-first -gl --git"
 alias la="l -a"
 
 # file browser
-alias f="fff"
+alias n="nnn"
