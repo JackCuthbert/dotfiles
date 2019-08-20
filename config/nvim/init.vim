@@ -53,9 +53,8 @@ Plug 'majutsushi/tagbar'
 Plug 'w0rp/ale'
 
 " Themes
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'itchyny/lightline.vim'
 
 
 call plug#end()
