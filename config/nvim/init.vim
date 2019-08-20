@@ -5,6 +5,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'travisjeffery/vim-auto-mkdir'
+Plug 'Asheq/close-buffers.vim'
 
 " Motion
 Plug 'tpope/vim-surround'
