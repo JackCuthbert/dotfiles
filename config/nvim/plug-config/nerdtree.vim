@@ -1,6 +1,11 @@
 let NERDTreeShowHidden=1
-let g:NERDTreeChDirMode=2
+let NERDTreeQuitOnOpen=1
+let NERDTreeMinimalUI=1
+let NERDTreeDirArrows=1
+let NERDTreeAutoDeleteBuffer=1
 let NERDTreeIgnore = ['node_modules', '.git', 'tmp', '.DS_Store']
+
+let g:NERDTreeChDirMode=2
 let g:ctrlp_dont_split = 'nerdtree'
 
 " toggle Nerdtree and open the current folder
