@@ -50,6 +50,7 @@ w3m
 xdotool
 xidlehook
 xorg-xinit
+xorg-xbacklight # for laptop brightness
 
 # applications
 firefox
