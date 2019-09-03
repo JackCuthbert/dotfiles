@@ -20,14 +20,14 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 # ╚══════╝╚══════╝╚═╝  ╚═╝
 #
 fresh-options --file=~/.zshrc --marker
-  fresh zsh/env.sh
-  fresh zsh/alias.sh
-  fresh zsh/history.sh
-  fresh zsh/nvm.sh
-  fresh zsh/direnv.sh
-  fresh zsh/vi-mode.sh
-  fresh zsh/startx.sh
-  fresh zsh/zplugin.sh # NOTE: zplugin must be last
+  fresh config/zsh/env.sh
+  fresh config/zsh/alias.sh
+  fresh config/zsh/history.sh
+  fresh config/zsh/nvm.sh
+  fresh config/zsh/direnv.sh
+  fresh config/zsh/vi-mode.sh
+  fresh config/zsh/startx.sh
+  fresh config/zsh/zplugin.sh # NOTE: zplugin must be last
 fresh-options
 
 #
@@ -80,15 +80,15 @@ fresh-options
 # ╚═╝╚═════╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚══════╝
 #
 fresh-options --file=~/.config/i3/config --marker
-  fresh i3/colors.conf # NOTE: Should be first!
+  fresh config/i3/colors.conf # NOTE: Should be first!
 
-  fresh i3/default.conf
-  fresh i3/bar.conf
+  fresh config/i3/default.conf
+  fresh config/i3/bar.conf
 
-  fresh i3/modes/\*.conf
-  fresh i3/keybindings/\*.conf
+  fresh config/i3/modes/\*.conf
+  fresh config/i3/keybindings/\*.conf
 
-  fresh i3/startup.conf # NOTE: Should be last!
+  fresh config/i3/startup.conf # NOTE: Should be last!
 fresh-options
 
 #
@@ -180,7 +180,7 @@ fresh-options
 #  ╚═════╝ ╚═╝   ╚═╝
 #
 fresh-options --file
-  fresh git/\*
+  fresh config/git/\*
 fresh-options
 
 fresh-options --file=~/.gitignore_global --marker
