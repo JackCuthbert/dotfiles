@@ -29,6 +29,3 @@ alias music="ncmpcpp -b ~/.config/ncmpcpp/bindings"
 # file listing
 alias l="exa --group-directories-first -gl --git"
 alias la="l -a"
-
-# file browser
-alias n="nnn"

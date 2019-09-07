@@ -40,9 +40,9 @@ i3status
 lxappearance
 network-manager-applet
 networkmanager
-nnn
 papirus-icon-theme
 qt5-base # for multimc
+ranger
 redshift
 rofi
 rsync
@@ -50,8 +50,8 @@ thefuck
 w3m
 xdotool
 xidlehook
-xorg-xinit
 xorg-xbacklight # for laptop brightness
+xorg-xinit
 
 # applications
 firefox
