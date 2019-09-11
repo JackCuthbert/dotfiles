@@ -1,5 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
+" File browser
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'travisjeffery/vim-auto-mkdir'
 Plug 'Asheq/close-buffers.vim'
