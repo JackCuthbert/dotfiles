@@ -2,7 +2,7 @@
 export QT_QPA_PLATFORMTHEME=qt5ct
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export PATH=$HOME/bin:$PATH # Local binary paths
+export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"
 export GOPATH=$HOME/go
 export NVM_LAZY_LOAD="true"
 
