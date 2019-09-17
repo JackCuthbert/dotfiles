@@ -20,15 +20,15 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 # ╚══════╝╚══════╝╚═╝  ╚═╝
 #
 fresh-options --file=~/.zshrc --marker
-  fresh config/zsh/env.sh
-  fresh config/zsh/alias.sh
-  fresh config/zsh/history.sh
-  fresh config/zsh/nvm.sh
-  fresh config/zsh/direnv.sh
-  fresh config/zsh/vi-mode.sh
-  fresh config/zsh/startx.sh
+  fresh config/zsh/env.zsh
+  fresh config/zsh/alias.zsh
+  fresh config/zsh/history.zsh
+  fresh config/zsh/nvm.zsh
+  fresh config/zsh/direnv.zsh
+  fresh config/zsh/vi-mode.zsh
+  fresh config/zsh/startx.zsh
   fresh config/zsh/starship.zsh
-  fresh config/zsh/zplugin.sh # NOTE: zplugin must be last
+  fresh config/zsh/zplugin.zsh # NOTE: zplugin must be last
 fresh-options
 
 #
