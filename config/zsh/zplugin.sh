@@ -25,6 +25,3 @@ zplugin snippet OMZ::plugins/git/git.plugin.zsh
 # thefuck
 zplugin ice wait"1" lucid
 zplugin light laggardkernel/zsh-thefuck
-
-# Theme
-zplugin light subnixr/minimal

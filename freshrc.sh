@@ -27,6 +27,7 @@ fresh-options --file=~/.zshrc --marker
   fresh config/zsh/direnv.sh
   fresh config/zsh/vi-mode.sh
   fresh config/zsh/startx.sh
+  fresh config/zsh/starship.zsh
   fresh config/zsh/zplugin.sh # NOTE: zplugin must be last
 fresh-options
 
@@ -107,6 +108,7 @@ fresh config/redshift.conf --file=~/.config/redshift.conf
 fresh config/rofi/dracula.rasi --file=~/.config/rofi/dracula.rasi
 fresh config/rofi/rofi.conf --file=~/.config/rofi/config
 fresh config/ssh.conf --file=~/.ssh/config
+fresh config/starship.toml --file=~/.config/starship.toml
 
 #
 # ███╗   ██╗ ██████╗███╗   ███╗██████╗  ██████╗██████╗ ██████╗
