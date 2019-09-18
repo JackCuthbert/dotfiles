@@ -10,7 +10,7 @@ neovim
 openssh
 python
 rustup
-starship
+starship-bin
 unzip
 vim
 vscodium-bin
