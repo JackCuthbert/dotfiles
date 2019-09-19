@@ -13,3 +13,6 @@ bindkey '^[3;5~' delete-char
 
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
+
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line

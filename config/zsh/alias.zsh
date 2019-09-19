@@ -29,3 +29,6 @@ alias music="ncmpcpp -b ~/.config/ncmpcpp/bindings"
 # file listing
 alias l="exa --group-directories-first -gl --git"
 alias la="l -a"
+
+# vim-like commands
+alias :q='exit'
