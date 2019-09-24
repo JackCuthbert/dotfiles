@@ -12,10 +12,6 @@ set showmatch           " highlight matching [{()}]
 " support hot-reloading in parcel/webpack
 set backupcopy=yes
 
-" natural split directions
-set splitbelow
-set splitright
-
 " remap leader to ';'
 let mapleader=";"
 
@@ -30,3 +26,16 @@ vnoremap <leader>y "+y
 highlight ColorColumn ctermbg=8
 nnoremap <silent> <leader>r :execute "set colorcolumn="
                   \ . (&colorcolumn == "" ? "80,120" : "")<CR>
+
+" Navigation splits
+" -----------------
+
+" natural split directions
+set splitbelow
+set splitright
+
+" Easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
