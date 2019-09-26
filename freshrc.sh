@@ -109,6 +109,7 @@ fresh config/rofi/dracula.rasi --file=~/.config/rofi/dracula.rasi
 fresh config/rofi/rofi.conf --file=~/.config/rofi/config
 fresh config/ssh.conf --file=~/.ssh/config
 fresh config/starship.toml --file=~/.config/starship.toml
+fresh config/autorandr/postswitch --file=~/.config/autorandr/postswitch
 
 #
 # ███╗   ██╗ ██████╗███╗   ███╗██████╗  ██████╗██████╗ ██████╗
@@ -197,3 +198,4 @@ fresh-options --file=~/.gitignore_global --marker
   # Language specific
   fresh github/gitignore Node.gitignore
 fresh-options
+
