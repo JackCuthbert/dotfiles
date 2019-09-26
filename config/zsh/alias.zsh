@@ -32,3 +32,6 @@ alias la="l -a"
 
 # vim-like commands
 alias :q='exit'
+
+# direnv
+alias da='direnv allow'
