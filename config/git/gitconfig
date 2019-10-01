@@ -2,6 +2,11 @@
   name = Jack Cuthbert
   email = jckcthbrt@gmail.com
   signingkey = "DF233537630051E5!"
+[gpg]
+  program = /usr/bin/gpg2
+[commit]
+  template = ~/.gitmessage
+  gpgsign = true
 [core]
   ignorecase = false
   excludesfile = ~/.gitignore_global
@@ -79,6 +84,3 @@
   added = green
   changed = red
   untracked = magenta
-[commit]
-  template = ~/.gitmessage
-  gpgsign = true
