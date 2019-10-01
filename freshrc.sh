@@ -23,11 +23,12 @@ fresh-options --file=~/.zshrc --marker
   fresh config/zsh/env.zsh
   fresh config/zsh/alias.zsh
   fresh config/zsh/history.zsh
+  fresh config/zsh/starship.zsh
   fresh config/zsh/nvm.zsh
   fresh config/zsh/direnv.zsh
   fresh config/zsh/vi-mode.zsh
   fresh config/zsh/startx.zsh
-  fresh config/zsh/starship.zsh
+  fresh config/zsh/keychain.zsh
   fresh config/zsh/zplugin.zsh # NOTE: zplugin must be last
 fresh-options
 
@@ -110,6 +111,7 @@ fresh config/rofi/rofi.conf --file=~/.config/rofi/config
 fresh config/ssh.conf --file=~/.ssh/config
 fresh config/starship.toml --file=~/.config/starship.toml
 fresh config/autorandr/postswitch --bin=~/.config/autorandr/postswitch
+fresh config/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 
 #
 # ███╗   ██╗ ██████╗███╗   ███╗██████╗  ██████╗██████╗ ██████╗
