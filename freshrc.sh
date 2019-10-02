@@ -111,7 +111,17 @@ fresh config/rofi/rofi.conf --file=~/.config/rofi/config
 fresh config/ssh.conf --file=~/.ssh/config
 fresh config/starship.toml --file=~/.config/starship.toml
 fresh config/autorandr/postswitch --bin=~/.config/autorandr/postswitch
-fresh config/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
+
+#
+#  ██████╗ ██████╗  ██████╗
+# ██╔════╝ ██╔══██╗██╔════╝
+# ██║  ███╗██████╔╝██║  ███╗
+# ██║   ██║██╔═══╝ ██║   ██║
+# ╚██████╔╝██║     ╚██████╔╝
+#  ╚═════╝ ╚═╝      ╚═════╝
+#
+fresh config/gpg/gpg.conf --file=~/.gnupg/gpg.conf
+fresh config/gpg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 
 #
 # ███╗   ██╗ ██████╗███╗   ███╗██████╗  ██████╗██████╗ ██████╗
