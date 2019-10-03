@@ -15,6 +15,9 @@ Plug 'jxnblk/vim-mdx-js'
 " Rust
 Plug 'rust-lang/rust.vim'
 
+" GPG
+Plug 'jamessan/vim-gnupg'
+
 " Autocomplete
 " ------------
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

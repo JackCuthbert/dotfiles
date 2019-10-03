@@ -142,7 +142,7 @@ fresh config/ncmpcpp/bindings.conf --file=~/.config/ncmpcpp/bindings
 # ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 # ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 #
-fresh config/nvim/init.vim --file=~/.config/nvim/init.vim
+fresh config/nvim/plugs.vim --file=~/.config/nvim/init.vim
 fresh config/nvim/coc-settings.json --file=~/.config/nvim/coc-settings.json
 fresh-options --file=~/.config/nvim/init.vim --marker='"'
   fresh config/nvim/settings/\*.vim
