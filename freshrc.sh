@@ -46,7 +46,6 @@ fresh-options --file=~/.zshrc --marker
   fresh config/zsh/zplugin.zsh # NOTE: zplugin must be last
 fresh-options
 
-
 #
 # ██╗  ██╗ ██████╗ ██████╗  ██████╗
 # ╚██╗██╔╝██╔═══██╗██╔══██╗██╔════╝
@@ -55,26 +54,14 @@ fresh-options
 # ██╔╝ ██╗╚██████╔╝██║  ██║╚██████╔╝
 # ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝
 #
-fresh-options --file=~/.xinitrc --marker
-  # NOTE: Must be first
-  # Load everything that the x server needs
-  fresh config/xinit/pre.sh
+# Initial xorg commands (setup DISPLAY, start i3, etc)
+fresh config/xorg/xinit.sh --file=~/.xinitrc
 
-  # Overrides for desktop
-  if [[ "$(hostname)" == "kanade" ]]; then
-    fresh config/xinit/kanade/\*
-  fi
-
-  # NOTE: Must be last
-  # start window manager
-  fresh config/xinit/post.sh
-fresh-options
-
-# Global Xorg startup config
-fresh config/xserverrc.conf --file=~/.xserverrc
+# Global Xorg server startup config
+fresh config/xorg/xserverrc.conf --file=~/.xserverrc
 
 # Colours and font configureation for Xorg
-fresh config/xresources.conf --file=~/.Xresources
+fresh config/xorg/xresources.conf --file=~/.Xresources
 
 #
 #  ██████╗ ██████╗ ███╗   ███╗██████╗ ████████╗ ██████╗ ███╗   ██╗
@@ -157,12 +144,12 @@ fresh config/ncmpcpp/bindings.conf --file=~/.config/ncmpcpp/bindings
 # ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 # ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 #
-fresh config/nvim/plugs.vim --file=~/.config/nvim/init.vim
-fresh config/nvim/coc-settings.json --file=~/.config/nvim/coc-settings.json
 fresh-options --file=~/.config/nvim/init.vim --marker='"'
-  fresh config/nvim/settings/\*.vim
-  fresh config/nvim/plug-config/\*.vim
+  fresh config/nvim/plugins.vim # NOTE: Must be first
+  fresh config/nvim/nvim-config/\*.vim
+  fresh config/nvim/plugin-config/\*.vim
 fresh-options
+fresh config/nvim/coc-settings.json --file=~/.config/nvim/coc-settings.json
 
 #
 # ████████╗███╗   ███╗██╗   ██╗██╗  ██╗
@@ -215,14 +202,17 @@ fresh-options
 
 fresh-options --file=~/.gitignore_global --marker
   # Global ignores
-  fresh github/gitignore Global/macOS.gitignore
+  fresh github/gitignore Global/GPG.gitignore
   fresh github/gitignore Global/Vagrant.gitignore
   fresh github/gitignore Global/Vim.gitignore
   fresh github/gitignore Global/VisualStudioCode.gitignore
   fresh github/gitignore Global/Windows.gitignore
   fresh github/gitignore Global/Xcode.gitignore
+  fresh github/gitignore Global/macOS.gitignore
 
   # Language specific
+  fresh github/gitignore Go.gitignore
   fresh github/gitignore Node.gitignore
+  fresh github/gitignore Rust.gitignore
 fresh-options
 
