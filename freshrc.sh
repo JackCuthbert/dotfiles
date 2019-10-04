@@ -19,18 +19,33 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 # ███████╗███████║██║  ██║
 # ╚══════╝╚══════╝╚═╝  ╚═╝
 #
-fresh-options --file=~/.zshrc --marker
+
+# 1. Run on login?
+# 2. May take some time to run
+# 3. Before everything else?
+fresh-options --file=~/.zlogin --marker
+  fresh config/zsh/startx.zsh
+fresh-options
+
+# 1. Needed by something in .zshrc?
+# 2. Needed by a command to be interactive?
+# 3. Needs to be updated on every new shell?
+fresh-options --file=~/.zshenv --marker
   fresh config/zsh/env.zsh
   fresh config/zsh/alias.zsh
-  fresh config/zsh/history.zsh
-  fresh config/zsh/starship.zsh
-  fresh config/zsh/nvm.zsh
-  fresh config/zsh/direnv.zsh
-  fresh config/zsh/vi-mode.zsh
-  fresh config/zsh/startx.zsh
+fresh-options
+
+# 1. Run with interactive shell?
+# 2. Initialising a shell modules?
+fresh-options --file=~/.zshrc --marker
   fresh config/zsh/keychain.zsh
+  fresh config/zsh/history.zsh
+  fresh config/zsh/vi-mode.zsh
+  fresh config/zsh/direnv.zsh
+  fresh config/zsh/starship.zsh
   fresh config/zsh/zplugin.zsh # NOTE: zplugin must be last
 fresh-options
+
 
 #
 # ██╗  ██╗ ██████╗ ██████╗  ██████╗
