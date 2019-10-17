@@ -110,9 +110,18 @@ fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 fresh config/redshift.conf --file=~/.config/redshift.conf
 fresh config/rofi/dracula.rasi --file=~/.config/rofi/dracula.rasi
 fresh config/rofi/rofi.conf --file=~/.config/rofi/config
-fresh config/ssh.conf --file=~/.ssh/config
 fresh config/starship.toml --file=~/.config/starship.toml
 fresh config/autorandr/postswitch --bin=~/.config/autorandr/postswitch.d/update-wallpaper
+
+#
+# ███████╗███████╗██╗  ██╗
+# ██╔════╝██╔════╝██║  ██║
+# ███████╗███████╗███████║
+# ╚════██║╚════██║██╔══██║
+# ███████║███████║██║  ██║
+# ╚══════╝╚══════╝╚═╝  ╚═╝
+#
+fresh config/ssh/ssh.conf --file=~/.ssh/config
 
 #
 #  ██████╗ ██████╗  ██████╗
@@ -123,6 +132,7 @@ fresh config/autorandr/postswitch --bin=~/.config/autorandr/postswitch.d/update-
 #  ╚═════╝ ╚═╝      ╚═════╝
 #
 fresh config/gpg/gpg.conf --file=~/.gnupg/gpg.conf
+fresh config/gpg/sshcontrol --file=~/.gnupg/sshcontrol
 fresh config/gpg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 
 #

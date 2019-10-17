@@ -1,6 +1,3 @@
-# GPG Key
-export KEYID=0x0689854D762DF9AF
-
 # Generic env vars
 export QT_QPA_PLATFORMTHEME=qt5ct
 export EDITOR="nvim"
