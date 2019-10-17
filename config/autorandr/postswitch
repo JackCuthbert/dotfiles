@@ -1,2 +1,5 @@
-#/bin/bash
-feh --bg-fill "/home/jack/.dotfiles/wallpaper.jpg"
+#/bin/sh
+
+set -e
+
+sleep 1; /usr/bin/feh --bg-fill "/home/jack/.dotfiles/wallpaper.jpg"
