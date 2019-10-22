@@ -15,7 +15,7 @@ if [[ "$(hostname)" == "kanade" ]]; then
       ''
 fi
 
-if [[ "$(hostname)" == "pepper" ]]; then
+if [[ "$(hostname)" == "sinon" ]]; then
   xidlehook \
     `# Don't lock when there's a fullscreen application` \
     --not-when-fullscreen \
