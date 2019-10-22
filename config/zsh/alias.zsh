@@ -8,10 +8,14 @@ alias clterm="clear && zshsource"
 alias cl="clear"
 alias cll="clear && l"
 alias g="git"
-alias dotfiles="cd ~/.dotfiles"
 alias record="asciinema rec"
 alias v="nvim"
 alias vs="vscodium"
+
+# Common directories
+alias dotfiles="cd ~/.dotfiles"
+alias docs="cd ~/Documents"
+alias pics="cs ~/Pictures"
 
 # Docker
 alias c='docker-compose'
