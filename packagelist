@@ -64,10 +64,10 @@ steam
 teamspeak3
 
 # screenshots
-imagemagick
-maim
-scrot
+flameshot
 xclip
+imagemagick # for lockscreen
+scrot # for lockscreen
 
 # sound
 pavucontrol
