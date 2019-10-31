@@ -1,5 +1,4 @@
-nnoremap <leader>g :Grepper -tool git<cr>
-nnoremap <leader>G :Grepper -tool rg<cr>
+nnoremap <leader>g :Grepper -tool rg<cr>
 
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
@@ -8,4 +7,3 @@ xmap gs <plug>(GrepperOperator)
 let g:grepper               = {}
 let g:grepper.tools         = ['rg', 'grep', 'git']
 let g:grepper.jump          = 1
-let g:grepper.next_tool     = '<leader>g'
