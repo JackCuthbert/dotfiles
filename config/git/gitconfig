@@ -66,7 +66,7 @@
 
   # Branches
   b = "!git for-each-ref --sort='-authordate' --format='%(authordate:short)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
-  bp = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
+  bp = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #" # get parent branch name
 
   # Branching strategies
   mupm = !git checkout master && git pull && git checkout - && git merge master # update master and merge into current branch
@@ -75,6 +75,7 @@
   hard-pull = !git fetch && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD) # throw away all local changes/commits and reset back to remote's version of branch
   rasm = "rebase -i --autosquash master"      # interactive rebase with autosquash on master
   rasd = "rebase -i --autosquash development" # interactive rebase with autosquash on development
+  rasp = !git rebase -i --autosquash $(git bp) # interactive rebase with autosquash on parent branch
 
   # Aliases
   g="!exec git"
