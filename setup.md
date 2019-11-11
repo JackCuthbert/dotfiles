@@ -41,9 +41,15 @@ git clone https://github.com/zdharma/zplugin.git ~/.zplugin/bin
 
 Install [vimplug](https://github.com/junegunn/vim-plug) for [neovim](https://neovim.io/):
 
-```
+```bash
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+Install [sdkman](https://github.com/sdkman/sdkman-cli)
+
+```bash
+curl -s https://get.sdkman.io | bash
 ```
 
 ## Optional software
