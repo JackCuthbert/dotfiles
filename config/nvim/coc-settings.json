@@ -1,4 +1,10 @@
 {
+  "languageserver": {
+    "kotlin": {
+      "command": "/home/jack/Code/kotlin-language-server/server/build/scripts/kotlin-language-server",
+      "filetypes": ["kotlin"]
+    }
+  },
   "coc.preferences.diagnostic.displayByAle": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "rust"

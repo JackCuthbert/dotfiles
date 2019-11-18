@@ -15,6 +15,9 @@ Plug 'jxnblk/vim-mdx-js'
 " Rust
 Plug 'rust-lang/rust.vim'
 
+" Kotlin
+Plug 'udalov/kotlin-vim'
+
 " GPG
 Plug 'jamessan/vim-gnupg'
 
