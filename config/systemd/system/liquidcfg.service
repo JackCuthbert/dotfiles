@@ -3,13 +3,13 @@ Description=NZXT AIO + Lighting Service
 
 [Service]
 Type=oneshot
-# CPU Cooler
-ExecStart=liquidctl --device 0 set pump speed 35 70  40 80  45 85  50 90  55 95  60 100
-ExecStart=liquidctl --device 0 set fan speed  20 30  30 50  40 60  45 70  50 80  55 90  60 100
-ExecStart=liquidctl --device 0 set ring color breathing ffffff
-ExecStart=liquidctl --device 0 set logo color off
 # Smart device lighting
-ExecStart=liquidctl --device 1 set led color fixed 323232
+ExecStart=liquidctl --device 0 set led color fixed 323232
+# CPU Cooler
+ExecStart=liquidctl --device 1 set pump speed 35 70  40 80  45 85  50 90  55 95  60 100
+ExecStart=liquidctl --device 1 set fan speed  20 30  30 50  40 60  45 70  50 80  55 90  60 100
+ExecStart=liquidctl --device 1 set ring color breathing ffffff
+ExecStart=liquidctl --device 1 set logo color off
 
 [Install]
 WantedBy=default.target
