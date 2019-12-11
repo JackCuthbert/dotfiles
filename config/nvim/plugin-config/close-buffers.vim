@@ -1,1 +1,1 @@
-nnoremap <silent> Q :CloseBuffersMenu<CR>
+nnoremap <silent> Q :Bdelete menu<CR>
