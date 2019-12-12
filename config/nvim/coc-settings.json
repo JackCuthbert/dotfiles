@@ -5,7 +5,6 @@
       "filetypes": ["kotlin"]
     }
   },
-  "coc.preferences.diagnostic.displayByAle": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "rust"
   ],
