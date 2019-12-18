@@ -57,7 +57,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 
 " Themes
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'JackCuthbert/challenger-deep-theme-vim', { 'as': 'challenger-deep' }
 Plug 'itchyny/lightline.vim'
 
 " Non-editor things
