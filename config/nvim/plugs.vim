@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 " TypeScript + JavaScript
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'pangloss/vim-javascript'
+Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
