@@ -8,29 +8,26 @@
  */
 
 * {
-  /* Dracula theme */
-  colorForeground:  #F8F8F2;
-  colorBackground:  #282A36;
-  colorBlack:       #1E1F29;
-  colorBlackLight:  #4D4D4D;
-  colorRed:         #FF5555;
-  colorRedLight:    #FF6E67;
-  colorGreen:       #50FA7B;
-  colorGreenLight:  #5AF78E;
-  colorYellow:      #F1FA8C;
-  colorYellowLight: #F4F99D;
-  colorPurple:      #BD93F9;
-  colorPurpleLight: #CAA9FA;
-  colorPink:        #FF79C6;
-  colorPinkLight:   #FF92D0;
-  colorCyan:        #8BE9FD;
-  colorCyanLight:   #9AEDFE;
-  colorGrey:        #BFBFBF;
-  colorGreyLight:   #E6E6E6;
-  colorOrange:      #FFB86C;
-  colorOrangeLight: #ffc17f;
-  colorBlue:        #44475A;
-  colorBlueLight:   #6272A4;
+  colorBackground:    #1B182C;
+  colorForeground:    #CBE3E7;
+
+  colorBlack:         #100E23;
+  colorRed:           #FF8080;
+  colorGreen:         #95FFA4;
+  colorYellow:        #FFE9AA;
+  colorBlue:          #91DDFF;
+  colorMagenta:       #C991E1;
+  colorCyan:          #AAFFE4;
+  colorWhite:         #CBE3E7;
+
+  colorBlackLight:    #565575;
+  colorRedLight:      #FF5458;
+  colorGreenLight:    #62D196;
+  colorYellowLight:   #FFB378;
+  colorBlueLight:     #65B2FF;
+  colorMagentaLight:  #906CFF;
+  colorCyanLight:     #63F2F1;
+  colorWhiteLight:    #A6B3CC;
 
   spacing: 0;
   background-color: @colorBlack;
@@ -39,7 +36,7 @@
 window {
   transparency: "real";
   /*fullscreen: true;*/
-  background-color: #263238CC; /*base00 + CC (80% opacity)*/
+  background-color: #1B182CCC; /*base00 + CC (80% opacity)*/
   width: 900px;
 }
 
@@ -50,7 +47,7 @@ mainbox {
   /*margin: 20%;*/
   padding: 16px 0;
   border: 2px;
-  border-color: @colorBlueLight;
+  border-color: @colorMagentaLight;
 }
 
 inputbar {
@@ -59,14 +56,14 @@ inputbar {
 }
 
 prompt {
-  text-color: @colorPink;
+  text-color: @colorMagentaLight;
 }
 
 textbox-prompt-colon {
   expand: false;
   str: ":";
   margin: 0 1ch 0 0;
-  text-color: @colorPink;
+  text-color: @colorMagentaLight;
 }
 
 entry {
@@ -84,7 +81,7 @@ mode-switcher, message {
 
 button, textbox {
   background-color: @colorBlue;
-  text-color: @colorPink;
+  text-color: @colorMagentaLight;
   padding: 5px;
 }
 
@@ -99,11 +96,11 @@ listview {
 }
 
 scrollbar {
-  background-color: @colorBlue;
-  handle-color: @colorPink;
+  background-color: @colorBlackLight;
+  handle-color: @colorMagentaLight;
   handle-width: 5px;
   border: 0 0px;
-  border-color: @colorPink;
+  border-color: @colorMagentaLight;
   margin: 0 0 0 20px;
 }
 
@@ -117,22 +114,36 @@ element normal {
 }
 
 element selected {
-  background-color: @colorBlue;
+  background-color: @colorBlackLight;
 }
 
 element alternate {
   /*background-color: @base03;*/
 }
 
-element normal normal, element selected normal, element alternate normal {
+element normal normal,
+element alternate normal {
   text-color: @colorForeground;
 }
 
-element normal urgent, element selected urgent, element alternate urgent {
-  text-color: @colorRed;
+element selected normal {
+  text-color: @colorForeground;
+  background-color: @colorBlackLight;
 }
 
-element normal active, element selected active, element alternate active {
-  text-color: @colorPink;
+element selected active {
+  text-color: @colorGreen;
+}
+
+element alternate active,
+element normal active {
+  text-color: @colorGreen;
+}
+
+element selected urgent {}
+
+element normal urgent,
+element alternate urgent {
+  text-color: @colorRed;
 }
 
