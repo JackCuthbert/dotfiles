@@ -4,9 +4,9 @@ call plug#begin('~/.vim/plugged')
 " ----------------
 
 " TypeScript + JavaScript
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " MDX
@@ -57,7 +57,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 
 " Themes
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'itchyny/lightline.vim'
 
 " Non-editor things

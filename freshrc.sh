@@ -62,7 +62,7 @@ fresh config/xorg/xinit.sh --file=~/.xinitrc
 fresh config/xorg/xserverrc.conf --file=~/.xserverrc
 
 # Colours and font configureation for Xorg
-fresh config/xorg/xresources.conf --file=~/.Xresources
+fresh challenger-deep-theme/xresources challenger-deep.xdefaults --file=~/.Xresources
 
 #
 #  ██████╗ ██████╗ ███╗   ███╗██████╗ ████████╗ ██████╗ ███╗   ██╗
@@ -157,6 +157,8 @@ fresh config/ncmpcpp/bindings.conf --file=~/.config/ncmpcpp/bindings
 #
 fresh-options --file=~/.config/nvim/init.vim --marker='"'
   fresh config/nvim/plugins.vim # NOTE: Must be first
+  fresh config/nvim/theme.vim
+
   fresh config/nvim/nvim-config/\*.vim
   fresh config/nvim/plugin-config/\*.vim
 fresh-options
@@ -185,6 +187,7 @@ fresh-options
 #
 fresh-options --file=~/.config/alacritty/alacritty.yml --marker=#
   fresh config/alacritty/\*
+  fresh challenger-deep-theme/alacritty challenger-deep.yml
 fresh-options
 
 #
