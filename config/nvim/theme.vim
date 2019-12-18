@@ -4,9 +4,10 @@ if has('nvim') || has('termguicolors')
   set termguicolors
 endif
 
-" Don't lose transparency
-hi Normal ctermbg=none
-highlight NonText ctermbg=none
-
 " Colors
 colorscheme challenger_deep
+
+" Don't let theme override background colours
+" NOTE: This must be after `colorscheme` call
+highlight Normal guibg=none
+highlight NonText guibg=none
