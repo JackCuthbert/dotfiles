@@ -27,9 +27,6 @@ alias pacman-cleanup="sudo pacman -Rns $(pacman -Qtdq)"
 # list installed packages _not_ in the base or base-devel groups
 alias pacman-list="comm -23 <(pacman -Qeq | sort) <(pacman -Qgq base base-devel | sort) | less"
 
-# becuase who wants to type that
-alias music="ncmpcpp -b ~/.config/ncmpcpp/bindings"
-
 # file listing
 alias l="exa --group-directories-first -gl --git"
 alias la="l -a"
