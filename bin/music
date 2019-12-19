@@ -1,18 +1,26 @@
 #!/bin/bash
 
+set -e
+
 STACK="mpd mpdscribble mpd-mpris"
 
 for arg in "$@"
 do
     case $arg in
-      -s|--start)
-        systemctl --user start $STACK; exit 0
+      -r|--up)
+        echo "Starting MPD services..."
+        systemctl --user start "$STACK"
+        exit 0
         ;;
-      -x|--stop)
-        systemctl --user stop $STACK; exit 0
+      -x|--down)
+        echo "Stopping MPD services..."
+        systemctl --user stop "$STACK"
+        exit 0
         ;;
+      -s|--status) systemctl --user status -n 0 $STACK; exit 0 ;;
       *)
-        echo "Only --start (-s) or --stop (-x) arguments are available"; exit 1
+        echo "Only --up (-u), --down (-d), or --status (-s) arguments are available"
+        exit 1
         ;;
     esac
 done
