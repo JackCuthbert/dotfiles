@@ -62,3 +62,15 @@ chmod +x pia-nm.sh && sudo ./pia-nm.sh
 # Select UDP and strong encryption
 sudo systemctl restart NetworkManager.service
 ```
+
+## Gnome Keyring
+
+Some desktop applications require that this is installed. Since I use keychain
+to manage SSH and GPG keys, the SSH portion of Gnome Keyring must be disabled.
+
+```bash
+cp /etc/xdg/autostart/gnome-keyring-ssh.desktop ~/.config/autostart/
+echo "Hidden=true" >> ~/.config/autostart/gnome-keyring-ssh.desktop
+```
+
+[Ref](https://wiki.archlinux.org/index.php/GNOME/Keyring#Disable_keyring_daemon_components)
