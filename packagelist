@@ -59,6 +59,7 @@ xorg-xinit
 firefox
 lib32-vulkan-icd-loader # for proton/lutris
 megasync
+nextcloud-client
 slack-desktop
 steam
 teamspeak3
