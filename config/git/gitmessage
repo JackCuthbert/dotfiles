@@ -19,10 +19,10 @@
 #	chore: Changes to auxiliary tools and libraries such as dependencies
 #	ci: Changes to the continuous integration or delivery process
 #	docs: Documentation only changes
-#	feat: A new feature
+#	feat: A new feature ie. a change that adds functionality that wasn't previously present
 #	fix: A bug fix
 #	perf: A code change that improves performance
 #	refactor: A code change that neither fixes a bug nor adds a feature
-#	revert: Revets a previous commit
+#	revert: Reverts a previous commit
 #	style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 #	test: Adding missing or correcting existing tests
