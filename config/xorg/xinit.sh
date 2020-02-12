@@ -12,5 +12,8 @@ xset s off
 xset s no blank
 xset dpms 300 300 300
 
+# set capslock to be control
+setxkbmap -option caps:ctrl_modifier
+
 # Start i3!
 exec i3
