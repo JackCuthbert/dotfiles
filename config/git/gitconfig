@@ -53,6 +53,11 @@
   dc = diff --cached # show the difference between staged and last commit
   ds = diff --stat # show the number of lines changed across unstaged files
 
+  # Pushing
+  p = push
+  pf = push --force-with-lease
+  pff = push --force
+
   # Staging
   derp = reset # alias for unstaging files
 
