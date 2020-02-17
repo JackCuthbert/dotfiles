@@ -63,7 +63,10 @@ fresh config/xorg/xinit.sh --file=~/.xinitrc
 fresh config/xorg/xserverrc.conf --file=~/.xserverrc
 
 # Colours and font configureation for Xorg
-fresh challenger-deep-theme/xresources challenger-deep.xdefaults --file=~/.Xresources
+fresh-options --file=~/.Xresources
+  fresh challenger-deep-theme/xresources challenger-deep.xdefaults
+  fresh config/xorg/xresources.conf
+fresh-options
 
 #
 #  ██████╗ ██████╗ ███╗   ███╗██████╗ ████████╗ ██████╗ ███╗   ██╗
