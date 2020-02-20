@@ -2,4 +2,4 @@
 
 set -e
 
-sleep 1; /usr/bin/feh --bg-fill "/home/jack/.dotfiles/wallpaper.jpg"
+sleep 1; /usr/bin/feh --bg-fill "/home/jack/.dotfiles/wallpaper.png"
