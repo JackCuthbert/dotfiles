@@ -38,3 +38,5 @@ alias :x='exit'
 
 # direnv
 alias da='direnv allow'
+
+alias open='xdg-open'

@@ -54,6 +54,8 @@ xdotool
 xidlehook
 xorg-xbacklight # for laptop brightness
 xorg-xinit
+zathura
+zathura-pdf-mupdf
 
 # applications
 firefox
