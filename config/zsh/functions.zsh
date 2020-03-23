@@ -9,3 +9,9 @@ function quick_find () {
 
 zle -N quick_find_widget quick_find
 bindkey "^P" quick_find_widget
+
+# Open something and disown the process
+function open () {
+    xdg-open "$*" &
+    disown
+}
