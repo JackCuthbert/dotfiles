@@ -21,9 +21,10 @@ Plug 'udalov/kotlin-vim'
 " GPG
 Plug 'jamessan/vim-gnupg'
 
-" Autocomplete
-" ------------
+" Autocomplete/format
+" -------------------
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 " Editor
 " ------
