@@ -16,6 +16,7 @@ unzip
 vim
 vscodium-bin
 wget
+zoxide
 zsh
 
 # fonts
