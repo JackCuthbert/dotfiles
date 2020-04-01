@@ -70,18 +70,6 @@ fresh-options --file=~/.Xresources
 fresh-options
 
 #
-#  ██████╗ ██████╗ ███╗   ███╗██████╗ ████████╗ ██████╗ ███╗   ██╗
-# ██╔════╝██╔═══██╗████╗ ████║██╔══██╗╚══██╔══╝██╔═══██╗████╗  ██║
-# ██║     ██║   ██║██╔████╔██║██████╔╝   ██║   ██║   ██║██╔██╗ ██║
-# ██║     ██║   ██║██║╚██╔╝██║██╔═══╝    ██║   ██║   ██║██║╚██╗██║
-# ╚██████╗╚██████╔╝██║ ╚═╝ ██║██║        ██║   ╚██████╔╝██║ ╚████║
-#  ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝        ╚═╝    ╚═════╝ ╚═╝  ╚═══╝
-#
-fresh-options --file=~/.config/compton.conf --marker
-  fresh config/compton/\*.conf
-fresh-options
-
-#
 # ██╗██████╗      ██████╗  █████╗ ██████╗ ███████╗
 # ██║╚════██╗    ██╔════╝ ██╔══██╗██╔══██╗██╔════╝
 # ██║ █████╔╝    ██║  ███╗███████║██████╔╝███████╗
@@ -116,6 +104,7 @@ fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 fresh config/redshift.conf --file=~/.config/redshift.conf
 fresh config/rofi/challengerdeep.rasi --file=~/.config/rofi/challengerdeep.rasi
 fresh config/rofi/rofi.conf --file=~/.config/rofi/config
+fresh config/picom.conf --file=~/.config/picom/picom.conf
 fresh config/starship.toml --file=~/.config/starship.toml
 fresh config/autorandr/postswitch --bin=~/.config/autorandr/postswitch.d/update-wallpaper
 
