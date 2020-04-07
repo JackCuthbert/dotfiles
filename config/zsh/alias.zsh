@@ -13,9 +13,7 @@ alias v="nvim"
 alias vs="vscodium"
 
 # Common directories
-alias dotfiles="cd ~/.dotfiles"
-alias docs="cd ~/Documents"
-alias pics="cs ~/Pictures"
+alias f="zi"
 
 # Docker
 alias c='docker-compose'
