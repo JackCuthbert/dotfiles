@@ -1,12 +1,13 @@
+# requires `nfs-utils`
 [Unit]
-Description=Audio NFS Mount
+Description=<WHAT> NFS Mount
 Requires=systemd-networkd.service
 After=network-online.target
 Wants=network-online.target
 
 [Mount]
-What=192.168.1.11:/volume1/Audio/Lossless
-Where=/nfs/audio
+What=<SERVER_IP>:/what/to/mount
+Where=/where/to/mount
 Type=nfs
 Options=_netdev,auto
 
