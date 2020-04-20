@@ -7,7 +7,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
-" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " MDX
 Plug 'jxnblk/vim-mdx-js'
