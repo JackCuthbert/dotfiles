@@ -214,6 +214,7 @@ fresh-options --file=~/.gitignore_global --marker
   fresh github/gitignore Global/Vagrant.gitignore
   fresh github/gitignore Global/Vim.gitignore
   fresh github/gitignore Global/VisualStudioCode.gitignore
+  fresh github/gitignore Global/JetBrains.gitignore
   fresh github/gitignore Global/Windows.gitignore
   fresh github/gitignore Global/Xcode.gitignore
   fresh github/gitignore Global/macOS.gitignore
@@ -222,5 +223,7 @@ fresh-options --file=~/.gitignore_global --marker
   fresh github/gitignore Go.gitignore
   fresh github/gitignore Node.gitignore
   fresh github/gitignore Rust.gitignore
+  fresh github/gitignore Kotlin.gitignore
+  fresh github/gitignore Java.gitignore
 fresh-options
 
