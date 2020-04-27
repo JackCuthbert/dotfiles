@@ -10,9 +10,11 @@
 [core]
   ignorecase = false
   excludesfile = ~/.gitignore_global
-  pager = "diff-so-fancy | less --tabs=4 -RFX"
+  pager = delta --dark --theme="ansi-dark"
 [push]
   default = simple
+[interactive]
+  diffFilter = delta --color-only
 [color]
   diff = auto
   status = auto
