@@ -108,6 +108,8 @@ fresh config/picom.conf --file=~/.config/picom/picom.conf
 fresh config/starship.toml --file=~/.config/starship.toml
 fresh config/autorandr/postswitch --bin=~/.config/autorandr/postswitch.d/update-wallpaper
 
+fresh config/systemd/user --file=~/.config/systemd/user/
+
 #
 # ███████╗███████╗██╗  ██╗
 # ██╔════╝██╔════╝██║  ██║
