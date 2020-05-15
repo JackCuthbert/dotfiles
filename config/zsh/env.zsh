@@ -2,8 +2,6 @@
 export QT_QPA_PLATFORMTHEME=qt5ct
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"
-export GOPATH=$HOME/go
 
 # Use pixel-perfect scrolling in firefox
 export MOZ_USE_XINPUT2=1
