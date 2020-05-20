@@ -1,0 +1,42 @@
+/*
+ * Default scheme
+ * by Chris Kempson (http://chriskempson.com)
+ *
+ * GTK 3.0 template 
+ * by Jonn Mostovoy - https://github.com/manpages
+ *
+ * Generated
+ * by base16-builder - https://github.com/base16-builder/base16-builder
+ */
+
+@define-color theme_base_color #181818;
+@define-color theme_fg_color #b8b8b8;
+@define-color theme_active_color #383838;
+@define-color theme_insensitive_color #b8b8b8;
+@define-color theme_insensitive_bg #181818;
+
+@define-color theme_cursor_color #7cafc2;
+
+/* fallback mode */
+@define-color os_chrome_bg_color #181818;
+@define-color os_chrome_fg_color #b8b8b8;
+@define-color os_chrome_selected_bg_color #e8e8e8;
+@define-color os_chrome_selected_fg_color #383838;
+
+* {
+    /* Pidgin */
+    -GtkIMHtml-hyperlink-color: #7cafc2;
+    -GtkIMHtml-hyperlink-visited-color: #ba8baf;
+    -GtkIMHtml-hyperlink-prelight-color: #f8f8f8;
+
+    /* Evolution */
+    -GtkHTML-link-color: #7cafc2;
+    -GtkHTML-vlink-color: #ba8baf;
+    -GtkHTML-cite-color: #a1b56c;
+
+    -GtkWidget-link-color: #7cafc2;
+    -GtkWidget-visited-link-color: #ba8baf;
+}
+
+@import url("resource:///org/gnome/HighContrastInverse/a11y.css");
+

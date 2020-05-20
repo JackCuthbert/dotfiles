@@ -65,7 +65,7 @@ fresh config/xorg/xserverrc.conf --file=~/.xserverrc
 
 # Colours and font configureation for Xorg
 fresh-options --file=~/.Xresources
-  fresh challenger-deep-theme/xresources challenger-deep.xdefaults
+  fresh pinpox/base16-xresources xresources/base16-default-dark-256.Xresources
   fresh config/xorg/xresources.conf
 fresh-options
 
@@ -103,12 +103,29 @@ fresh config/mpd.conf --file=~/.config/mpd/mpd.conf
 fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 fresh config/redshift.conf --file=~/.config/redshift.conf
 fresh config/rofi/challengerdeep.rasi --file=~/.config/rofi/challengerdeep.rasi
+fresh config/rofi/base16defaultdark.rasi --file=~/.config/rofi/base16defaultdark.rasi
 fresh config/rofi/rofi.conf --file=~/.config/rofi/config
 fresh config/picom.conf --file=~/.config/picom/picom.conf
 fresh config/starship.toml --file=~/.config/starship.toml
 fresh config/autorandr/postswitch --bin=~/.config/autorandr/postswitch.d/update-wallpaper
 
 fresh config/systemd/user --file=~/.config/systemd/user/
+
+#
+#  ██████╗████████╗██╗  ██╗
+# ██╔════╝╚══██╔══╝██║ ██╔╝
+# ██║  ███╗  ██║   █████╔╝
+# ██║   ██║  ██║   ██╔═██╗
+# ╚██████╔╝  ██║   ██║  ██╗
+#  ╚═════╝   ╚═╝   ╚═╝  ╚═╝
+#
+# GTK 2.0
+fresh config/gtk/gtkrc-2.0 --file
+fresh config/gtk/theme/gtk2.css --file=~/.gtkrc-2.0
+
+# GTK 3.0
+fresh config/gtk/settings.ini --file=~/.config/gtk-3.0/settings.ini
+fresh config/gtk/theme/gtk3.css --file=~/.config/gtk-3.0/gtk.css
 
 #
 # ███████╗███████╗██╗  ██╗
@@ -183,7 +200,8 @@ fresh-options
 #
 fresh-options --file=~/.config/alacritty/alacritty.yml --marker=#
   fresh config/alacritty/\*
-  fresh challenger-deep-theme/alacritty challenger-deep.yml
+  # fresh challenger-deep-theme/alacritty challenger-deep.yml
+  fresh aaron-williamson/base16-alacritty colors/base16-default-dark-256.yml
 fresh-options
 
 #
