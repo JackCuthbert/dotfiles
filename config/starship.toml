@@ -6,7 +6,6 @@ symbol = ""
 error_symbol = ""
 vicmd_symbol = ""
 
-
 [git_status]
 ahead = "↑"
 behind = "↓"

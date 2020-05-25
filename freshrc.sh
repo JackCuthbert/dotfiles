@@ -102,7 +102,6 @@ fresh config/i3status.conf --file=~/.i3status.conf
 fresh config/mpd.conf --file=~/.config/mpd/mpd.conf
 fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 fresh config/redshift.conf --file=~/.config/redshift.conf
-fresh config/rofi/challengerdeep.rasi --file=~/.config/rofi/challengerdeep.rasi
 fresh config/rofi/base16defaultdark.rasi --file=~/.config/rofi/base16defaultdark.rasi
 fresh config/rofi/rofi.conf --file=~/.config/rofi/config
 fresh config/picom.conf --file=~/.config/picom/picom.conf
@@ -200,7 +199,6 @@ fresh-options
 #
 fresh-options --file=~/.config/alacritty/alacritty.yml --marker=#
   fresh config/alacritty/\*
-  # fresh challenger-deep-theme/alacritty challenger-deep.yml
   fresh aaron-williamson/base16-alacritty colors/base16-default-dark-256.yml
 fresh-options
 
