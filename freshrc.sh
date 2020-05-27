@@ -106,7 +106,6 @@ fresh config/rofi/base16defaultdark.rasi --file=~/.config/rofi/base16defaultdark
 fresh config/rofi/rofi.conf --file=~/.config/rofi/config
 fresh config/picom.conf --file=~/.config/picom/picom.conf
 fresh config/starship.toml --file=~/.config/starship.toml
-fresh config/autorandr/postswitch --bin=~/.config/autorandr/postswitch.d/update-wallpaper
 
 fresh config/systemd/user --file=~/.config/systemd/user/
 
