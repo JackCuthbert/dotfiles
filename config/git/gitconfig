@@ -11,6 +11,8 @@
   ignorecase = false
   excludesfile = ~/.gitignore_global
   pager = delta --dark --theme="ansi-dark"
+[pull]
+  rebase = true
 [push]
   default = simple
 [interactive]
@@ -46,8 +48,8 @@
   ap = add -p # add patch
   c = commit --verbose
   ca = commit -a --verbose # commit all
-  # cm = commit -m # commit with message
-  # cam = commit -a -m # commit all with message
+  cm = commit -m # commit with message
+  cam = commit -a -m # commit all with message
   m = commit --amend --verbose # ammend the last commit with the new one
 
   # Diffing
