@@ -14,13 +14,19 @@
 
 ### Aura
 
-Install [Aura](https://github.com/aurapm/aura) to manage [AUR](https://aur.archlinux.org) packages:
+Install [Aura](https://github.com/aurapm/aura) to manage [AUR](https://aur.archlinux.org)
+packages:
 
 ```bash
 wget -O PKGBUILD https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=aura-bin && \
   makepkg --install && \
   rm PKGBUILD
 ```
+
+## Wallpaper
+
+Wallpaper is set by placing a `wallpaper.jpg` file in the root of the dotfiles
+directory.
 
 ## Dotfiles
 
