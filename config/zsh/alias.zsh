@@ -3,24 +3,19 @@
 # Alias
 #
 #######
-alias reload="source ~/.zshrc && clear && motd"
-alias clterm="clear && zshsource"
 alias cl="clear"
-alias cll="clear && l"
 alias g="git"
-alias record="asciinema rec"
 alias v="nvim"
-alias vs="vscodium"
 
 # Common directories
 alias f="zi"
 
 # Docker
-alias c='docker-compose'
 alias d='docker'
+alias c='docker-compose'
 
 # remove orphaned packages
-alias pacman-cleanup="sudo pacman -Rns $(pacman -Qtdq)"
+alias pacman-cleanup="echo \"Consider using aura -Oj\"; sleep 3; sudo pacman -Rns $(pacman -Qtdq)"
 
 # list installed packages _not_ in the base or base-devel groups
 alias pacman-list="comm -23 <(pacman -Qeq | sort) <(pacman -Qgq base base-devel | sort) | less"
