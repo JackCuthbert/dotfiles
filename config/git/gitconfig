@@ -82,6 +82,7 @@
   purge = !git checkout master && git pull && git branch --merged | grep -Ev 'master' | xargs -n 1 git branch -d # delete merged branches
   pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\"" # push a branch and set up remote tracking
   hard-pull = !git fetch && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD) # throw away all local changes/commits and reset back to remote's version of branch
+  ras = rebase -i --autosquash --autostash
   rasm = "rebase -i --autosquash master"      # interactive rebase with autosquash on master
   rasd = "rebase -i --autosquash development" # interactive rebase with autosquash on development
   rasp = !git rebase -i --autosquash $(git bp) # interactive rebase with autosquash on parent branch
