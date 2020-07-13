@@ -38,7 +38,7 @@ fresh-options
 # 1. Run with interactive shell?
 # 2. Initialising a shell modules?
 fresh-options --file=~/.zshrc --marker
-  fresh config/zsh/zplugin.zsh
+  fresh config/zsh/zinit.zsh
   fresh config/zsh/keychain.zsh
   fresh config/zsh/history.zsh
   fresh config/zsh/vi-mode.zsh
