@@ -13,3 +13,6 @@ endif
 " NOTE: This must be after `colorscheme` call
 highlight Normal guibg=none
 highlight NonText guibg=none
+
+" set the window title
+set title
