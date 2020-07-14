@@ -24,29 +24,20 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 # 2. May take some time to run
 # 3. Before everything else?
 fresh-options --file=~/.zlogin --marker
-  fresh config/zsh/startx.zsh
+  fresh config/zsh/login/\*.zsh
 fresh-options
 
 # 1. Needed by something in .zshrc?
 # 2. Needed by a command to be interactive?
 # 3. Needs to be updated on every new shell?
 fresh-options --file=~/.zshenv --marker
-  fresh config/zsh/env.zsh
-  fresh config/zsh/alias.zsh
+  fresh config/zsh/env/\*.zsh
 fresh-options
 
 # 1. Run with interactive shell?
 # 2. Initialising a shell modules?
 fresh-options --file=~/.zshrc --marker
-  fresh config/zsh/zinit.zsh
-  fresh config/zsh/keychain.zsh
-  fresh config/zsh/history.zsh
-  fresh config/zsh/vi-mode.zsh
-  fresh config/zsh/functions.zsh
-  fresh config/zsh/direnv.zsh
-  fresh config/zsh/starship.zsh
-  fresh config/zsh/zoxide.zsh
-  fresh config/zsh/sdkman.zsh
+  fresh config/zsh/rc/\*.zsh
 fresh-options
 
 #
@@ -77,16 +68,19 @@ fresh-options
 # ██║██████╔╝    ╚██████╔╝██║  ██║██║     ███████║
 # ╚═╝╚═════╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚══════╝
 #
+fresh config/i3status.conf --file=~/.i3status.conf
 fresh-options --file=~/.config/i3/config --marker
-  fresh config/i3/colors.conf # NOTE: Should be first!
-
-  fresh config/i3/default.conf
-  fresh config/i3/bar.conf
-
+  # keybindings
+  fresh config/i3/appearance.conf
+  fresh config/i3/modifiers.conf
   fresh config/i3/modes/\*.conf
   fresh config/i3/keybindings/\*.conf
 
-  fresh config/i3/startup.conf # NOTE: Should be last!
+  # theme
+  fresh khamer/base16-i3 themes/base16-default-dark.config
+
+  # startup must be last
+  fresh config/i3/startup.conf
 fresh-options
 
 #
@@ -98,7 +92,6 @@ fresh-options
 # ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝
 #
 fresh config/dunst.conf --file=~/.config/dunst/dunstrc
-fresh config/i3status.conf --file=~/.i3status.conf
 fresh config/mpd.conf --file=~/.config/mpd/mpd.conf
 fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 fresh config/redshift.ini --file=~/.config/redshift.conf
@@ -106,7 +99,16 @@ fresh config/rofi/base16defaultdark.rasi --file=~/.config/rofi/base16defaultdark
 fresh config/rofi/rofi.conf --file=~/.config/rofi/config
 fresh config/picom.conf --file=~/.config/picom/picom.conf
 fresh config/starship.toml --file=~/.config/starship.toml
+fresh HaoZeke/base16-zathura build_schemes/base16-default-dark.config --file=~/.config/zathura/zathurarc
 
+#
+# ███████╗██╗   ██╗███████╗████████╗███████╗███╗   ███╗██████╗
+# ██╔════╝╚██╗ ██╔╝██╔════╝╚══██╔══╝██╔════╝████╗ ████║██╔══██╗
+# ███████╗ ╚████╔╝ ███████╗   ██║   █████╗  ██╔████╔██║██║  ██║
+# ╚════██║  ╚██╔╝  ╚════██║   ██║   ██╔══╝  ██║╚██╔╝██║██║  ██║
+# ███████║   ██║   ███████║   ██║   ███████╗██║ ╚═╝ ██║██████╔╝
+# ╚══════╝   ╚═╝   ╚══════╝   ╚═╝   ╚══════╝╚═╝     ╚═╝╚═════╝
+#
 fresh config/systemd/user --file=~/.config/systemd/user/
 
 #
@@ -174,19 +176,6 @@ fresh-options --file=~/.config/nvim/init.vim --marker='"'
   fresh config/nvim/plug-config/\*.vim
 fresh-options
 fresh config/nvim/coc.nvim/settings.json --file=~/.config/nvim/coc-settings.json
-
-#
-# ████████╗███╗   ███╗██╗   ██╗██╗  ██╗
-# ╚══██╔══╝████╗ ████║██║   ██║╚██╗██╔╝
-#    ██║   ██╔████╔██║██║   ██║ ╚███╔╝
-#    ██║   ██║╚██╔╝██║██║   ██║ ██╔██╗
-#    ██║   ██║ ╚═╝ ██║╚██████╔╝██╔╝ ██╗
-#    ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝
-#
-fresh-options --file=~/.tmux.conf --marker
-  fresh config/tmux/plugins.conf
-  fresh config/tmux/config/\*
-fresh-options
 
 #
 #  █████╗ ██╗      █████╗  ██████╗██████╗ ██╗████████╗████████╗██╗   ██╗
