@@ -1,5 +1,8 @@
 source ~/.zinit/bin/zinit.zsh
 
+# window title
+zinit light trystan2k/zsh-tab-title
+
 # Highlighting
 zinit ice silent wait"0" atinit"zpcompinit; zpcdreplay"
 zinit light zdharma/fast-syntax-highlighting
