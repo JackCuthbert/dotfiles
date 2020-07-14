@@ -20,9 +20,6 @@ Plug 'udalov/kotlin-vim'
 " GPG
 Plug 'jamessan/vim-gnupg'
 
-" Fish scripting
-Plug 'dag/vim-fish'
-
 " Autocomplete/format
 " -------------------
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
