@@ -91,15 +91,24 @@ fresh-options
 # ██╗╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
 # ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝
 #
-fresh config/dunst.conf --file=~/.config/dunst/dunstrc
 fresh config/mpd.conf --file=~/.config/mpd/mpd.conf
 fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 fresh config/redshift.ini --file=~/.config/redshift.conf
-fresh config/rofi/base16defaultdark.rasi --file=~/.config/rofi/base16defaultdark.rasi
-fresh config/rofi/rofi.conf --file=~/.config/rofi/config
-fresh config/picom.conf --file=~/.config/picom/picom.conf
 fresh config/starship.toml --file=~/.config/starship.toml
 fresh HaoZeke/base16-zathura build_schemes/base16-default-dark.config --file=~/.config/zathura/zathurarc
+
+fresh config/dunst.conf --file=~/.config/dunst/dunstrc
+
+#
+# ██████╗  ██████╗ ███████╗██╗
+# ██╔══██╗██╔═══██╗██╔════╝██║
+# ██████╔╝██║   ██║█████╗  ██║
+# ██╔══██╗██║   ██║██╔══╝  ██║
+# ██║  ██║╚██████╔╝██║     ██║
+# ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝
+#
+fresh config/rofi/rofi.conf --file=~/.config/rofi/config
+fresh config/rofi/base16-default-dark.rasi --file=~/.config/rofi/base16-default-dark.rasi
 
 #
 # ███████╗██╗   ██╗███████╗████████╗███████╗███╗   ███╗██████╗
@@ -109,7 +118,7 @@ fresh HaoZeke/base16-zathura build_schemes/base16-default-dark.config --file=~/.
 # ███████║   ██║   ███████║   ██║   ███████╗██║ ╚═╝ ██║██████╔╝
 # ╚══════╝   ╚═╝   ╚══════╝   ╚═╝   ╚══════╝╚═╝     ╚═╝╚═════╝
 #
-fresh config/systemd/user --file=~/.config/systemd/user/
+# fresh config/systemd/user --file=~/.config/systemd/user/
 
 #
 #  ██████╗████████╗██╗  ██╗

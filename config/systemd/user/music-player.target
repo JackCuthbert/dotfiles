@@ -1,6 +1,0 @@
-[Unit]
-Description=Start the entire MPD, Last.fm, and mpris stack
-Wants=mpd.service mpd-mpris.service mpdscribble.service
-
-[Install]
-WantedBy=multi-user.target
