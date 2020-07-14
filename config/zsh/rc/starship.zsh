@@ -1,6 +1,1 @@
-function set_win_title(){
-    echo -ne "\033]0; Alacritty - $(basename $PWD) \007"
-}
-precmd_functions+=(set_win_title)
-
 eval "$(starship init zsh)"
