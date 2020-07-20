@@ -49,6 +49,7 @@ qt5-base # for multimc
 ranger
 redshift
 rofi
+rofi-emoji
 rsync
 thefuck
 w3m
