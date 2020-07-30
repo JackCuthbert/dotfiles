@@ -38,33 +38,31 @@ ln -s "~/.dotfiles/freshrc.sh" "~/.freshrc"
 bash -c "`curl -sL https://get.freshshell.com`"
 ```
 
-Install [zplugin](https://github.com/zdharma/zplugin):
+### [zplugin](https://github.com/zdharma/zplugin)
 
 ```bash
-mkdir ~/.zplugin
-git clone https://github.com/zdharma/zplugin.git ~/.zplugin/bin
+mkdir ~/.zinit
+git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
 ```
 
-Install [vimplug](https://github.com/junegunn/vim-plug) for [neovim](https://neovim.io/):
+### [vimplug](https://github.com/junegunn/vim-plug) for [neovim](https://neovim.io/)
 
 ```bash
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-Install [sdkman](https://github.com/sdkman/sdkman-cli)
+### [sdkman](https://github.com/sdkman/sdkman-cli)
 
 ```bash
 curl -s https://get.sdkman.io | bash
 ```
 
-## Optional software
-
-Install [OpenVPN](https://openvpn.net/) + [PIA](https://privateinternetaccess.com/) servers:
+### [Google Cloud SDK](https://cloud.google.com/sdk/)
 
 ```bash
-wget -O pia-nm.sh https://www.privateinternetaccess.com/installer/pia-nm.sh
-chmod +x pia-nm.sh && sudo ./pia-nm.sh
-# Select UDP and strong encryption
-sudo systemctl restart NetworkManager.service
+# Find the latest version number here: https://cloud.google.com/sdk/docs/quickstart-linux
+curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-303.0.0-linux-x86_64.tar.gz
+tar -zxf [ARCHIVE_FILE].tar.gz
+mv google-cloud-sdk ~/.local/share/
 ```
