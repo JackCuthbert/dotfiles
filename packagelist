@@ -4,17 +4,14 @@ git
 git-delta-bin
 htop
 httpie
-jre8-openjdk
 keychain
 neofetch
 neovim
 openssh
 python
-rustup
 starship-bin
 unzip
 vim
-vscodium-bin
 wget
 zoxide
 zsh
@@ -29,32 +26,24 @@ ttf-liberation
 
 # hardware drivers/utils
 lib32-nvidia-utils # for steam under nvidia graphics
+liquidctl          # for kraken x52 cooler
 mesa               # for intel graphics
 nvidia             # for nvidia graphics
 nvidia-settings    # for nvidia graphics
 nvidia-utils       # for nvidia graphics
-python-liquidctl   # for kraken x52 cooler
 xf86-video-intel   # for intel graphics
 
 # desktop experience and theming
 i3-wm
 i3lock
 i3status
-lxappearance
 network-manager-applet
 networkmanager
-papirus-icon-theme
-picom
-qt5-base # for multimc
 ranger
 redshift
 rofi
 rofi-emoji
-rsync
 thefuck
-w3m
-xdotool
-xidlehook
 xorg-xbacklight # for laptop brightness
 xorg-xinit
 zathura
@@ -63,21 +52,22 @@ zathura-pdf-mupdf
 # applications
 firefox
 lib32-vulkan-icd-loader # for proton/lutris
-megasync
-nextcloud-client
 slack-desktop
 steam
-teamspeak3
 
 # screenshots
 flameshot
 xclip
 imagemagick # for lockscreen
-scrot # for lockscreen
+scrot       # for lockscreen
 
 # sound
 pavucontrol
 pulseaudio
 pulseaudio-alsa
+
+# bluetooth
+bluez
+bluez-utils
 pulseaudio-bluetooth
 
