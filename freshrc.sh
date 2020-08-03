@@ -129,12 +129,8 @@ fresh config/rofi/base16-default-dark.rasi --file=~/.config/rofi/base16-default-
 #  ╚═════╝   ╚═╝   ╚═╝  ╚═╝
 #
 # GTK 2.0
-fresh config/gtk/gtkrc-2.0 --file
-fresh config/gtk/theme/gtk2.css --file=~/.gtkrc-2.0
-
-# GTK 3.0
+fresh config/gtk/gtkrc-2.0 --file=~/.gtkrc-2.0
 fresh config/gtk/settings.ini --file=~/.config/gtk-3.0/settings.ini
-fresh config/gtk/theme/gtk3.css --file=~/.config/gtk-3.0/gtk.css
 
 #
 # ███████╗███████╗██╗  ██╗
