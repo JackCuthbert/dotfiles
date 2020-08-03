@@ -55,7 +55,7 @@ cursor:
 #   - EaseOutCirc
 #   - Linear
 # Specifying a `duration` of `0` will disable the visual bell.
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 0
   color: '0x4D4F68'

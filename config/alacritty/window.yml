@@ -7,6 +7,10 @@ window:
     columns: 0
     lines: 0
 
+
+  # Allow terminal applications to change Alacritty's window title.
+  dynamic_title: true
+
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
