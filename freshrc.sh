@@ -141,6 +141,7 @@ fresh config/gtk/settings.ini --file=~/.config/gtk-3.0/settings.ini
 # ╚══════╝╚══════╝╚═╝  ╚═╝
 #
 fresh config/ssh/ssh.conf --file=~/.ssh/config
+fresh config/ssh/pam_environment --file=~/.pam_environment
 
 #
 #  ██████╗ ██████╗  ██████╗
