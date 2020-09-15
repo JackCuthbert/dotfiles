@@ -66,3 +66,32 @@ curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-
 tar -zxf [ARCHIVE_FILE].tar.gz
 mv google-cloud-sdk ~/.local/share/
 ```
+
+## SSH + GPG
+
+Install `gnome-keyring` and `seahorse`:
+
+```
+sudo pacman -S gnome-keyring seahorse
+```
+
+Add the following to the end of `/etc/pam.d/login`:
+
+```
+session    optional     pam_gnome_keyring.so auto_start
+```
+
+Disable the SSH component of gnome-keyring by:
+
+```
+cp /etc/xdg/autostart/gnome-keyring-ssh.desktop ~/.config/autostart/
+echo "Hidden=true" >> ~/.config/autostart/gnome-keyring-ssh.desktop
+```
+
+Ensure the ssh agent points to the gpg ssh emulator with a `~/.pam_environment`
+file containing:
+
+```
+SSH_AGENT_PID	DEFAULT=
+SSH_AUTH_SOCK	DEFAULT="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
+```
