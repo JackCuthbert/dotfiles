@@ -1,7 +1,7 @@
 {
   "languageserver": {
     "kotlin": {
-      "command": "/home/jack/code/github.com/fwcd/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
+      "command": "/home/jack/Code/github.com/fwcd/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
       "filetypes": ["kotlin"]
     }
   },
