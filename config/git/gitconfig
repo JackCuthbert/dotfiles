@@ -1,7 +1,7 @@
 [user]
   name = Jack Cuthbert
   email = jckcthbrt@gmail.com
-  signingkey = "DF233537630051E5!"
+  signingkey = "8E15CE91C96DB71D!"
 [gpg]
   program = /usr/bin/gpg2
 [commit]
