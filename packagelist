@@ -63,6 +63,7 @@ rofi
 rofi-emoji
 seahorse
 thefuck
+xcursor-breeze
 xorg-server
 xorg-xbacklight # for laptop brightness
 xorg-xinit
