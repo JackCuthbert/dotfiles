@@ -1,10 +1,15 @@
 # programming/cli
+aura-bin
+docker
+docker-compose
 feh
+fzf
 git
 git-delta-bin
 gnome-keyring
 htop
 httpie
+jq
 neofetch
 neovim
 openssh
@@ -24,16 +29,31 @@ noto-fonts-emoji
 otf-san-francisco
 ttf-liberation
 
+# removable/mountable media
+fuse2
+fuse3
+nfs-utils
+udisks2
+
 # hardware drivers/utils
-lib32-nvidia-utils # for steam under nvidia graphics
-liquidctl          # for kraken x52 cooler
-mesa               # for intel + nvidia graphics
-nvidia             # for nvidia graphics
-nvidia-settings    # for nvidia graphics
-nvidia-utils       # for nvidia graphics
-xf86-video-intel   # for intel graphics
+# amd-ucode or intel-ucode
+efibootmgr
+dfu-programmer          # qmk flasher
+lib32-nvidia-utils      # for steam under nvidia graphics
+lib32-vulkan-icd-loader # for proton/lutris
+liquidctl               # for kraken x52 cooler
+mesa                    # for intel + nvidia graphics
+nvidia                  # for nvidia graphics
+nvidia-settings         # for nvidia graphics
+nvidia-utils            # for nvidia graphics
+piper                   # gaming mouse config
+systemd-resolvconf      # DNS resolution
+xf86-video-intel        # for intel graphics
+xow                     # xbox dongle driver
 
 # desktop experience and theming
+dunst
+gnome-themes-extra
 i3-wm
 i3lock
 i3status
@@ -43,16 +63,22 @@ rofi
 rofi-emoji
 seahorse
 thefuck
+xorg-server
 xorg-xbacklight # for laptop brightness
 xorg-xinit
+xorg-xset
 zathura
 zathura-pdf-mupdf
 
 # applications
+discord
 firefox
-lib32-vulkan-icd-loader # for proton/lutris
+nextcloud-client
+peek
+signal-desktop-beta-bin
 slack-desktop
 steam
+picard
 
 # screenshots
 flameshot
@@ -69,4 +95,3 @@ pulseaudio-alsa
 bluez
 bluez-utils
 pulseaudio-bluetooth
-
