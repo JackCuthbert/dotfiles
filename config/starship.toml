@@ -5,9 +5,9 @@ disabled = true
 disabled = true
 
 [character]
-symbol = ""
-error_symbol = ""
-vicmd_symbol = ""
+success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
+vicmd_symbol = "[](bold green)"
 
 [git_status]
 ahead = "↑"
