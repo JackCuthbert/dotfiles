@@ -52,6 +52,7 @@ xf86-video-intel        # for intel graphics
 xow                     # xbox dongle driver
 
 # desktop experience and theming
+bibata-cursor-theme-bin
 dunst
 gnome-themes-extra
 i3-wm
@@ -63,7 +64,6 @@ rofi
 rofi-emoji
 seahorse
 thefuck
-xcursor-breeze
 xorg-server
 xorg-xbacklight # for laptop brightness
 xorg-xinit
