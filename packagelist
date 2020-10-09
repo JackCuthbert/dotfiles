@@ -2,6 +2,7 @@
 aura-bin
 docker
 docker-compose
+fd
 feh
 fzf
 git
