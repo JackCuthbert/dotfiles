@@ -61,12 +61,12 @@ fresh-options --file=~/.Xresources
 fresh-options
 
 #
-# ██╗██████╗      ██████╗  █████╗ ██████╗ ███████╗
-# ██║╚════██╗    ██╔════╝ ██╔══██╗██╔══██╗██╔════╝
-# ██║ █████╔╝    ██║  ███╗███████║██████╔╝███████╗
-# ██║ ╚═══██╗    ██║   ██║██╔══██║██╔═══╝ ╚════██║
-# ██║██████╔╝    ╚██████╔╝██║  ██║██║     ███████║
-# ╚═╝╚═════╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚══════╝
+# ██╗██████╗
+# ██║╚════██╗
+# ██║ █████╔╝
+# ██║ ╚═══██╗
+# ██║██████╔╝
+# ╚═╝╚═════╝
 #
 fresh config/i3status.conf --file=~/.i3status.conf
 fresh-options --file=~/.config/i3/config --marker
@@ -96,8 +96,8 @@ fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 fresh config/redshift.ini --file=~/.config/redshift.conf
 fresh config/starship.toml --file=~/.config/starship.toml
 fresh HaoZeke/base16-zathura build_schemes/base16-default-dark.config --file=~/.config/zathura/zathurarc
-
 fresh config/dunst.conf --file=~/.config/dunst/dunstrc
+fresh config/fdignore --file
 
 #
 # ██████╗  ██████╗ ███████╗██╗

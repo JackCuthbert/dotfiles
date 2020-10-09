@@ -31,7 +31,7 @@ Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 " File browser
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf.vim'
 Plug 'travisjeffery/vim-auto-mkdir'
 Plug 'Asheq/close-buffers.vim'
 
