@@ -7,18 +7,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
-
-" MDX
-Plug 'jxnblk/vim-mdx-js'
-
-" Rust
 Plug 'rust-lang/rust.vim'
-
-" Kotlin
 Plug 'udalov/kotlin-vim'
-
-" GPG
-Plug 'jamessan/vim-gnupg'
 
 " Autocomplete/format
 " -------------------
@@ -46,7 +36,7 @@ Plug 'editorconfig/editorconfig-vim'
 " Highlight and strip whitespace
 Plug 'ntpeters/vim-better-whitespace'
 
-" Search
+" Codebase search
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 
 " Git
@@ -60,12 +50,6 @@ Plug 'w0rp/ale'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" Non-editor things
-" -----------------
-
-" Preview markdown files in browser with :MarkdownPreview
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 call plug#end()
 
