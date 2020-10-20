@@ -2,13 +2,14 @@ call plug#begin('~/.vim/plugged')
 
 " Language Support
 " ----------------
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'rust-lang/rust.vim'
+Plug 'udalov/kotlin-vim'
 
 " TypeScript + JavaScript
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'rust-lang/rust.vim'
-Plug 'udalov/kotlin-vim'
 
 " Autocomplete/format
 " -------------------
