@@ -2,6 +2,7 @@
 aura-bin
 docker
 docker-compose
+dog
 fd
 feh
 fzf
