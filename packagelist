@@ -66,6 +66,7 @@ rofi
 rofi-emoji
 seahorse
 thefuck
+unipicker
 xorg-server
 xorg-xbacklight # for laptop brightness
 xorg-xinit
