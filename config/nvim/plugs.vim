@@ -2,9 +2,9 @@ call plug#begin('~/.vim/plugged')
 
 " Language Support
 " ----------------
+
+" Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'rust-lang/rust.vim'
-Plug 'udalov/kotlin-vim'
 
 " TypeScript + JavaScript
 Plug 'HerringtonDarkholme/yats.vim'
@@ -13,7 +13,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 
 " Autocomplete/format
 " -------------------
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 " Editor
