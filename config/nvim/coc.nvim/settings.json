@@ -1,7 +1,7 @@
 {
   "languageserver": {
     "golang": {
-      "command": "gopls",
+      "command": "/home/jack/go/bin/gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"],
       "initializationOptions": {
