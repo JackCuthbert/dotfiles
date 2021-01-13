@@ -1,13 +1,14 @@
 {
   "languageserver": {
-    "kotlin": {
-      "command": "/home/jack/Code/github.com/fwcd/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
-      "filetypes": ["kotlin"]
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": [
-    "rust"
-  ],
   "typescript.suggest.autoImports": true,
   "suggest.completionItemKindLabels": {
     "keyword": "Keyword",
@@ -37,3 +38,4 @@
     "default": "Default"
   }
 }
+
