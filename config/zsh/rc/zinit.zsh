@@ -16,8 +16,6 @@ zinit light zsh-users/zsh-autosuggestions
 
 # nvm and npm completions
 zinit ice silent wait"0"
-zinit light lukechilds/zsh-nvm
-zinit ice silent wait"0"
 zinit light lukechilds/zsh-better-npm-completion
 
 # Git
