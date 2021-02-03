@@ -45,17 +45,65 @@ mkdir ~/.zinit
 git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
 ```
 
+### [asdf](https://asdf-vm.com)
+
+[Check version here](https://asdf-vm.com/#/core-manage-asdf?id=install).
+
+```bash
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+```
+
+#### Nodejs
+
+```bash
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+asdf list-all nodejs
+asdf install nodejs <version>
+asdf global nodejs <version>
+```
+
+#### Java
+
+```bash
+asdf plugin-add java https://github.com/halcyon/asdf-java.git
+asdf list-all java | rg adopt
+asdf install java <version>
+asdf global nodejs <version>
+```
+
+#### Kotlin
+
+```bash
+asdf plugin-add kotlin https://github.com/asdf-community/asdf-kotlin.git
+asdf list-all kotlin
+asdf install kotlin <version>
+asdf global kotlin <version>
+```
+
+#### Maven
+
+```bash
+asdf plugin-add maven https://github.com/halcyon/asdf-maven
+asdf list-all maven
+asdf install maven <version>
+asdf global maven <version>
+```
+
+#### Go
+
+```bash
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf list-all golang
+asdf install golang <version>
+asdf global golang <version>
+```
+
 ### [vimplug](https://github.com/junegunn/vim-plug) for [neovim](https://neovim.io/)
 
 ```bash
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-### [sdkman](https://github.com/sdkman/sdkman-cli)
-
-```bash
-curl -s https://get.sdkman.io | bash
 ```
 
 ### [Google Cloud SDK](https://cloud.google.com/sdk/)
