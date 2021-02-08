@@ -7,6 +7,7 @@ alias g="git"
 alias l="exa --group-directories-first -gl"
 alias la="l -a"
 alias v="nvim"
+alias http="ht"
 
 # vim-like
 alias :q='exit'
