@@ -121,6 +121,7 @@ fresh-options
 #
 fresh config/rofi/default.conf --file=~/.config/rofi/config
 fresh config/rofi/theme/base16-default-dark.rasi --file=~/.config/rofi/base16-default-dark.rasi
+fresh config/rofi/theme/one-dark.rasi --file=~/.config/rofi/one-dark.rasi
 
 #
 # ███████╗██╗   ██╗███████╗████████╗███████╗███╗   ███╗██████╗
