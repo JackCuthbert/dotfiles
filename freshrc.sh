@@ -77,7 +77,7 @@ fresh-options --file=~/.config/i3/config --marker
   fresh config/i3/keybindings/\*.conf
 
   # theme
-  fresh khamer/base16-i3 themes/base16-default-dark.config
+  fresh config/i3/theme/one-dark.conf
 
   # startup must be last
   fresh config/i3/startup.conf
@@ -96,8 +96,20 @@ fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 fresh config/redshift.ini --file=~/.config/redshift.conf
 fresh config/starship.toml --file=~/.config/starship.toml
 fresh HaoZeke/base16-zathura build_schemes/base16-default-dark.config --file=~/.config/zathura/zathurarc
-fresh config/dunst.conf --file=~/.config/dunst/dunstrc
 fresh config/fdignore --file
+
+#
+# ██████╗ ██╗   ██╗███╗   ██╗███████╗████████╗
+# ██╔══██╗██║   ██║████╗  ██║██╔════╝╚══██╔══╝
+# ██║  ██║██║   ██║██╔██╗ ██║███████╗   ██║
+# ██║  ██║██║   ██║██║╚██╗██║╚════██║   ██║
+# ██████╔╝╚██████╔╝██║ ╚████║███████║   ██║
+# ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝
+#
+fresh-options --file=~/.config/dunst/dunstrc
+  fresh config/dunst/default.conf
+  fresh config/dunst/theme/base16-default-dark.conf
+fresh-options
 
 #
 # ██████╗  ██████╗ ███████╗██╗
@@ -107,8 +119,8 @@ fresh config/fdignore --file
 # ██║  ██║╚██████╔╝██║     ██║
 # ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝
 #
-fresh config/rofi/rofi.conf --file=~/.config/rofi/config
-fresh config/rofi/base16-default-dark.rasi --file=~/.config/rofi/base16-default-dark.rasi
+fresh config/rofi/default.conf --file=~/.config/rofi/config
+fresh config/rofi/theme/base16-default-dark.rasi --file=~/.config/rofi/base16-default-dark.rasi
 
 #
 # ███████╗██╗   ██╗███████╗████████╗███████╗███╗   ███╗██████╗
@@ -193,7 +205,7 @@ fresh config/nvim/coc.nvim/settings.json --file=~/.config/nvim/coc-settings.json
 #
 fresh-options --file=~/.config/alacritty/alacritty.yml --marker=#
   fresh config/alacritty/\*
-  fresh aaron-williamson/base16-alacritty colors/base16-default-dark-256.yml
+  fresh eendroroy/alacritty-theme themes/one_dark.yaml
 fresh-options
 
 #
