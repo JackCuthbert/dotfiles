@@ -108,7 +108,7 @@ fresh config/fdignore --file
 #
 fresh-options --file=~/.config/dunst/dunstrc
   fresh config/dunst/default.conf
-  fresh config/dunst/theme/base16-default-dark.conf
+  fresh config/dunst/theme/one-dark.conf
 fresh-options
 
 #
