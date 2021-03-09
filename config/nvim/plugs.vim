@@ -10,6 +10,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'jxnblk/vim-mdx-js'
+Plug 'pantharshit00/vim-prisma'
 
 " Autocomplete/format
 " -------------------
@@ -48,6 +50,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 
 " Themes
+Plug 'joshdick/onedark.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'

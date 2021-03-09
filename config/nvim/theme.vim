@@ -1,6 +1,6 @@
 " Colors
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-default-dark
+colorscheme onedark
 
 " Theme options
 " let g:lightline = { 'colorscheme': '16color'}
