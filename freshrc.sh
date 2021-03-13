@@ -56,7 +56,7 @@ fresh config/xorg/xserverrc.conf --file=~/.xserverrc
 
 # Colours and font configuration for Xorg
 fresh-options --file=~/.Xresources
-  fresh pinpox/base16-xresources xresources/base16-default-dark-256.Xresources
+  fresh joshdick/onedark.vim term/One\ Dark.Xresources
   fresh config/xorg/xresources.conf
 fresh-options
 
@@ -95,7 +95,6 @@ fresh config/mpd.conf --file=~/.config/mpd/mpd.conf
 fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 fresh config/redshift.ini --file=~/.config/redshift.conf
 fresh config/starship.toml --file=~/.config/starship.toml
-fresh HaoZeke/base16-zathura build_schemes/base16-default-dark.config --file=~/.config/zathura/zathurarc
 fresh config/fdignore --file
 
 #
