@@ -1,78 +1,32 @@
-# NOTE: Headings done with http://www.patorjk.com/software/taag/#p=display&f=ANSI Shadow&t=SOME_TEXT
-
-#
-# ███████╗██████╗ ███████╗███████╗██╗  ██╗
-# ██╔════╝██╔══██╗██╔════╝██╔════╝██║  ██║
-# █████╗  ██████╔╝█████╗  ███████╗███████║
-# ██╔══╝  ██╔══██╗██╔══╝  ╚════██║██╔══██║
-# ██║     ██║  ██║███████╗███████║██║  ██║
-# ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
-#
+# Fresh
 fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
-#
-# ███████╗███████╗██╗  ██╗
-# ╚══███╔╝██╔════╝██║  ██║
-#   ███╔╝ ███████╗███████║
-#  ███╔╝  ╚════██║██╔══██║
-# ███████╗███████║██║  ██║
-# ╚══════╝╚══════╝╚═╝  ╚═╝
-#
+# Fish
+fresh config/fish/config.fish --file=~/.config/fish/config.fish
+fresh config/fish/fish_plugins --file=~/.config/fish/fish_plugins
 
-# 1. Run on login?
-# 2. May take some time to run
-# 3. Before everything else?
-fresh-options --file=~/.zlogin --marker
-  fresh config/zsh/login/\*.zsh
+# Xorg
+fresh-options --file
+  fresh config/xorg/\*
 fresh-options
 
-# 1. Needed by something in .zshrc?
-# 2. Needed by a command to be interactive?
-# 3. Needs to be updated on every new shell?
-fresh-options --file=~/.zshenv --marker
-  fresh config/zsh/env/\*.zsh
+# Custom scripts
+fresh-options --bin
+  fresh bin/\*
 fresh-options
 
-# 1. Run with interactive shell?
-# 2. Initialising a shell modules?
-fresh-options --file=~/.zshrc --marker
-  fresh config/zsh/rc/\*.zsh
+# Git
+fresh-options --file
+  fresh config/git/\*
 fresh-options
 
-#
-# ██╗  ██╗ ██████╗ ██████╗  ██████╗
-# ╚██╗██╔╝██╔═══██╗██╔══██╗██╔════╝
-#  ╚███╔╝ ██║   ██║██████╔╝██║  ███╗
-#  ██╔██╗ ██║   ██║██╔══██╗██║   ██║
-# ██╔╝ ██╗╚██████╔╝██║  ██║╚██████╔╝
-# ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝
-#
-# Initial xorg commands (setup DISPLAY, start i3, etc)
-fresh config/xorg/xinit.sh --file=~/.xinitrc
-
-# Global Xorg server startup config
-fresh config/xorg/xserverrc.conf --file=~/.xserverrc
-
-# Colours and font configuration for Xorg
-fresh-options --file=~/.Xresources
-  fresh joshdick/onedark.vim term/One\ Dark.Xresources
-  fresh config/xorg/xresources.conf
-fresh-options
-
-#
-# ██╗██████╗
-# ██║╚════██╗
-# ██║ █████╔╝
-# ██║ ╚═══██╗
-# ██║██████╔╝
-# ╚═╝╚═════╝
-#
+# i3
 fresh config/i3status.conf --file=~/.i3status.conf
 fresh-options --file=~/.config/i3/config --marker
-  # keybindings
   fresh config/i3/appearance.conf
   fresh config/i3/modifiers.conf
+
   fresh config/i3/modes/\*.conf
   fresh config/i3/keybindings/\*.conf
 
@@ -83,109 +37,37 @@ fresh-options --file=~/.config/i3/config --marker
   fresh config/i3/startup.conf
 fresh-options
 
-#
-#     ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗
-#    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝
-#    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
-#    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
-# ██╗╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
-# ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝
-#
-fresh config/mpd.conf --file=~/.config/mpd/mpd.conf
+# .config
 fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 fresh config/redshift.ini --file=~/.config/redshift.conf
 fresh config/starship.toml --file=~/.config/starship.toml
 fresh config/fdignore --file
 
-#
-# ██████╗ ██╗   ██╗███╗   ██╗███████╗████████╗
-# ██╔══██╗██║   ██║████╗  ██║██╔════╝╚══██╔══╝
-# ██║  ██║██║   ██║██╔██╗ ██║███████╗   ██║
-# ██║  ██║██║   ██║██║╚██╗██║╚════██║   ██║
-# ██████╔╝╚██████╔╝██║ ╚████║███████║   ██║
-# ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝
-#
+# Dunst
 fresh-options --file=~/.config/dunst/dunstrc
   fresh config/dunst/default.conf
   fresh config/dunst/theme/one-dark.conf
 fresh-options
 
-#
-# ██████╗  ██████╗ ███████╗██╗
-# ██╔══██╗██╔═══██╗██╔════╝██║
-# ██████╔╝██║   ██║█████╗  ██║
-# ██╔══██╗██║   ██║██╔══╝  ██║
-# ██║  ██║╚██████╔╝██║     ██║
-# ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝
-#
+# Rofi
 fresh config/rofi/default.conf --file=~/.config/rofi/config
 fresh config/rofi/theme/base16-default-dark.rasi --file=~/.config/rofi/base16-default-dark.rasi
 fresh config/rofi/theme/one-dark.rasi --file=~/.config/rofi/one-dark.rasi
 
-#
-# ███████╗██╗   ██╗███████╗████████╗███████╗███╗   ███╗██████╗
-# ██╔════╝╚██╗ ██╔╝██╔════╝╚══██╔══╝██╔════╝████╗ ████║██╔══██╗
-# ███████╗ ╚████╔╝ ███████╗   ██║   █████╗  ██╔████╔██║██║  ██║
-# ╚════██║  ╚██╔╝  ╚════██║   ██║   ██╔══╝  ██║╚██╔╝██║██║  ██║
-# ███████║   ██║   ███████║   ██║   ███████╗██║ ╚═╝ ██║██████╔╝
-# ╚══════╝   ╚═╝   ╚══════╝   ╚═╝   ╚══════╝╚═╝     ╚═╝╚═════╝
-#
-# fresh config/systemd/user --file=~/.config/systemd/user/
-
-#
-#  ██████╗████████╗██╗  ██╗
-# ██╔════╝╚══██╔══╝██║ ██╔╝
-# ██║  ███╗  ██║   █████╔╝
-# ██║   ██║  ██║   ██╔═██╗
-# ╚██████╔╝  ██║   ██║  ██╗
-#  ╚═════╝   ╚═╝   ╚═╝  ╚═╝
-#
-# GTK 2.0
+# GTK 2 & 3
 fresh config/gtk/gtkrc-2.0 --file=~/.gtkrc-2.0
 fresh config/gtk/settings.ini --file=~/.config/gtk-3.0/settings.ini
 
-#
-# ███████╗███████╗██╗  ██╗
-# ██╔════╝██╔════╝██║  ██║
-# ███████╗███████╗███████║
-# ╚════██║╚════██║██╔══██║
-# ███████║███████║██║  ██║
-# ╚══════╝╚══════╝╚═╝  ╚═╝
-#
+# SSH
 fresh config/ssh/ssh.conf --file=~/.ssh/config
 fresh config/ssh/pam_environment --file=~/.pam_environment
 
-#
-#  ██████╗ ██████╗  ██████╗
-# ██╔════╝ ██╔══██╗██╔════╝
-# ██║  ███╗██████╔╝██║  ███╗
-# ██║   ██║██╔═══╝ ██║   ██║
-# ╚██████╔╝██║     ╚██████╔╝
-#  ╚═════╝ ╚═╝      ╚═════╝
-#
+# GPG
 fresh config/gpg/gpg.conf --file=~/.gnupg/gpg.conf
 fresh config/gpg/sshcontrol --file=~/.gnupg/sshcontrol
 fresh config/gpg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 
-#
-# ███╗   ██╗ ██████╗███╗   ███╗██████╗  ██████╗██████╗ ██████╗
-# ████╗  ██║██╔════╝████╗ ████║██╔══██╗██╔════╝██╔══██╗██╔══██╗
-# ██╔██╗ ██║██║     ██╔████╔██║██████╔╝██║     ██████╔╝██████╔╝
-# ██║╚██╗██║██║     ██║╚██╔╝██║██╔═══╝ ██║     ██╔═══╝ ██╔═══╝
-# ██║ ╚████║╚██████╗██║ ╚═╝ ██║██║     ╚██████╗██║     ██║
-# ╚═╝  ╚═══╝ ╚═════╝╚═╝     ╚═╝╚═╝      ╚═════╝╚═╝     ╚═╝
-#
-fresh config/ncmpcpp/config.conf --file=~/.config/ncmpcpp/config
-fresh config/ncmpcpp/bindings.conf --file=~/.config/ncmpcpp/bindings
-
-#
-# ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
-# ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
-# ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
-# ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
-# ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
-# ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
-#
+# Neovim
 fresh-options --file=~/.config/nvim/init.vim --marker='"'
   fresh config/nvim/plugs.vim # NOTE: Must be first
   fresh config/nvim/theme.vim
@@ -195,53 +77,18 @@ fresh-options --file=~/.config/nvim/init.vim --marker='"'
 fresh-options
 fresh config/nvim/coc.nvim/settings.json --file=~/.config/nvim/coc-settings.json
 
-#
-#  █████╗ ██╗      █████╗  ██████╗██████╗ ██╗████████╗████████╗██╗   ██╗
-# ██╔══██╗██║     ██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚══██╔══╝╚██╗ ██╔╝
-# ███████║██║     ███████║██║     ██████╔╝██║   ██║      ██║    ╚████╔╝
-# ██╔══██║██║     ██╔══██║██║     ██╔══██╗██║   ██║      ██║     ╚██╔
-# ██║  ██║███████╗██║  ██║╚██████╗██║  ██║██║   ██║      ██║      ██║
-# ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝      ╚═╝
-#
+# Alacritty
 fresh-options --file=~/.config/alacritty/alacritty.yml --marker=#
   fresh config/alacritty/\*
   fresh eendroroy/alacritty-theme themes/one_dark.yaml
 fresh-options
 
-#
-# ███████╗ ██████╗██████╗ ██╗██████╗ ████████╗███████╗
-# ██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝██╔════╝
-# ███████╗██║     ██████╔╝██║██████╔╝   ██║   ███████╗
-# ╚════██║██║     ██╔══██╗██║██╔═══╝    ██║   ╚════██║
-# ███████║╚██████╗██║  ██║██║██║        ██║   ███████║
-# ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   ╚══════╝
-#
-fresh-options --bin
-  fresh bin/\*
-fresh-options
-
-#
-#  ██████╗ ██╗████████╗
-# ██╔════╝ ██║╚══██╔══╝
-# ██║  ███╗██║   ██║
-# ██║   ██║██║   ██║
-# ╚██████╔╝██║   ██║
-#  ╚═════╝ ╚═╝   ╚═╝
-#
-fresh-options --file
-  fresh config/git/\*
-fresh-options
-
 fresh-options --file=~/.gitignore_global --marker
   # Global ignores
   fresh github/gitignore Global/GPG.gitignore
-  fresh github/gitignore Global/Vagrant.gitignore
   fresh github/gitignore Global/Vim.gitignore
   fresh github/gitignore Global/VisualStudioCode.gitignore
   fresh github/gitignore Global/JetBrains.gitignore
-  fresh github/gitignore Global/Windows.gitignore
-  fresh github/gitignore Global/Xcode.gitignore
-  fresh github/gitignore Global/macOS.gitignore
 
   # Language specific
   fresh github/gitignore Go.gitignore

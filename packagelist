@@ -5,12 +5,12 @@ docker-compose
 dog
 fd
 feh
+fish
 fzf
 git
 git-delta-bin
 gnome-keyring
 htop
-ht-bin
 jq
 neofetch
 neovim
@@ -20,8 +20,8 @@ starship-bin
 unzip
 vim
 wget
+xh
 zoxide
-zsh
 
 # fonts
 nerd-fonts-jetbrains-mono

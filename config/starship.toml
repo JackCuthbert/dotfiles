@@ -13,3 +13,6 @@ vicmd_symbol = "[](bold green)"
 ahead = "↑"
 behind = "↓"
 diverged = "↕"
+
+[line_break]
+disabled = true
