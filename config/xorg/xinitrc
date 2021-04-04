@@ -1,4 +1,3 @@
-# X and i3 need a DISPLAY environment variable
 systemctl --user import-environment DISPLAY
 
 # Setup Xresources for term if they exist

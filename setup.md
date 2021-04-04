@@ -38,11 +38,10 @@ ln -s "~/.dotfiles/freshrc.sh" "~/.freshrc"
 bash -c "`curl -sL https://get.freshshell.com`"
 ```
 
-### [zplugin](https://github.com/zdharma/zplugin)
+### [fisher](https://github.com/jorgebucaran/fisher)
 
 ```bash
-mkdir ~/.zinit
-git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 ```
 
 ### [asdf](https://asdf-vm.com)
@@ -137,7 +136,7 @@ echo "Hidden=true" >> ~/.config/autostart/gnome-keyring-ssh.desktop
 ```
 
 Ensure the ssh agent points to the gpg ssh emulator with a `~/.pam_environment`
-file containing:
+file containing (handled by [./ssh/pam_environment](./ssh/pam_environment)):
 
 ```
 SSH_AGENT_PID	DEFAULT=

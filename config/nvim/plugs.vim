@@ -13,6 +13,9 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'jxnblk/vim-mdx-js'
 Plug 'pantharshit00/vim-prisma'
 
+" Fish
+Plug 'dag/vim-fish'
+
 " Autocomplete/format
 " -------------------
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
