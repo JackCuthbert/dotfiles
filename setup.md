@@ -50,6 +50,8 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
 ```bash
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+mkdir -p ~/.config/fish/completions
+ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 ```
 
 #### Nodejs
@@ -136,7 +138,7 @@ echo "Hidden=true" >> ~/.config/autostart/gnome-keyring-ssh.desktop
 ```
 
 Ensure the ssh agent points to the gpg ssh emulator with a `~/.pam_environment`
-file containing (handled by [./ssh/pam_environment](./ssh/pam_environment)):
+file containing (handled by [./config/ssh/pam_environment](./config/ssh/pam_environment)):
 
 ```
 SSH_AGENT_PID	DEFAULT=
