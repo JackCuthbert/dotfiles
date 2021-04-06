@@ -40,6 +40,7 @@ fresh-options
 # .config
 fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 fresh config/redshift.ini --file=~/.config/redshift.conf
+fresh config/flameshot.ini --file=~/.config/flameshot/flameshot.ini
 fresh config/starship.toml --file=~/.config/starship.toml
 fresh config/fdignore --file
 
