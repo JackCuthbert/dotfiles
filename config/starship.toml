@@ -16,3 +16,6 @@ diverged = "↕"
 
 [line_break]
 disabled = true
+
+[package]
+disabled = true
