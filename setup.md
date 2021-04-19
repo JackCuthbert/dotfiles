@@ -100,6 +100,21 @@ asdf install golang <version>
 asdf global golang <version>
 ```
 
+#### Python
+
+```bash
+asdf plugin-add python
+asdf list-all python
+asdf install python 3.x.x
+asdf install python 2.x.x
+asdf global python 3.x.x 2.x.x
+
+asdf plugin-add poetry https://github.com/asdf-community/asdf-poetry.git
+asdf list-all poetry
+asdf install poetry <version>
+asdf global poetry <version>
+```
+
 ### [vimplug](https://github.com/junegunn/vim-plug) for [neovim](https://neovim.io/)
 
 ```bash
