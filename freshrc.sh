@@ -5,6 +5,7 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 # Fish
 fresh config/fish/config.fish --file=~/.config/fish/config.fish
 fresh config/fish/fish_plugins --file=~/.config/fish/fish_plugins
+fresh config/fish/completions/poetry.fish --file=~/.config/fish/completions/poetry.fish
 
 # Xorg
 fresh-options --file
