@@ -97,5 +97,6 @@ fresh-options --file=~/.gitignore_global --marker
   fresh github/gitignore Rust.gitignore
   fresh github/gitignore Kotlin.gitignore
   fresh github/gitignore Java.gitignore
+  fresh github/gitignore Python.gitignore
 fresh-options
 
