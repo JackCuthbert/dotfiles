@@ -19,6 +19,7 @@ end
 starship init fish | source
 zoxide init fish | source
 direnv hook fish | source
+thefuck --alias | source
 source "$HOME/.local/share/google-cloud-sdk/path.fish.inc"
 source "$HOME/.asdf/asdf.fish"
 
