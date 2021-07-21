@@ -1,5 +1,6 @@
 # programming/cli
 aura-bin
+bc
 docker
 docker-compose
 dog
@@ -10,26 +11,32 @@ fzf
 git
 git-delta-bin
 gnome-keyring
+gnu-netcat
 htop
 jq
 neofetch
 neovim
 openssh
+p7zip
 python
+sshfs
 starship-bin
 unzip
 vim
 wget
 xh
-zoxide
+zip
+zoxide-bin
 
 # fonts
+font-manager
 nerd-fonts-jetbrains-mono
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 otf-san-francisco
 ttf-liberation
+ttf-ms-fonts
 
 # removable/mountable media
 fuse2
@@ -39,8 +46,9 @@ udisks2
 
 # hardware drivers/utils
 # amd-ucode or intel-ucode
-efibootmgr
+autorandr               # monitor hotplug
 dfu-programmer          # qmk flasher
+efibootmgr
 lib32-nvidia-utils      # for steam under nvidia graphics
 lib32-vulkan-icd-loader # for proton/lutris
 liquidctl               # for kraken x52 cooler
@@ -50,16 +58,19 @@ nvidia-settings         # for nvidia graphics
 nvidia-utils            # for nvidia graphics
 piper                   # gaming mouse config
 systemd-resolvconf      # DNS resolution
+v4l2loopback-dkms       # virtual camera support
 xf86-video-intel        # for intel graphics
 xow                     # xbox dongle driver
 
 # desktop experience and theming
+appimagelauncher
 bibata-cursor-theme-bin
 dunst
 gnome-themes-extra
 i3-wm
 i3lock
 i3status
+mpv
 ranger
 redshift
 rofi
@@ -75,14 +86,21 @@ zathura
 zathura-pdf-mupdf
 
 # applications
+brave-bin
+calibre
+chromium
 discord
+evince
 firefox
-nextcloud-client
+obs-studio
 peek
+picard
 signal-desktop-beta-bin
 slack-desktop
 steam
-picard
+virtualbox-ext-oracle
+visual-studio-code-bin
+xournalpp
 
 # screenshots
 flameshot
