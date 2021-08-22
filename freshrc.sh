@@ -7,6 +7,9 @@ fresh config/fish/config.fish --file=~/.config/fish/config.fish
 fresh config/fish/fish_plugins --file=~/.config/fish/fish_plugins
 fresh config/fish/completions/poetry.fish --file=~/.config/fish/completions/poetry.fish
 
+# JetBrains
+fresh config/ideavimrc.vim --file=~/.ideavimrc
+
 # Xorg
 fresh-options --file
   fresh config/xorg/\*
