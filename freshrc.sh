@@ -47,6 +47,7 @@ fresh config/redshift.ini --file=~/.config/redshift/redshift.conf
 fresh config/flameshot.ini --file=~/.config/flameshot/flameshot.ini
 fresh config/starship.toml --file=~/.config/starship.toml
 fresh config/fdignore --file
+fresh config/quokka.json --file=~/.quokka/config.json
 
 # Dunst
 fresh-options --file=~/.config/dunst/dunstrc
