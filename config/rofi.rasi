@@ -2,7 +2,7 @@ configuration {
   modi: "combi";
   combi-modi: "drun,window";
   font: "Noto Sans 12";
-  show-icons: true;
+  show-icons: false;
 
   /* location: 0; */
   /* yoffset: 0; */
