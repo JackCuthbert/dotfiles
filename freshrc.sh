@@ -56,9 +56,7 @@ fresh-options --file=~/.config/dunst/dunstrc
 fresh-options
 
 # Rofi
-fresh config/rofi/default.conf --file=~/.config/rofi/config
-fresh config/rofi/theme/base16-default-dark.rasi --file=~/.config/rofi/base16-default-dark.rasi
-fresh config/rofi/theme/one-dark.rasi --file=~/.config/rofi/one-dark.rasi
+fresh config/rofi.rasi --file=~/.config/rofi/config.rasi
 
 # GTK 2 & 3
 fresh config/gtk/gtkrc-2.0 --file=~/.gtkrc-2.0
