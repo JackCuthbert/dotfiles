@@ -25,6 +25,9 @@ fresh-options --file
   fresh config/git/\*
 fresh-options
 
+# Fontconfig
+fresh config/fontconfig/conf.d/00-blacklist_nimbus.conf --file=~/.config/fontconfig/conf.d/00-blacklist_nimbus.conf
+
 # i3
 fresh config/i3status.conf --file=~/.i3status.conf
 fresh-options --file=~/.config/i3/config --marker
@@ -44,7 +47,7 @@ fresh-options
 # .config
 fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 fresh config/redshift.ini --file=~/.config/redshift/redshift.conf
-fresh config/flameshot.ini --file=~/.config/flameshot/flameshot.ini
+# fresh config/flameshot.ini --file=~/.config/flameshot/flameshot.ini
 fresh config/starship.toml --file=~/.config/starship.toml
 fresh config/fdignore --file
 fresh config/quokka.json --file=~/.quokka/config.json
