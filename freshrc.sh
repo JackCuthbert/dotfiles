@@ -1,6 +1,5 @@
 # Fresh
 fresh freshshell/fresh bin/fresh --bin
-fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
 # Fish
 fresh config/fish/config.fish --file=~/.config/fish/config.fish
