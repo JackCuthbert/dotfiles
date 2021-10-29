@@ -82,17 +82,18 @@ set -U FZF_COMPLETE 3
 #  / __ \|  |_|  |/ __ \_\___ \
 # (____  /____/__(____  /____  >
 #      \/             \/     \/
-alias :q='exit'
-alias :wq='exit'
-alias :x='exit'
-alias c='docker-compose'
+
+# docker
 alias d='docker'
-alias da='direnv allow'
-alias http="xh"
+alias c='docker compose'
+
+# files
 alias f="zi"
-alias g="git"
 alias l="exa --group-directories-first -gl"
 alias la="l -a"
+
+# version control
+alias g="git"
+
+# editing
 alias v="nvim"
-alias vi="nvim"
-alias vim="nvim"
