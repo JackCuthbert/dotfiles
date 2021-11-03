@@ -48,6 +48,9 @@ end
 #                \/     \/
 set -g fish_greeting # Disable greeting
 
+# fzf.fish
+fzf_configure_bindings --git_log=\cg --git_status=\cs --directory=\cp
+
 #   ____   _______  __
 # _/ __ \ /    \  \/ /
 # \  ___/|   |  \   /
@@ -70,11 +73,8 @@ set -gx THEFUCK_REQUIRE_CONFIRMATION "false"
 set -gx THEFUCK_EXCLUDE_RULES "git_pull:git_push"
 
 # fzf
-set -gx FZF_DEFAULT_COMMAND "fd --type f --color=never --hidden"
+set -gx FZF_DEFAULT_COMMAND "fd --type f"
 set -gx FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
-set -gx FZF_ALT_C_COMMAND "fd --type d . --color=never --hidden"
-set -U FZF_LEGACY_KEYBINDINGS 0
-set -U FZF_COMPLETE 3
 
 #        .__  .__
 # _____  |  | |__|____    ______
