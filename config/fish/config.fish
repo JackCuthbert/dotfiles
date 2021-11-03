@@ -51,6 +51,23 @@ set -g fish_greeting # Disable greeting
 # fzf.fish
 fzf_configure_bindings --git_log=\cg --git_status=\cs --directory=\cp
 
+# fzf for ghq
+function __ghq_fzf_cd --description "Use FZF to choose from ghq managed repositories and then switch to one with cd"
+  set -l ghq_root (ghq root)
+  set -l ghq_sel (ghq list | fzf --height "40%")
+
+  echo $ghq_sel
+
+  if [ $ghq_sel ]
+    set -l new_pwd $ghq_root/$ghq_sel
+    builtin cd $new_pwd
+  end
+
+  commandline -f repaint
+end
+
+bind \ck __ghq_fzf_cd
+
 #   ____   _______  __
 # _/ __ \ /    \  \/ /
 # \  ___/|   |  \   /
