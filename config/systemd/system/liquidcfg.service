@@ -1,5 +1,5 @@
 [Unit]
-Description=NZXT AIO + Lighting Service
+Description=NZXT AIO Service
 
 [Service]
 Type=oneshot
@@ -9,7 +9,6 @@ ExecStart=liquidctl --match kraken set pump speed 35 70  40 80  45 85  50 90  55
 ExecStart=liquidctl --match kraken set fan speed  20 30  30 50  40 60  45 70  50 80  55 90  60 100
 
 # Lighting
-ExecStart=liquidctl --match smart set led color off
 ExecStart=liquidctl --match kraken set ring color breathing ffffff
 ExecStart=liquidctl --match kraken set logo color off
 
