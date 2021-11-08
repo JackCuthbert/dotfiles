@@ -7,6 +7,7 @@ dog
 fd
 feh
 fish
+fisher
 fzf
 ghq-bin
 git
@@ -21,7 +22,7 @@ openssh
 p7zip
 python
 sshfs
-starship-bin
+starship
 unzip
 vim
 wget
@@ -96,7 +97,7 @@ firefox
 obs-studio
 peek
 picard
-signal-desktop-beta-bin
+signal-desktop
 slack-desktop
 steam
 virtualbox-ext-oracle
