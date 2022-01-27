@@ -1,60 +1,24 @@
 call plug#begin('~/.vim/plugged')
 
-" Language Support
-" ----------------
-
-" Go
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
-" TypeScript + JavaScript
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'yuezk/vim-js'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'jxnblk/vim-mdx-js'
-Plug 'pantharshit00/vim-prisma'
-
-" Fish
-Plug 'dag/vim-fish'
-
-" Autocomplete/format
-" -------------------
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-
-" Editor
-" ------
-
-" File browser
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'junegunn/fzf.vim'
-Plug 'travisjeffery/vim-auto-mkdir'
-Plug 'Asheq/close-buffers.vim'
-
-" Motion
-Plug 'tpope/vim-surround'
-Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-commentary'
-
-" Support editor config files
+" syntax
+Plug 'navarasu/onedark.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'editorconfig/editorconfig-vim'
 
-" Highlight and strip whitespace
-Plug 'ntpeters/vim-better-whitespace'
+" nav
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'ahmedkhalf/project.nvim'
+Plug 'yamatsum/nvim-cursorline'
 
-" Codebase search
-Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
+" completion
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
-" Git
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-
-" Linting
-Plug 'w0rp/ale'
-
-" Themes
-Plug 'joshdick/onedark.vim'
-Plug 'chriskempson/base16-vim'
+" theme
+Plug 'navarasu/onedark.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
