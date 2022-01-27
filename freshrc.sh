@@ -76,12 +76,12 @@ fresh config/gpg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 # Neovim
 fresh-options --file=~/.config/nvim/init.vim --marker='"'
   fresh config/nvim/plugs.vim # NOTE: Must be first
-  fresh config/nvim/theme.vim
+  fresh config/nvim/init.vim
+  fresh config/nvim/init.lua.vim
 
-  fresh config/nvim/nvim-config/\*.vim
   fresh config/nvim/plug-config/\*.vim
 fresh-options
-fresh config/nvim/coc.nvim/settings.json --file=~/.config/nvim/coc-settings.json
+fresh config/nvim/coc-settings.json --file=~/.config/nvim/coc-settings.json
 
 # Alacritty
 fresh-options --file=~/.config/alacritty/alacritty.yml --marker=#
