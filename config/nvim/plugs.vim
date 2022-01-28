@@ -1,19 +1,20 @@
+" TODO: Migration to packer
 call plug#begin('~/.vim/plugged')
 
 " syntax
-Plug 'navarasu/onedark.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'editorconfig/editorconfig-vim'
-Plug 'tpope/vim-surround'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 
 " nav
+Plug 'ahmedkhalf/project.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'ryanoasis/vim-devicons'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'lewis6991/gitsigns.nvim'
-Plug 'ahmedkhalf/project.nvim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-fugitive'
 Plug 'yamatsum/nvim-cursorline'
 
 " completion

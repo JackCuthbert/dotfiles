@@ -75,9 +75,8 @@ fresh config/gpg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 
 # Neovim
 fresh-options --file=~/.config/nvim/init.vim --marker='"'
-  fresh config/nvim/plugs.vim # NOTE: Must be first
+  fresh config/nvim/plugs.vim
   fresh config/nvim/init.vim
-  fresh config/nvim/init.lua.vim
 
   fresh config/nvim/plug-config/\*.vim
 fresh-options
