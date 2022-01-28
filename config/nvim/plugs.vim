@@ -5,6 +5,7 @@ Plug 'navarasu/onedark.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 " nav
 Plug 'kyazdani42/nvim-tree.lua'
