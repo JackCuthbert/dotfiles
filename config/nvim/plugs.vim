@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'navarasu/onedark.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-surround'
 
 " nav
 Plug 'kyazdani42/nvim-tree.lua'
