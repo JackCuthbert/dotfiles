@@ -59,8 +59,8 @@
     - name: Create liquid cooler unit file
       become: true
       template:
-        src: ./templates/systemd/system/liquidcfg.service
-        dest: /etc/systemd/system/liquidcfg.service
+        src: ./templates/systemd/system/liquidctl.service
+        dest: /etc/systemd/system/liquidctl.service
         owner: root
         group: root
         mode: '0644'
@@ -110,7 +110,7 @@
     - name: Liquid cooler configuration service
       become: true
       service:
-        name: liquidcfg
+        name: liquidctl
         state: started
         enabled: true
       when:
