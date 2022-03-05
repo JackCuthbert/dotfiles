@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-#
-# Dependencies:
-#   * scrot
-#   * imagemagick
-
 # Take screenshot and pixelate it
 scrot /tmp/lockscreen.tmp.png
 convert /tmp/lockscreen.tmp.png -scale 10% -scale 1000% /tmp/lockscreen.tmp.png

@@ -1,3 +1,4 @@
+# NOTE: Currently unused
 [Unit]
 Description=i3lock on suspend
 Before=sleep.target
