@@ -46,7 +46,7 @@ fresh-options
 # .config
 fresh config/ranger.conf --file=~/.config/ranger/rc.conf
 fresh config/redshift.ini --file=~/.config/redshift/redshift.conf
-# fresh config/flameshot.ini --file=~/.config/flameshot/flameshot.ini
+fresh config/flameshot.ini --file=~/.config/flameshot/flameshot.ini
 fresh config/starship.toml --file=~/.config/starship.toml
 fresh config/fdignore --file
 fresh config/quokka.json --file=~/.quokka/config.json
@@ -72,15 +72,6 @@ fresh config/ssh/pam_environment --file=~/.pam_environment
 fresh config/gpg/gpg.conf --file=~/.gnupg/gpg.conf
 fresh config/gpg/sshcontrol --file=~/.gnupg/sshcontrol
 fresh config/gpg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
-
-# Neovim
-fresh-options --file=~/.config/nvim/init.vim --marker='"'
-  fresh config/nvim/plugs.vim
-  fresh config/nvim/init.vim
-
-  fresh config/nvim/plug-config/\*.vim
-fresh-options
-fresh config/nvim/coc-settings.json --file=~/.config/nvim/coc-settings.json
 
 # Alacritty
 fresh-options --file=~/.config/alacritty/alacritty.yml --marker=#
