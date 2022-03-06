@@ -3,6 +3,7 @@
   connection: local
   vars:
     desktop: "{{ ansible_hostname == 'kanade' }}"
+    laptop: "{{ ansible_hostname == 'narumi' }}"
   tasks:
     # Networking
     - name: Create systemd/network directory
@@ -21,11 +22,20 @@
         group: root
         mode: '0644'
 
-    - name: Network configuration
+    - name: Network configuration (wired)
       become: true
       template:
-        src: ./templates/systemd/network/20-eth0.network
-        dest: /etc/systemd/network/20-eth0.network
+        src: ./templates/systemd/network/20-dhcp.network
+        dest: /etc/systemd/network/20-dhcp.network
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Network configuration (wireless)
+      become: true
+      template:
+        src: ./templates/etc/iwd/main.conf
+        dest: /etc/iwd/main.conf
         owner: root
         group: root
         mode: '0644'
@@ -38,13 +48,16 @@
         owner: root
         group: root
         state: link
+    
+    - name: Create systemd user directory
+      file:
+        path: ~/.config/systemd/user
+        state: directory
 
     - name: Geoclue agent unit file
       template:
         src: ./templates/systemd/user/geoclue-agent.service
         dest: ~/.config/systemd/user/geoclue-agent.service
-      when:
-        - desktop
 
     - name: Configure timesyncd
       become: true
@@ -85,6 +98,15 @@
         name: systemd-networkd
         state: started
         enabled: true
+
+    - name: Start & enable iwd
+      become: true
+      service:
+        name: iwd
+        state: started
+        enabled: true
+      when:
+        - laptop
 
     - name: Start & enable systemd-resolved
       become: true
