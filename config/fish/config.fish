@@ -49,7 +49,7 @@ end
 set -g fish_greeting # Disable greeting
 
 # fzf.fish
-fzf_configure_bindings --git_log=\cg --git_status=\cs --directory=\cp
+fzf_configure_bindings --git_log=\cg --git_status=\cs --directory=\cp --variables
 
 # fzf for ghq
 function __ghq_fzf_cd --description "Use FZF to choose from ghq managed repositories and then switch to one with cd"
