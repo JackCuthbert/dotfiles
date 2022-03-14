@@ -167,3 +167,34 @@
         owner: root
         group: root
         mode: '0644'
+
+    # Kernel modules
+    - name: Blacklist i2c nvidia driver
+      become: true
+      template:
+        src: ./templates/etc/modprobe.d/i2c-nvidia-gpu-blacklist.conf
+        dest: /etc/modprobe.d/i2c-nvidia-gpu-blacklist.conf
+        owner: root
+        group: root
+        mode: '0644'
+      when:
+        - desktop
+    - name: Disable fTPM
+      become: true
+      template:
+        src: ./templates/etc/modprobe.d/tpm_crb-blacklist.conf
+        dest: /etc/modprobe.d/tpm_crb-blacklist.conf
+        owner: root
+        group: root
+        mode: '0644'
+      when:
+        - desktop
+    - name: Enable V4L2Loopback
+      become: true
+      template:
+        src: ./templates/etc/modprobe.d/v4l2loopback.conf
+        dest: /etc/modprobe.d/v4l2loopback.conf
+        owner: root
+        group: root
+        mode: '0644'
+
