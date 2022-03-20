@@ -198,3 +198,14 @@
         group: root
         mode: '0644'
 
+    # Sysctl config
+    - name: Lower swappiness
+      become: true
+      template:
+        src: ./templates/etc/sysctl.d/99-swappiness.conf
+        dest: /etc/sysctl.d/99-swappiness.conf
+        owner: root
+        group: root
+        mode: '0644'
+      when:
+        - desktop
