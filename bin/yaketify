@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# Put yakety.mp3 audio on top of video file $1
-ffmpeg -i "$1" -i /opt/yakety.mp3 -shortest "$1-yakety.mp4"
