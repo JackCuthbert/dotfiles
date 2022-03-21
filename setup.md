@@ -34,7 +34,7 @@ Clone this dotfiles repo and install [fresh](https://freshshell.com):
 
 ```bash
 git clone https://gitlab.com/JackCuthbert/dotfiles.git ~/.dotfiles
-ln -s "~/.dotfiles/freshrc.sh" "~/.freshrc"
+ln -s "~/.dotfiles/.freshrc" "~/.freshrc"
 bash -c "`curl -sL https://get.freshshell.com`"
 ```
 
