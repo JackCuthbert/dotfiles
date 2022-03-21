@@ -2,80 +2,80 @@
 fresh freshshell/fresh bin/fresh --bin
 
 # Fish
-fresh config/fish/config.fish --file=~/.config/fish/config.fish
-fresh config/fish/fish_plugins --file=~/.config/fish/fish_plugins
-fresh config/fish/completions/poetry.fish --file=~/.config/fish/completions/poetry.fish
+fresh src/fish/config.fish --file=~/.config/fish/config.fish
+fresh src/fish/fish_plugins --file=~/.config/fish/fish_plugins
+fresh src/fish/completions/poetry.fish --file=~/.config/fish/completions/poetry.fish
 
 # JetBrains
-fresh config/ideavimrc.vim --file=~/.ideavimrc
+fresh src/ideavimrc.vim --file=~/.ideavimrc
 
 # Xorg
 fresh-options --file
-  fresh config/xorg/\*
+  fresh src/xorg/\*
 fresh-options
 
 # Custom scripts
 fresh-options --bin
-  fresh bin/\*
+  fresh src/bin/\*
 fresh-options
 
 # Git
 fresh-options --file
-  fresh config/git/\*
+  fresh src/git/\*
 fresh-options
 
 # Fontconfig
-fresh config/fontconfig/conf.d/00-blacklist_nimbus.conf --file=~/.config/fontconfig/conf.d/00-blacklist_nimbus.conf
+fresh src/fontconfig/conf.d/00-blacklist_nimbus.conf --file=~/.config/fontconfig/conf.d/00-blacklist_nimbus.conf
 
 # i3
-fresh config/i3status.conf --file=~/.i3status.conf
+fresh src/i3status.conf --file=~/.i3status.conf
 fresh-options --file=~/.config/i3/config --marker
-  fresh config/i3/appearance.conf
-  fresh config/i3/modifiers.conf
+  fresh src/i3/appearance.conf
+  fresh src/i3/modifiers.conf
 
-  fresh config/i3/modes/\*.conf
-  fresh config/i3/keybindings/\*.conf
+  fresh src/i3/modes/\*.conf
+  fresh src/i3/keybindings/\*.conf
 
   # theme
-  fresh config/i3/theme/one-dark.conf
+  fresh src/i3/theme/one-dark.conf
 
   # startup must be last
-  fresh config/i3/startup.conf
+  fresh src/i3/startup.conf
 fresh-options
 
 # .config
-fresh config/ranger.conf --file=~/.config/ranger/rc.conf
-fresh config/redshift.ini --file=~/.config/redshift/redshift.conf
-fresh config/flameshot.ini --file=~/.config/flameshot/flameshot.ini
-fresh config/starship.toml --file=~/.config/starship.toml
-fresh config/fdignore --file
-fresh config/quokka.json --file=~/.quokka/config.json
+fresh src/ranger.conf --file=~/.config/ranger/rc.conf
+fresh src/redshift.ini --file=~/.config/redshift/redshift.conf
+fresh src/flameshot.ini --file=~/.config/flameshot/flameshot.ini
+fresh src/starship.toml --file=~/.config/starship.toml
+fresh src/fdignore --file
+fresh src/quokka.json --file=~/.quokka/config.json
 
 # Dunst
 fresh-options --file=~/.config/dunst/dunstrc
-  fresh config/dunst/default.conf
-  fresh config/dunst/theme/one-dark.conf
+  fresh src/dunst/default.conf
+  fresh src/dunst/theme/one-dark.conf
 fresh-options
 
 # Rofi
-fresh config/rofi.rasi --file=~/.config/rofi/config.rasi
+fresh src/rofi.rasi --file=~/.config/rofi/config.rasi
 
 # GTK 2 & 3
-fresh config/gtk/gtkrc-2.0 --file=~/.gtkrc-2.0
-fresh config/gtk/settings.ini --file=~/.config/gtk-3.0/settings.ini
+fresh src/gtk/gtkrc-2.0 --file=~/.gtkrc-2.0
+fresh src/gtk/settings.ini --file=~/.config/gtk-3.0/settings.ini
 
 # SSH
-fresh config/ssh/ssh.conf --file=~/.ssh/config
-fresh config/ssh/pam_environment --file=~/.pam_environment
+fresh src/ssh/ssh.conf --file=~/.ssh/config
+fresh src/ssh/pam_environment --file=~/.pam_environment
 
 # GPG
-fresh config/gpg/gpg.conf --file=~/.gnupg/gpg.conf
-fresh config/gpg/sshcontrol --file=~/.gnupg/sshcontrol
-fresh config/gpg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
+fresh src/gpg/gpg.conf --file=~/.gnupg/gpg.conf
+fresh src/gpg/sshcontrol --file=~/.gnupg/sshcontrol
+fresh src/gpg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 
 # Alacritty
 fresh-options --file=~/.config/alacritty/alacritty.yml --marker=#
-  fresh config/alacritty/\*
+  fresh src/alacritty/\*
   fresh eendroroy/alacritty-theme themes/one_dark.yaml
 fresh-options
 
