@@ -44,6 +44,7 @@ fresh-options --file=~/.config/i3/config --marker
 fresh-options
 
 # .config
+fresh src/picom.conf --file=~/.config/picom/picom.conf
 fresh src/ranger.conf --file=~/.config/ranger/rc.conf
 fresh src/redshift.ini --file=~/.config/redshift/redshift.conf
 fresh src/flameshot.ini --file=~/.config/flameshot/flameshot.ini
