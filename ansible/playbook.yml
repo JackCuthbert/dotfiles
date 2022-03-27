@@ -22,7 +22,7 @@
         group: root
         mode: '0644'
 
-    - name: Network configuration (wired)
+    - name: Network configuration (dhcp)
       become: true
       template:
         src: ./templates/systemd/network/20-dhcp.network
@@ -31,7 +31,7 @@
         group: root
         mode: '0644'
 
-    - name: Network configuration (wireless)
+    - name: Network configuration (wifi device)
       become: true
       template:
         src: ./templates/etc/iwd/main.conf
@@ -125,6 +125,13 @@
     - name: Start & enable geoclue-agent
       service:
         name: geoclue-agent
+        state: started
+        enabled: true
+        scope: user
+
+    - name: Start & enable pipewire-pulse
+      service:
+        name: pipewire-pulse
         state: started
         enabled: true
         scope: user
