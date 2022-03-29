@@ -30,7 +30,7 @@ source "$HOME/.asdf/asdf.fish"
 #  |__| |___|  /\___  >__|_|  /\___  >
 #            \/     \/      \/     \/
 if status is-interactive
-    set -l onedark_options '-b'
+    set -l onedark_options
 
     if set -q VIM
         # Using from vim/neovim.
