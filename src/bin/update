@@ -1,0 +1,20 @@
+#!/usr/bin/env fish
+
+function inform --argument text
+  set_color -o yellow
+  echo "$text"
+  set_color normal
+end
+
+if type -q aura
+  inform "Updating Pacman packages"
+  sudo aura -Syu
+
+  inform "Updating AUR packages"
+  sudo aura -Aau
+end
+
+if type -q nvim
+  inform "Updating Vim plugins"
+  nvim +PackerUpdate +TSUpdate
+end
