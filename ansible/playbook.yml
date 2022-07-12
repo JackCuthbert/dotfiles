@@ -22,6 +22,15 @@
         group: root
         mode: '0644'
 
+    - name: Disable resolved multicast
+      become: true
+      template:
+        src: ./templates/systemd/resolved.conf.d/disable_multicast.conf
+        dest: /etc/systemd/resolved.conf.d/disable_multicast.conf
+        owner: root
+        group: root
+        mode: '0644'
+
     - name: Network configuration (dhcp)
       become: true
       template:
