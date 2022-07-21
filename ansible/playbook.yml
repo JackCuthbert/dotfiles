@@ -89,6 +89,17 @@
       when:
         - desktop
 
+    - name: Create OpenRGB unit file
+      become: true
+      template:
+        src: ./templates/systemd/system/openrgb.service
+        dest: /etc/systemd/system/openrgb.service
+        owner: root
+        group: root
+        mode: '0644'
+      when:
+        - desktop
+
     # Reload to ensure all following starts are using new config
     - name: Reload systemd (system)
       become: true
@@ -154,18 +165,16 @@
       when:
         - desktop
 
-    # Configure Xorg
-    - name: Nvidia configuration
+    - name: OpenRGB configuration service
       become: true
+      service:
+        name: openrgb
+        state: started
+        enabled: true
       when:
         - desktop
-      template:
-        src: ./templates/xorg.conf.d/10-nvidia.conf
-        dest: /etc/X11/xorg.conf.d/10-nvidia.conf
-        owner: root
-        group: root
-        mode: '0644'
 
+    # Configure Xorg
     - name: Mouse/trackpad configuration
       become: true
       template:
