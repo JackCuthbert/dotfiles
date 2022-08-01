@@ -32,12 +32,10 @@ fresh src/i3status.conf --file=~/.i3status.conf
 fresh-options --file=~/.config/i3/config --marker
   fresh src/i3/appearance.conf
   fresh src/i3/modifiers.conf
+  fresh src/i3/bar.conf
 
   fresh src/i3/modes/\*.conf
   fresh src/i3/keybindings/\*.conf
-
-  # theme
-  fresh src/i3/theme/one-dark.conf
 
   # startup must be last
   fresh src/i3/startup.conf
@@ -77,7 +75,7 @@ fresh src/gpg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 # Alacritty
 fresh-options --file=~/.config/alacritty/alacritty.yml --marker=#
   fresh src/alacritty/\*
-  fresh eendroroy/alacritty-theme themes/one_dark.yaml
+  fresh rajasegar/alacritty-themes themes/github_dark_default.yml
 fresh-options
 
 fresh-options --file=~/.gitignore_global --marker
