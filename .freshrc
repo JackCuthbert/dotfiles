@@ -26,6 +26,7 @@ fresh-options
 
 # Fontconfig
 fresh src/fontconfig/conf.d/00-blacklist_nimbus.conf --file=~/.config/fontconfig/conf.d/00-blacklist_nimbus.conf
+fresh src/fontconfig/fonts.conf --file=~/.config/fontconfig/fonts.conf
 
 # i3
 fresh src/i3status.conf --file=~/.i3status.conf
