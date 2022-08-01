@@ -22,3 +22,10 @@ disabled = true
 
 [terraform]
 disabled = true
+
+[directory]
+style = "bright-blue"
+
+[git_branch]
+format = "[$branch]($style)"
+style = "bright-black"
