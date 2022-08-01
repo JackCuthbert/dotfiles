@@ -1,7 +1,7 @@
 configuration {
   modi: "combi";
-  combi-modi: "drun,window";
-  font: "Noto Sans 12";
+  combi-modi: "window,drun";
+  font: "SF Mono Text 11";
   show-icons: false;
 
   timeout {
@@ -15,23 +15,20 @@ configuration {
   }
 }
 
-/**
- * Default theme
- */
 * {
   max-width: 600px;
 
   // Vars
   black:                       #000000;
-  red:                         #eb6e67;
-  blue:                        #6eaafb;
-  foreground:                  #abb2bf;
-  background:                  #282c34;
-  background-dark:             #21252B;
+  red:                         #FF7B72;
+  blue:                        #79C0FF;
+  foreground:                  #C9D1D9;
+  background:                  #0D1117;
+  background-dark:             #010409;
 
-  emphasis:                    #50536b; // lighter bg
-  text:                        #dfdfdf;
-  text-alt:                    #b2b2b2;
+  emphasis:                    #999999; // lighter bg
+  text:                        #C9D1D9;
+  text-alt:                    #8B949E;
 
   light-foreground:            var(text);
   light-background:            var(emphasis);
