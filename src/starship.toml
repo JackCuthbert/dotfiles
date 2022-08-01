@@ -1,31 +1,50 @@
-[aws]
-disabled = true
-
-[gcloud]
-disabled = true
+add_newline = false
 
 [character]
-success_symbol = "[](bold green)"
-error_symbol = "[](bold red)"
-vicmd_symbol = "[](bold green)"
-
-[git_status]
-ahead = "↑"
-behind = "↓"
-diverged = "↕"
+success_symbol = "[ﬦ](bright-green)"
+error_symbol = "[ﬦ](bright-red)"
+vicmd_symbol = "[ﬦ](bright-green)"
 
 [line_break]
+disabled = false
+
+[directory]
+style = "bright-blue"
+
+[git_metrics]
+disabled = false
+format = '([+$added]($added_style) )([-$deleted]($deleted_style) )'
+added_style = "bright-green"
+deleted_style = "bright-red"
+
+[git_branch]
+format = "[$branch(:$remote_branch)]($style) "
+style = "bright-black"
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = "white"
+ahead = "↑"
+behind = "↓"
+diverged = "⇵"
+
+[golang]
+disabled = true
+
+[java]
 disabled = true
 
 [package]
 disabled = true
 
+[nodejs]
+disabled = true
+
 [terraform]
 disabled = true
 
-[directory]
-style = "bright-blue"
+[aws]
+disabled = true
 
-[git_branch]
-format = "[$branch]($style)"
-style = "bright-black"
+[gcloud]
+disabled = true
