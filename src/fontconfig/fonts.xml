@@ -4,21 +4,32 @@
   <alias>
    <family>sans-serif</family>
    <prefer>
+     <!-- Support emoji in alacritty -->
      <family>Noto Color Emoji</family>
    </prefer>
   </alias>
-
   <alias>
    <family>serif</family>
    <prefer>
+     <!-- Support emoji in alacritty -->
      <family>Noto Color Emoji</family>
    </prefer>
   </alias>
-
   <alias>
     <family>monospace</family>
     <prefer>
+     <!-- Support emoji in alacritty -->
       <family>Noto Color Emoji</family>
     </prefer>
   </alias>
+
+  <!-- Disable "Helvetica" family and use "SF Pro Text" instead -->
+  <match>
+    <test name="family">
+      <string>Helvetica</string>
+    </test>
+    <edit binding="same" mode="assign" name="family">
+      <string>SF Pro Text</string>
+    </edit>
+  </match>
 </fontconfig>
