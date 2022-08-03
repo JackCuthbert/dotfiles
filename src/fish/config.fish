@@ -114,3 +114,7 @@ alias g="git"
 
 # editing
 alias v="nvim"
+
+# mac style clipboard
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
