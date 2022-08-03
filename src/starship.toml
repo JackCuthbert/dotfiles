@@ -27,6 +27,7 @@ style = "white"
 ahead = "↑"
 behind = "↓"
 diverged = "⇵"
+deleted = "×"
 
 [golang]
 disabled = true
