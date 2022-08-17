@@ -47,12 +47,12 @@ configuration {
 
   alternate-normal-foreground: var(foreground);
   urgent-background:           var(background);
-  selected-normal-foreground:  var(ligh-background);
+  selected-normal-foreground:  var(black);
   active-foreground:           var(blue);
   selected-active-background:  var(blue);
   active-background:           var(background);
   selected-normal-background:  var(light-foreground);
-  alternate-normal-background: var(ligh-background);
+  alternate-normal-background: var(black);
   selected-urgent-foreground:  var(background);
   normal-foreground:           var(foreground);
   alternate-urgent-foreground: var(red);
