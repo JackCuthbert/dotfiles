@@ -30,6 +30,11 @@ xh
 zip
 zoxide-bin
 
+# jp ime
+fcitx5
+fcitx5-im
+fcitx5-mozc
+
 # fonts
 font-manager
 nerd-fonts-jetbrains-mono

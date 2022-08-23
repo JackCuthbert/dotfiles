@@ -14,5 +14,10 @@ xset dpms 300 300 300
 # set capslock to be control
 setxkbmap -option caps:ctrl_modifier
 
+# jp ime
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+
 # Start i3!
 exec i3
