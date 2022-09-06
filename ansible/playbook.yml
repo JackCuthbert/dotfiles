@@ -222,6 +222,16 @@
         owner: root
         group: root
         mode: '0644'
+    - name: Enable fnmode=2 for hid_apple devices
+      become: true
+      template:
+        src: ./templates/etc/modprobe.d/hid_apple.conf
+        dest: /etc/modprobe.d/hid_apple.conf
+        owner: root
+        group: root
+        mode: "0644"
+      when:
+        - desktop
 
     # Sysctl config
     - name: Lower swappiness
