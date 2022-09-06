@@ -11,7 +11,7 @@
       file:
         path: /etc/systemd/network
         state: directory
-        mode: '0755'
+        mode: "0755"
 
     - name: Fallback DNS configuration
       become: true
@@ -20,7 +20,7 @@
         dest: /etc/systemd/resolved.conf.d/fallback_dns.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
 
     - name: Disable resolved multicast
       become: true
@@ -29,7 +29,7 @@
         dest: /etc/systemd/resolved.conf.d/disable_multicast.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
 
     - name: Network configuration (dhcp)
       become: true
@@ -38,7 +38,7 @@
         dest: /etc/systemd/network/20-dhcp.network
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
 
     - name: Network configuration (wifi device)
       become: true
@@ -47,7 +47,7 @@
         dest: /etc/iwd/main.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
 
     - name: Use systemd-resolved DNS config stub
       become: true
@@ -57,7 +57,7 @@
         owner: root
         group: root
         state: link
-    
+
     - name: Create systemd user directory
       file:
         path: ~/.config/systemd/user
@@ -85,7 +85,7 @@
         dest: /etc/systemd/system/liquidctl.service
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
       when:
         - desktop
 
@@ -96,7 +96,7 @@
         dest: /etc/systemd/system/openrgb.service
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
       when:
         - desktop
 
@@ -182,7 +182,7 @@
         dest: /etc/X11/xorg.conf.d/20-mouse.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
 
     - name: Keyboard configuration
       become: true
@@ -191,7 +191,7 @@
         dest: /etc/X11/xorg.conf.d/30-keyboard.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
 
     # Kernel modules
     - name: Blacklist i2c nvidia driver
@@ -201,7 +201,7 @@
         dest: /etc/modprobe.d/i2c-nvidia-gpu-blacklist.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
       when:
         - desktop
     - name: Disable fTPM
@@ -211,7 +211,7 @@
         dest: /etc/modprobe.d/tpm_crb-blacklist.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
       when:
         - desktop
     - name: Enable V4L2Loopback
@@ -221,7 +221,7 @@
         dest: /etc/modprobe.d/v4l2loopback.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
     - name: Enable fnmode=2 for hid_apple devices
       become: true
       template:
@@ -241,6 +241,6 @@
         dest: /etc/sysctl.d/99-swappiness.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
       when:
         - desktop
