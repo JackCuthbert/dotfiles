@@ -23,6 +23,18 @@ thefuck --alias | source
 source "$HOME/.local/share/google-cloud-sdk/path.fish.inc"
 source "$HOME/.asdf/asdf.fish"
 
+#   __________________  ________ 
+#  /  _____/\______   \/  _____/ 
+# /   \  ___ |     ___/   \  ___ 
+# \    \_\  \|    |   \    \_\  \
+#  \______  /|____|    \______  /
+#         \/                  \/
+if status is-interactive
+  set -x GPG_TTY (tty)
+  set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+  gpg-connect-agent updatestartuptty /bye > /dev/null
+end
+
 #   __  .__
 # _/  |_|  |__   ____   _____   ____
 # \   __\  |  \_/ __ \ /     \_/ __ \
