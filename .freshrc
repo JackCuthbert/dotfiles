@@ -1,13 +1,8 @@
-# Fresh
 fresh freshshell/fresh bin/fresh --bin
 
 # Fish
 fresh src/fish/config.fish --file=~/.config/fish/config.fish
 fresh src/fish/fish_plugins --file=~/.config/fish/fish_plugins
-fresh src/fish/completions/poetry.fish --file=~/.config/fish/completions/poetry.fish
-
-# JetBrains
-fresh src/ideavimrc.vim --file=~/.ideavimrc
 
 # Xorg
 fresh-options --file
@@ -23,6 +18,24 @@ fresh-options
 fresh-options --file
   fresh src/git/\*
 fresh-options
+
+fresh-options --file=~/.gitignore_global --marker
+  # Global ignores
+  fresh github/gitignore Global/GPG.gitignore
+  fresh github/gitignore Global/Vim.gitignore
+  fresh github/gitignore Global/VisualStudioCode.gitignore
+  fresh github/gitignore Global/JetBrains.gitignore
+
+  # Language specific
+  fresh github/gitignore Go.gitignore
+  fresh github/gitignore Node.gitignore
+  fresh github/gitignore Rust.gitignore
+  fresh github/gitignore Kotlin.gitignore
+  fresh github/gitignore Java.gitignore
+fresh-options
+
+# SSH
+fresh src/ssh/ssh.conf --file=~/.ssh/config
 
 # Fontconfig
 fresh src/fontconfig/conf.d/00-blacklist_nimbus.conf --file=~/.config/fontconfig/conf.d/00-blacklist_nimbus.conf
@@ -42,55 +55,15 @@ fresh-options --file=~/.config/i3/config --marker
   fresh src/i3/startup.conf
 fresh-options
 
-# .config
-fresh src/picom.conf --file=~/.config/picom/picom.conf
-fresh src/ranger.conf --file=~/.config/ranger/rc.conf
-fresh src/redshift.ini --file=~/.config/redshift/redshift.conf
-fresh src/flameshot.ini --file=~/.config/flameshot/flameshot.ini
-fresh src/starship.toml --file=~/.config/starship.toml
+# Alacritty
+fresh src/alacritty.yml --file=~/.config/alacritty/alacritty.yml
+fresh rajasegar/alacritty-themes themes/github_light_default.yml  --file=~/.config/alacritty/theme.yml
+
+# Other .config
 fresh src/fdignore --file
-fresh src/quokka.json --file=~/.quokka/config.json
-
-# Dunst
-fresh-options --file=~/.config/dunst/dunstrc
-  fresh src/dunst/default.conf
-  fresh src/dunst/theme/one-dark.conf
-fresh-options
-
-# Rofi
-fresh src/rofi.rasi --file=~/.config/rofi/config.rasi
-
-# GTK 2 & 3
+fresh src/flameshot.ini --file=~/.config/flameshot/flameshot.ini
 fresh src/gtk/gtkrc-2.0 --file=~/.gtkrc-2.0
 fresh src/gtk/settings.ini --file=~/.config/gtk-3.0/settings.ini
-
-# SSH
-fresh src/ssh/ssh.conf --file=~/.ssh/config
-fresh src/ssh/pam_environment --file=~/.pam_environment
-
-# GPG
-fresh src/gpg/gpg.conf --file=~/.gnupg/gpg.conf
-fresh src/gpg/sshcontrol --file=~/.gnupg/sshcontrol
-fresh src/gpg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
-
-# Alacritty
-fresh-options --file=~/.config/alacritty/alacritty.yml --marker=#
-  fresh src/alacritty/\*
-  fresh rajasegar/alacritty-themes themes/github_dark_default.yml
-fresh-options
-
-fresh-options --file=~/.gitignore_global --marker
-  # Global ignores
-  fresh github/gitignore Global/GPG.gitignore
-  fresh github/gitignore Global/Vim.gitignore
-  fresh github/gitignore Global/VisualStudioCode.gitignore
-  fresh github/gitignore Global/JetBrains.gitignore
-
-  # Language specific
-  fresh github/gitignore Go.gitignore
-  fresh github/gitignore Node.gitignore
-  fresh github/gitignore Rust.gitignore
-  fresh github/gitignore Kotlin.gitignore
-  fresh github/gitignore Java.gitignore
-fresh-options
-
+fresh src/ideavimrc.vim --file=~/.ideavimrc
+fresh src/rofi.rasi --file=~/.config/rofi/config.rasi
+fresh src/starship.toml --file=~/.config/starship.toml

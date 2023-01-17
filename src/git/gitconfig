@@ -1,40 +1,30 @@
 [user]
   name = Jack Cuthbert
   email = jckcthbrt@gmail.com
-  signingkey = "8E15CE91C96DB71D!"
-[gpg]
-  program = /usr/bin/gpg2
 [commit]
   template = ~/.gitmessage
-  gpgsign = true
 [core]
   ignorecase = false
   excludesfile = ~/.gitignore_global
-  pager = delta --dark --theme="ansi-dark"
+  pager = delta
 [pull]
   rebase = true
 [push]
   default = simple
 [interactive]
   diffFilter = delta --color-only
-[color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
-  ui = true
-[color "diff-highlight"]
-  oldNormal = "red bold"
-  oldHighlight = "red bold 52"
-  newNormal = "green bold"
-  newHighlight = "green bold 22"
+[blame]
+  pager = delta
+[delta]
+  line-numbers = true
+  navigate = true
+  light = true
+  theme = GitHub
+[merge]
+  conflictstyle = diff3
 [diff]
-  meta = "11"
-  frag = "magenta bold"
-  commit = "yellow bold"
-  old = "red bold"
-  new = "green bold"
-  whitespace = "red reverse"
+  colorMoved = default
+
 [alias]
   # Logging
   l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative # minimal complete log
@@ -87,7 +77,6 @@
   g="!exec git"
   git="!exec git" # git git git git git status
   alias = "!git config -l | grep alias | cut -c 7-" # list all aliases
-[color "status"]
-  added = green
-  changed = red
-  untracked = magenta
+
+[ghq]
+  root = ~/Ghq

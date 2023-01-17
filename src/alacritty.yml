@@ -1,0 +1,41 @@
+import:
+  # Managed by .freshrc
+  - "~/.config/alacritty/theme.yml"
+
+env:
+  TERM: xterm-256color
+
+window:
+  dynamic_padding: false
+  dynamic_title: true
+  padding:
+    x: 5
+    y: 0
+  decorations: full
+  decorations_theme_variant: None
+  opacity: 1.0
+  startup_mode: Windowed
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+font:
+  size: 12.0
+  normal:
+    family: "JetBrainsMono Nerd Font Mono"
+    style: Regular
+  bold:
+    family: "JetBrainsMono Nerd Font Mono"
+    style: Bold
+  italic:
+    family: "JetBrainsMono Nerd Font Mono"
+    style: Italic
+  bold_italic:
+    family: "JetBrainsMono Nerd Font Mono"
+    style: Bold Italic
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0

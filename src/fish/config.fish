@@ -1,3 +1,5 @@
+# generate headings: `figlet -f graffiti your_text`
+#
 #         ____ ____
 # ___  __/_   /_   |
 # \  \/  /|   ||   |
@@ -5,9 +7,9 @@
 # /__/\_ \|___||___|
 #       \/
 if status is-login
-    if test -z "$DISPLAY" -a -z "$INITIAL_SETUP" -a "$XDG_VTNR" = 1
-        exec startx
-    end
+  if test -z "$DISPLAY" -a -z "$INITIAL_SETUP" -a "$XDG_VTNR" = 1
+    exec startx
+  end
 end
 
 # .__       .__  __
@@ -17,40 +19,17 @@ end
 # |__|___|  /__||__|
 #         \/
 starship init fish | source
-zoxide init fish | source
 direnv hook fish | source
-thefuck --alias | source
 source "$HOME/.local/share/google-cloud-sdk/path.fish.inc"
 source "$HOME/.asdf/asdf.fish"
 
-#   __________________  ________ 
-#  /  _____/\______   \/  _____/ 
-# /   \  ___ |     ___/   \  ___ 
-# \    \_\  \|    |   \    \_\  \
-#  \______  /|____|    \______  /
-#         \/                  \/
-if status is-interactive
-  set -x GPG_TTY (tty)
-  set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-  gpg-connect-agent updatestartuptty /bye > /dev/null
-end
-
-#   __  .__
-# _/  |_|  |__   ____   _____   ____
-# \   __\  |  \_/ __ \ /     \_/ __ \
-#  |  | |   Y  \  ___/|  Y Y  \  ___/
-#  |__| |___|  /\___  >__|_|  /\___  >
-#            \/     \/      \/     \/
-if status is-interactive
-    set -l onedark_options
-
-    if set -q VIM
-        # Using from vim/neovim.
-        set onedark_options "-256"
-    end
-
-    set_onedark $onedark_options
-end
+#               .__     
+#   ______ _____|  |__  
+#  /  ___//  ___/  |  \ 
+#  \___ \ \___ \|   Y  \
+# /____  >____  >___|  /
+#      \/     \/     \/ 
+set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/keyring/ssh"
 
 #   _____.__       .__
 # _/ ____\__| _____|  |__
@@ -60,50 +39,37 @@ end
 #                \/     \/
 set -g fish_greeting # Disable greeting
 
-# fzf.fish
-fzf_configure_bindings --git_log=\cg --git_status=\cs --directory=\cp --variables
-
-# fzf for ghq
-function __ghq_fzf_cd --description "Use FZF to choose from ghq managed repositories and then switch to one with cd"
-  set -l ghq_root (ghq root)
-  set -l ghq_sel (ghq list | fzf --height "40%")
-
-  echo $ghq_sel
-
-  if [ $ghq_sel ]
-    set -l new_pwd $ghq_root/$ghq_sel
-    builtin cd $new_pwd
-  end
-
-  commandline -f repaint
-end
-
-bind \ck __ghq_fzf_cd
-
 #   ____   _______  __
 # _/ __ \ /    \  \/ /
 # \  ___/|   |  \   /
 #  \___  >___|  /\_/
 #      \/     \/
-set -gx GOPATH "$HOME/go"
 set -gx EDITOR "nvim"
 set -gx TERMINAL "alacritty"
-
 set -gx MOZ_USE_XINPUT2 "1"    # Use pixel-perfect scrolling in firefox
 set -gx WINIT_HIDPI_FACTOR "1" # Disable scaling for alacritty
 
-# Path
+#   _____          _____
+# _/ ____\________/ ____\
+# \   __\\___   /\   __\
+#  |  |   /    /  |  |
+#  |__|  /_____ \ |__|
+#              \/
+# github light default theme
+set -gx FZF_DEFAULT_OPTS "$FZF_DEFAULT_OPTS
+--color=fg:-1,bg:-1,hl:#0366d6
+--color=fg+:#24292e,bg+:#d0d7de,hl+:#2188ff
+--color=info:#57606a,prompt:#d73a49,pointer:#6f42c1
+--color=marker:#22863a,spinner:#8a63d2,header:#1b7c83"
+
+#               __  .__
+# ___________ _/  |_|  |__
+# \____ \__  \\   __\  |  \
+# |  |_> > __ \|  | |   Y  \
+# |   __(____  /__| |___|  /
+# |__|       \/          \/
 fish_add_path "$HOME/bin"        # fresh bin path
-fish_add_path "$HOME/.cargo/bin" # rust path
 fish_add_path "$GOPATH/bin"      # go path
-
-# thefuck
-set -gx THEFUCK_REQUIRE_CONFIRMATION "false"
-set -gx THEFUCK_EXCLUDE_RULES "git_pull:git_push"
-
-# fzf
-set -gx FZF_DEFAULT_COMMAND "fd --type f"
-set -gx FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 
 #        .__  .__
 # _____  |  | |__|____    ______
