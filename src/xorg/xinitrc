@@ -1,5 +1,8 @@
 systemctl --user import-environment DISPLAY
 
+# Ensure keyrings with seahorse works
+source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+
 # Setup Xresources for term if they exist
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
