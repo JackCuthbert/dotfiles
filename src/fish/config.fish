@@ -49,6 +49,11 @@ set -gx TERMINAL "alacritty"
 set -gx MOZ_USE_XINPUT2 "1"    # Use pixel-perfect scrolling in firefox
 set -gx WINIT_HIDPI_FACTOR "1" # Disable scaling for alacritty
 
+# Ensure GDK and Firefox use X11, resolves issue with Firefox unable to open
+# links without Firefox already being open.
+set -gx MOZ_ENABLE_WAYLAND "0"
+set -gx GDK_BACKEND "x11"      
+
 #   _____          _____
 # _/ ____\________/ ____\
 # \   __\\___   /\   __\
