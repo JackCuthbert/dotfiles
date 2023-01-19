@@ -11,6 +11,8 @@
   rebase = true
 [push]
   default = simple
+[rebase]
+  autostash = true
 [interactive]
   diffFilter = delta --color-only
 [blame]
@@ -71,7 +73,7 @@
   pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\"" # push a branch and set up remote tracking
   hard-pull = !git fetch && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD) # throw away all local changes/commits and reset back to remote's version of branch
   yoink = 'hard-pull'
-  ras = rebase -i --autosquash --autostash
+  ras = rebase -i --autosquash
 
   # Aliases
   g="!exec git"
