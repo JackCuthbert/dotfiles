@@ -17,6 +17,7 @@
     systemPackages = [
       # Utils / required everywhere
       pkgs.git
+      pkgs.delta
       pkgs.fzf
       pkgs.mosh
 
