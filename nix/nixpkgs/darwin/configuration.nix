@@ -18,6 +18,7 @@
       # Utils / required everywhere
       pkgs.git
       pkgs.fzf
+      pkgs.mosh
 
       # Docker support
       pkgs.colima
