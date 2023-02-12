@@ -150,6 +150,73 @@
 
     git = {
       enable = true;
+      userName = "Jack Cuthbert";
+      userEmail = "jckcthbrt@gmail.com";
+      aliases = {
+        # Committing
+        a = "add";
+        ap = "add -p"; # add patch
+        c = "commit --verbose";
+        ca = "commit -a --verbose"; # commit all
+        cm = "commit -m"; # commit with message
+        cam = "commit -a -m"; # commit all with message
+        m = "commit --amend --verbose"; # ammend the last commit with the new one
+
+        # Diffing
+        d = "diff"; # show the difference between unstaged and last commit
+        dc = "diff --cached"; # show the difference between staged and last commit
+        ds = "diff --stat"; # show the number of lines changed across unstaged files
+
+        # Pushing
+        p = "push";
+        pf = "push --force-with-lease";
+        pff = "push --force";
+
+        # Staging
+        derp = "reset"; # alias for unstaging files
+
+        # Status
+        s = "status -s"; # minimal status
+        stat = "status"; # alias for status
+
+        # Checkout
+        co = "checkout"; # alias for checkout
+        cob = "checkout -b"; # checkout to a new branch
+      };
+      extraConfig = {
+        core = {
+          ignorecase = false;
+          excludesfile = "~/.gitignore_global";
+          pager = "delta";
+        };
+        pull = {
+          rebase = true;
+        };
+        push = {
+          default = "simple";
+        };
+        rebase = {
+          autostash = true;
+        };
+        interactive = {
+          diffFilter = "delta --color-only";
+        };
+        blame = {
+          pager = "delta";
+        };
+        delta.options = {
+          line-numbers = true;
+          navigate = true;
+          light = true;
+          theme = "GitHub";
+        };
+        merge = {
+          conflictstyle = "diff3";
+        };
+        diff = {
+          colorMoved = "default";
+        };
+      };
     };
 
     neovim = {
