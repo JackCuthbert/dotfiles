@@ -20,8 +20,8 @@
 [delta]
   line-numbers = true
   navigate = true
-  light = true
-  theme = GitHub
+  dark = true
+  theme = Dracula
 [merge]
   conflictstyle = diff3
 [diff]

@@ -1,0 +1,37 @@
+fresh freshshell/fresh bin/fresh --bin
+
+# Fish
+fresh src/fish/config.mac.fish --file=~/.config/fish/config.fish
+fresh src/fish/fish_plugins --file=~/.config/fish/fish_plugins
+
+# Git
+fresh-options --file
+  fresh src/git/\*
+fresh-options
+
+fresh-options --file=~/.gitignore_global --marker
+  # Global ignores
+  fresh github/gitignore Global/GPG.gitignore
+  fresh github/gitignore Global/Vim.gitignore
+  fresh github/gitignore Global/VisualStudioCode.gitignore
+  fresh github/gitignore Global/JetBrains.gitignore
+
+  # Language specific
+  fresh github/gitignore Go.gitignore
+  fresh github/gitignore Node.gitignore
+  fresh github/gitignore Rust.gitignore
+  fresh github/gitignore Kotlin.gitignore
+  fresh github/gitignore Java.gitignore
+fresh-options
+
+# SSH
+fresh src/ssh/ssh.mac.conf --file=~/.ssh/config
+
+# Alacritty
+fresh src/alacritty.yml --file=~/.config/alacritty/alacritty.yml
+fresh dracula/alacritty dracula.yml --file=~/.config/alacritty/theme.yml
+
+# .config
+fresh src/starship.toml --file=~/.config/starship.toml
+fresh src/ideavimrc.vim --file=~/.ideavimrc
+fresh src/tmux.conf --file=~/.tmux.conf
