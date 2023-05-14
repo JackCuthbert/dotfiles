@@ -11,6 +11,8 @@
   rebase = true
 [push]
   default = simple
+[fetch]
+  prune = true
 [rebase]
   autostash = true
 [interactive]
