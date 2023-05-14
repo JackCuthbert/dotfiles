@@ -16,8 +16,8 @@ fish_add_path "/opt/homebrew/bin"
 #         \/
 starship init fish | source
 direnv hook fish | source
+rtx activate fish | source
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
-source "$(brew --prefix asdf)/libexec/asdf.fish"
 
 #   _____.__       .__
 # _/ ____\__| _____|  |__
