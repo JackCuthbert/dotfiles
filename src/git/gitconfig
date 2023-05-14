@@ -69,6 +69,7 @@
 
   # Branches
   b = "!git for-each-ref --sort='-authordate' --format='%(authordate:short)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+  bv = "branch -vv"
   bp = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #" # get parent branch name
 
   # Branching strategies
@@ -81,6 +82,9 @@
   g="!exec git"
   git="!exec git" # git git git git git status
   alias = "!git config -l | grep alias | cut -c 7-" # list all aliases
+
+  # clean merged
+  cmb = "!git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
 
 [ghq]
   root = ~/Ghq
