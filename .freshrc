@@ -25,6 +25,7 @@ fresh-options --file=~/.gitignore_global --marker
   fresh github/gitignore Global/Vim.gitignore
   fresh github/gitignore Global/VisualStudioCode.gitignore
   fresh github/gitignore Global/JetBrains.gitignore
+  fresh github/gitignore Global/macOS.gitignore
 
   # Language specific
   fresh github/gitignore Go.gitignore
