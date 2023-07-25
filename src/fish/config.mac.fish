@@ -58,7 +58,17 @@ set -gx FZF_DEFAULT_OPTS "--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#
 # |   __(____  /__| |___|  /
 # |__|       \/          \/
 fish_add_path "$HOME/bin"        # fresh bin path
+
+
+#                              .___
+# ___  ________ ____  ____   __| _/____
+# \  \/ /  ___// ___\/  _ \ / __ |/ __ \
+#  \   /\___ \\  \__(  <_> ) /_/ \  ___/
+#   \_//____  >\___  >____/\____ |\___  >
+#           \/     \/           \/    \/
 fish_add_path "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+string match -q "$TERM_PROGRAM" "vscode"
+and . (code --locate-shell-integration-path fish)
 
 #        .__  .__
 # _____  |  | |__|____    ______
