@@ -49,7 +49,22 @@ set -gx TERMINAL "alacritty"
 # --color=marker:#22863a,spinner:#8a63d2,header:#1b7c83"
 
 # dracula theme
-set -gx FZF_DEFAULT_OPTS "--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4"
+# set -gx FZF_DEFAULT_OPTS "--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4"
+
+# rose pine
+# set -Ux FZF_DEFAULT_OPTS "
+# 	--color=fg:#908caa,bg:#191724,hl:#ebbcba
+# 	--color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
+# 	--color=border:#403d52,header:#31748f,gutter:#191724
+# 	--color=spinner:#f6c177,info:#9ccfd8,separator:#403d52
+# 	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
+
+# catppuccin
+set -Ux FZF_DEFAULT_OPTS "\
+--color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
+--color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
+--color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
+
 
 #               __  .__
 # ___________ _/  |_|  |__
