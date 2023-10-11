@@ -45,6 +45,7 @@
   cm = commit -m # commit with message
   cam = commit -a -m # commit all with message
   m = commit --amend --verbose # ammend the last commit with the new one
+  fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup" # show commits to choose as a target for git commit --fixup
 
   # Diffing
   d = diff # show the difference between unstaged and last commit
