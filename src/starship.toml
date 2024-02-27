@@ -1,10 +1,5 @@
 add_newline = false
 
-[character]
-success_symbol = "[󰘧](bright-green)"
-error_symbol = "[󰘧](bright-red)"
-vicmd_symbol = "[󰘧](bright-green)"
-
 [line_break]
 disabled = false
 
@@ -55,3 +50,6 @@ disabled = true
 
 [battery]
 disabled = true
+
+[pulumi]
+format = '[$symbol ($version )$stack]($style) '
