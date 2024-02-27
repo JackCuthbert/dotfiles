@@ -15,8 +15,8 @@ fish_add_path "/opt/homebrew/bin"
 # |__|___|  /__||__|
 #         \/
 starship init fish | source
+mise activate fish | source
 set -gx DIRENV_LOG_FORMAT && direnv hook fish | source
-rtx activate fish | source
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 
 #   _____.__       .__
@@ -33,7 +33,7 @@ set -g fish_greeting # Disable greeting
 #  \___  >___|  /\_/
 #      \/     \/
 set -gx EDITOR "nvim"
-set -gx TERMINAL "alacritty"
+
 
 #   _____          _____
 # _/ ____\________/ ____\
@@ -41,29 +41,8 @@ set -gx TERMINAL "alacritty"
 #  |  |   /    /  |  |
 #  |__|  /_____ \ |__|
 #              \/
-# github light default theme
-# set -gx FZF_DEFAULT_OPTS "$FZF_DEFAULT_OPTS
-# --color=fg:-1,bg:-1,hl:#0366d6
-# --color=fg+:#24292e,bg+:#d0d7de,hl+:#2188ff
-# --color=info:#57606a,prompt:#d73a49,pointer:#6f42c1
-# --color=marker:#22863a,spinner:#8a63d2,header:#1b7c83"
-
-# dracula theme
-# set -gx FZF_DEFAULT_OPTS "--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4"
-
-# rose pine
-# set -Ux FZF_DEFAULT_OPTS "
-# 	--color=fg:#908caa,bg:#191724,hl:#ebbcba
-# 	--color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
-# 	--color=border:#403d52,header:#31748f,gutter:#191724
-# 	--color=spinner:#f6c177,info:#9ccfd8,separator:#403d52
-# 	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
-
-# catppuccin
-set -Ux FZF_DEFAULT_OPTS "\
---color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
---color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
---color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
+# requires `ghq get git@github.com:tinted-theming/base16-fzf.git`
+source ~/Ghq/github.com/tinted-theming/base16-fzf/fish/base16-ayu-mirage.fish
 
 
 #               __  .__

@@ -2,8 +2,9 @@ fresh freshshell/fresh bin/fresh --bin
 
 # Fish
 fresh src/fish/config.mac.fish --file=~/.config/fish/config.fish
-fresh src/fish/completions/rtx.fish --file=~/.config/fish/completions/rtx.fish
+fresh src/fish/completions/mise.fish --file=~/.config/fish/completions/mise.fish
 fresh src/fish/fish_plugins --file=~/.config/fish/fish_plugins
+fresh src/fish/fish_variables.mac --file=~/.config/fish/fish_variables
 
 # Git
 fresh-options --file
@@ -28,10 +29,6 @@ fresh-options
 
 # SSH
 fresh src/ssh/ssh.mac.conf --file=~/.ssh/config
-
-# Alacritty
-fresh src/alacritty.yml --file=~/.config/alacritty/alacritty.yml
-fresh dracula/alacritty dracula.yml --file=~/.config/alacritty/theme.yml
 
 # .config
 fresh src/starship.toml --file=~/.config/starship.toml
