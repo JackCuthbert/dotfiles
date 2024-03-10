@@ -23,7 +23,7 @@
   line-numbers = true
   navigate = true
   dark = true
-  theme = Dracula
+  theme = ansi
 [merge]
   conflictstyle = diff3
 [diff]
