@@ -1,0 +1,91 @@
+[user]
+  name = Jack Cuthbert
+  email = jckcthbrt@gmail.com
+[commit]
+  template = ~/.gitmessage
+[core]
+  ignorecase = false
+  excludesfile = ~/.gitignore_global
+  pager = delta
+[pull]
+  rebase = true
+[push]
+  default = simple
+[fetch]
+  prune = true
+[rebase]
+  autostash = true
+[interactive]
+  diffFilter = delta --color-only
+[blame]
+  pager = delta
+[delta]
+  line-numbers = true
+  navigate = true
+  dark = true
+  theme = ansi
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
+
+[alias]
+  # Logging
+  l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative # minimal complete log
+  lbm = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative master..HEAD      # minimal log of commits on current branch compared with master
+  lbd = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=relative development..HEAD # minimal log of commits on current branch compated with development
+  lnr = log --branches --not --remotes # log unpushed commits
+  lp = log --graph --decorate --pretty=oneline --abbrev-commit --all # pretty log
+
+  # Committing
+  a = add
+  ap = add -p # add patch
+  c = commit --verbose
+  ca = commit -a --verbose # commit all
+  cm = commit -m # commit with message
+  cam = commit -a -m # commit all with message
+  m = commit --amend --verbose # ammend the last commit with the new one
+  fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup" # show commits to choose as a target for git commit --fixup
+
+  # Diffing
+  d = diff # show the difference between unstaged and last commit
+  dc = diff --cached # show the difference between staged and last commit
+  ds = diff --stat # show the number of lines changed across unstaged files
+
+  # Pushing
+  p = push
+  pf = push --force-with-lease
+  pff = push --force
+
+  # Staging
+  derp = reset # alias for unstaging files
+
+  # Status
+  s = status -s # minimal status
+  stat = status # alias for status
+
+  # Checkout
+  co = checkout # alias for checkout
+  cob = checkout -b # checkout to a new branch
+
+  # Branches
+  b = "!git for-each-ref --sort='-authordate' --format='%(authordate:short)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+  bv = "branch -vv"
+  bp = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #" # get parent branch name
+
+  # Branching strategies
+  pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\"" # push a branch and set up remote tracking
+  hard-pull = !git fetch && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD) # throw away all local changes/commits and reset back to remote's version of branch
+  yoink = 'hard-pull'
+  ras = rebase -i --autosquash
+
+  # Aliases
+  g="!exec git"
+  git="!exec git" # git git git git git status
+  alias = "!git config -l | grep alias | cut -c 7-" # list all aliases
+
+  # clean merged
+  cmb = "!git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
+
+[ghq]
+  root = ~/Code
