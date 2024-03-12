@@ -1,0 +1,48 @@
+tap "homebrew/bundle"
+
+# cli
+brew "direnv"
+brew "eza"
+brew "figlet"
+brew "fish"
+brew "fisher"
+brew "fzf"
+brew "ghq"
+brew "git"
+brew "git-delta"
+brew "htop"
+brew "just"
+brew "mas"
+brew "mise"
+brew "neofetch"
+brew "neovim"
+brew "starship"
+brew "stow"
+
+# casks
+cask "1password"
+cask "appcleaner"
+cask "betterdisplay"
+cask "discord"
+cask "google-chrome"
+cask "google-cloud-sdk"
+cask "hiddenbar"
+cask "iterm2"
+cask "jetbrains-toolbox"
+cask "orbstack"
+cask "rectangle"
+cask "signal"
+cask "slack"
+cask "visual-studio-code"
+
+# not listed in brew
+# - Tinkertool
+# - Jagex Launcher
+
+# mac app store
+mas "adguard", id: 1440147259
+mas "bitwarden", id: 1352778147
+mas "numbers", id: 409203825
+mas "velja", id: 1607635845
+mas "wireguard", id: 1451685025
+mas "xcode", id: 497799835
