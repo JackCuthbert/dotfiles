@@ -796,13 +796,13 @@
         }
       },
       "google-chrome": {
-        "version": "122.0.6261.112",
+        "version": "122.0.6261.129",
         "options": {
           "full_name": "google-chrome"
         }
       },
       "google-cloud-sdk": {
-        "version": "467.0.0",
+        "version": "468.0.0",
         "options": {
           "full_name": "google-cloud-sdk"
         }
@@ -844,7 +844,7 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.87.1",
+        "version": "1.87.2",
         "options": {
           "full_name": "visual-studio-code"
         }
@@ -853,6 +853,18 @@
         "version": "2.2.2,2.2.2.20062",
         "options": {
           "full_name": "jetbrains-toolbox"
+        }
+      },
+      "shottr": {
+        "version": "1.7.2",
+        "options": {
+          "full_name": "shottr"
+        }
+      },
+      "obsidian": {
+        "version": "1.5.8",
+        "options": {
+          "full_name": "obsidian"
         }
       }
     },
