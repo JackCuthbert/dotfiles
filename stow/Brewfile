@@ -35,6 +35,7 @@ cask "rectangle"
 cask "shottr"
 cask "signal"
 cask "slack"
+cask "tailscale"
 cask "visual-studio-code"
 
 # not listed in brew
