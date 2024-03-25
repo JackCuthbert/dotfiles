@@ -11,6 +11,7 @@ brew "ghq"
 brew "git"
 brew "git-delta"
 brew "htop"
+brew "imagemagick"
 brew "just"
 brew "mas"
 brew "mise"
@@ -19,6 +20,7 @@ brew "neovim"
 brew "pulumi"
 brew "starship"
 brew "stow"
+brew "wget"
 
 # casks
 cask "1password"
@@ -29,6 +31,7 @@ cask "google-chrome"
 cask "google-cloud-sdk"
 cask "hiddenbar"
 cask "iina"
+cask "imageoptim"
 cask "iterm2"
 cask "jellyfin-media-player"
 cask "jetbrains-toolbox"
@@ -49,6 +52,7 @@ cask "visual-studio-code"
 # mac app store
 mas "adguard", id: 1440147259
 mas "bitwarden", id: 1352778147
+mas "dayone", id: 1055511498
 mas "numbers", id: 409203825
 mas "velja", id: 1607635845
 mas "wireguard", id: 1451685025
