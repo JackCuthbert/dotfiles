@@ -16,6 +16,7 @@ brew "mas"
 brew "mise"
 brew "neofetch"
 brew "neovim"
+brew "pulumi"
 brew "starship"
 brew "stow"
 
