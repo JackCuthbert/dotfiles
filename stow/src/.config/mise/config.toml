@@ -5,3 +5,5 @@ python = ["2.7.18", "3.11.8"]
 java = "adoptopenjdk-21.0.2+13.0.LTS"
 maven = "3.9.6"
 poetry = "1.8.2"
+
+[env]
