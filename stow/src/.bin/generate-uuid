@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+// Using nodejs generate a random UUID
+// Usage: `generate-uuid`
+console.log(require("crypto").randomUUID());

@@ -16,6 +16,9 @@ fish_add_path "/opt/homebrew/bin"
 #                  \/     \/            \/     \/     \/
 fish_add_path ~/.orbstack/bin
 
+# custom binaries
+fish_add_path ~/.bin
+
 # .__       .__  __
 # |__| ____ |__|/  |_
 # |  |/    \|  \   __\
