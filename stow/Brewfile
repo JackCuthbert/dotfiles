@@ -24,6 +24,7 @@ brew "wget"
 
 # casks
 cask "1password"
+cask "alt-tab"
 cask "appcleaner"
 cask "betterdisplay"
 cask "discord"
