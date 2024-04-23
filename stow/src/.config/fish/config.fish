@@ -53,7 +53,7 @@ set -gx EDITOR "nvim"
 #  |__|  /_____ \ |__|
 #              \/
 # requires `ghq get git@github.com:tinted-theming/base16-fzf.git`
-source ~/Code/github.com/tinted-theming/base16-fzf/fish/base16-ayu-mirage.fish
+source ~/Code/github.com/tinted-theming/base16-fzf/fish/base16-onedark.fish
 
 #        .__  .__
 # _____  |  | |__|____    ______
@@ -76,3 +76,5 @@ alias g="git"
 
 # editing
 alias v="nvim"
+
+alias tf="terraform"
