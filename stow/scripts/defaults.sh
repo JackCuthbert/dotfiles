@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-# enable key repeat for VSCode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false
+defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 
 # fast key repeat
 defaults write -g InitialKeyRepeat -int 10
