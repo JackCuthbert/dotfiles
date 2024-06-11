@@ -60,6 +60,7 @@ cask "visual-studio-code"
 
 # mac app store
 mas "adguard", id: 1440147259
+mas "amphetamine", id: 937984704
 mas "bitwarden", id: 1352778147
 mas "dayone", id: 1055511498
 mas "numbers", id: 409203825
