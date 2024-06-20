@@ -15,6 +15,8 @@
   prune = true
 [rebase]
   autostash = true
+[rerere]
+  enabled = true
 [interactive]
   diffFilter = delta --color-only
 [blame]
