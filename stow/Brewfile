@@ -25,45 +25,35 @@ brew "terraform"
 brew "wget"
 brew "yt-dlp"
 
-# casks
-cask "1password"
-cask "alt-tab"
+# Global casks
 cask "appcleaner"
-cask "arc"
 cask "betterdisplay"
-cask "discord"
-cask "google-chrome"
-cask "google-cloud-sdk"
-cask "hiddenbar"
-cask "iina"
-cask "imageoptim"
-cask "iterm2"
-cask "jellyfin-media-player"
-cask "jetbrains-toolbox"
-cask "obsidian"
-cask "orbstack"
-cask "plexamp"
-cask "postman"
-cask "rectangle"
-cask "shottr"
-cask "signal"
-cask "slack"
+cask "visual-studio-code"
 cask "sonos"
-cask "spotify"
+cask "rectangle"
+cask "hiddenbar"
+cask "iterm2"
 cask "tailscale"
 cask "utm"
-cask "visual-studio-code"
+
+# Work casks
+cask "1password" # Must be installed in /Applications
+cask "arc", args: { appdir: "~/Applications" }
+cask "google-chrome", args: { appdir: "~/Applications" }
+cask "google-cloud-sdk" # Must be installed in /Applications
+cask "jetbrains-toolbox", args: { appdir: "~/Applications" }
+cask "obsidian", args: { appdir: "~/Applications" }
+cask "orbstack", args: { appdir: "~/Applications" }
+cask "postman", args: { appdir: "~/Applications" }
+cask "shottr", args: { appdir: "~/Applications" }
+cask "slack", args: { appdir: "~/Applications" }
 
 # not listed in brew
 # - Tinkertool
-# - Jagex Launcher
 
 # mac app store
-mas "adguard", id: 1440147259
 mas "amphetamine", id: 937984704
-mas "bitwarden", id: 1352778147
-mas "dayone", id: 1055511498
+mas "bitwarden", id: 1352778147 # must come from MAS for extensions
 mas "numbers", id: 409203825
 mas "velja", id: 1607635845
-mas "wireguard", id: 1451685025
 mas "xcode", id: 497799835
