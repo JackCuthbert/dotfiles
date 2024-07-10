@@ -28,13 +28,14 @@ brew "yt-dlp"
 # Global casks
 cask "appcleaner"
 cask "betterdisplay"
-cask "visual-studio-code"
-cask "sonos"
-cask "rectangle"
 cask "hiddenbar"
 cask "iterm2"
+cask "rectangle"
+cask "sonos"
 cask "tailscale"
+cask "todoist"
 cask "utm"
+cask "visual-studio-code"
 
 # Work casks
 cask "1password" # Must be installed in /Applications
