@@ -36,6 +36,7 @@ cask "tailscale"
 cask "todoist"
 cask "utm"
 cask "visual-studio-code"
+cask "zed"
 
 # Work casks
 cask "1password" # Must be installed in /Applications
