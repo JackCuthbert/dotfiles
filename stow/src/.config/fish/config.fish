@@ -8,10 +8,10 @@
 #      \/             \/     \/    \/            \/
 fish_add_path "/opt/homebrew/bin"
 
-#             ___.             __                 __    
+#             ___.             __                 __
 #   __________\_ |__   _______/  |______    ____ |  | __
 #  /  _ \_  __ \ __ \ /  ___/\   __\__  \ _/ ___\|  |/ /
-# (  <_> )  | \/ \_\ \\___ \  |  |  / __ \\  \___|    < 
+# (  <_> )  | \/ \_\ \\___ \  |  |  / __ \\  \___|    <
 #  \____/|__|  |___  /____  > |__| (____  /\___  >__|_ \
 #                  \/     \/            \/     \/     \/
 fish_add_path ~/.orbstack/bin
@@ -76,5 +76,6 @@ alias g="git"
 
 # editing
 alias v="nvim"
+alias zed="/Users/$USER/Applications/Zed.app/Contents/MacOS/cli"
 
 alias tf="terraform"
