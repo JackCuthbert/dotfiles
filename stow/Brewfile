@@ -28,6 +28,7 @@ brew "yt-dlp"
 # Global casks
 cask "appcleaner"
 cask "betterdisplay"
+cask "firefox"
 cask "hiddenbar"
 cask "iterm2"
 cask "rectangle"
