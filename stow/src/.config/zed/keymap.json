@@ -9,16 +9,32 @@
   {
     "context": "Editor",
     "bindings": {
-      "cmd-i": "editor::ShowCompletions"
+      "cmd-i": "editor::ShowCompletions",
+      // Ordered tabbing through tabs
+      "ctrl-tab": "pane::ActivateNextItem",
+      "ctrl-shift-tab": "pane::ActivatePrevItem"
     }
   },
   {
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      // Easier vim pane nav
+      "ctrl-h": [
+        "workspace::ActivatePaneInDirection",
+        "Left"
+      ],
+      "ctrl-l": [
+        "workspace::ActivatePaneInDirection",
+        "Right"
+      ],
+      "ctrl-k": [
+        "workspace::ActivatePaneInDirection",
+        "Up"
+      ],
+      "ctrl-j": [
+        "workspace::ActivatePaneInDirection",
+        "Down"
+      ]
     }
-  }
+  },
 ]

@@ -36,7 +36,10 @@ cask "tailscale"
 cask "todoist"
 cask "utm"
 cask "visual-studio-code"
+cask "wezterm"
 cask "zed"
+
+cask "nikitabobko/tap/aerospace"
 
 # Work casks
 cask "1password" # Must be installed in /Applications

@@ -7,8 +7,20 @@
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
 {
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "selections_menu": false
+  },
+  "tabs": {
+    "git_status": true,
+  },
   "base_keymap": "VSCode",
   "vim_mode": true,
+  "wrap_guides": [
+    80,
+    120
+  ],
   "vim": {
     "use_smartcase_find": true,
     "use_system_clipboard": "never"

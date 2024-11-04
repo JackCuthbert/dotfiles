@@ -76,6 +76,5 @@ alias g="git"
 
 # editing
 alias v="nvim"
-alias zed="/Users/$USER/Applications/Zed.app/Contents/MacOS/cli"
 
 alias tf="terraform"
