@@ -44,15 +44,19 @@ cask "nikitabobko/tap/aerospace"
 
 # Work casks
 cask "1password" # Must be installed in /Applications
-cask "arc", args: { appdir: "~/Applications" }
-cask "google-chrome", args: { appdir: "~/Applications" }
+cask "arc"
+cask "dbeaver-community"
+cask "google-chrome"
 cask "google-cloud-sdk" # Must be installed in /Applications
-cask "jetbrains-toolbox", args: { appdir: "~/Applications" }
-cask "obsidian", args: { appdir: "~/Applications" }
-cask "orbstack", args: { appdir: "~/Applications" }
-cask "postman", args: { appdir: "~/Applications" }
-cask "shottr", args: { appdir: "~/Applications" }
-cask "slack", args: { appdir: "~/Applications" }
+cask "jetbrains-toolbox"
+cask "obsidian"
+cask "orbstack"
+cask "postman"
+cask "shottr"
+cask "slack"
+
+# Personal casks
+cask "discord"
 
 # not listed in brew
 # - Tinkertool
