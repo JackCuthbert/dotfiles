@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 
 # cli
+brew "7zip"
 brew "direnv"
 brew "eza"
 brew "ffmpeg"
@@ -56,7 +57,13 @@ cask "shottr"
 cask "slack"
 
 # Personal casks
+cask "autodesk-fusion"
+cask "bambu-studio"
+cask "blender"
 cask "discord"
+cask "iina"
+cask "signal"
+cask "transmission"
 
 # not listed in brew
 # - Tinkertool
