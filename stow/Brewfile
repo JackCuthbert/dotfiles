@@ -47,6 +47,7 @@ cask "nikitabobko/tap/aerospace"
 # Work casks
 cask "1password" # Must be installed in /Applications
 cask "arc"
+cask "claude"
 cask "dbeaver-community"
 cask "google-chrome"
 cask "google-cloud-sdk" # Must be installed in /Applications

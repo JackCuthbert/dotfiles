@@ -52,8 +52,9 @@ set -gx EDITOR "nvim"
 #  |  |   /    /  |  |
 #  |__|  /_____ \ |__|
 #              \/
+# If I want fzf theming back, then this might be a way to do it
 # requires `ghq get git@github.com:tinted-theming/base16-fzf.git`
-source ~/Code/github.com/tinted-theming/tinted-fzf/fish/base16-onedark.fish
+# source ~/Code/github.com/tinted-theming/tinted-fzf/fish/base16-onedark.fish
 
 #        .__  .__
 # _____  |  | |__|____    ______
