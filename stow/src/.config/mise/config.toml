@@ -1,9 +1,9 @@
 [tools]
-usage = "latest"
-node = "22"
-python = ["3.12.4", "2.7.18"]
 java = "adoptopenjdk-21.0.3+9.0.LTS"
 maven = "3.9.6"
+node = "22.5.1"
 poetry = "1.8.3"
+python = ["3.13.1", "2.7.18"]
+usage = "latest"
 
 [env]
