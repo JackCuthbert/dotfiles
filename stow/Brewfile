@@ -27,6 +27,7 @@ brew "wget"
 brew "yt-dlp"
 
 # Global casks
+cask "alfred"
 cask "appcleaner"
 cask "betterdisplay"
 cask "firefox"
