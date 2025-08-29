@@ -1,0 +1,28 @@
+
+# +---------------------------- Sample commit message ----------------------------+
+# |                                                                               |
+# | topic(optional_scope): a brief summary of the change(s)                       |
+# |                                                                               |
+# | Longer explanation of commit goes on the 3rd line. If the commit is changing  |
+# | something in a non-backwards-compatible way, then `BREAKING CHANGE: ...` must |
+# | be present.                                                                   |
+# |                                                                               |
+# | Any links for further context around the commit should go here:               |
+# |                                                                               |
+# | * https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits     |
+# | * https://www.freshconsulting.com/atomic-commits/                             |
+# |                                                                               |
+# +-------------------------------------------------------------------------------+
+#
+# Available topics:
+#	build: Changes to the build process or code generation
+#	chore: Changes to auxiliary tools and libraries such as dependencies
+#	ci: Changes to the continuous integration or delivery process
+#	docs: Documentation only changes
+#	feat: A new feature ie. a change that adds functionality that wasn't previously present
+#	fix: A bug fix
+#	perf: A code change that improves performance
+#	refactor: A code change that neither fixes a bug nor adds a feature
+#	revert: Reverts a previous commit
+#	style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+#	test: Adding missing or correcting existing tests
