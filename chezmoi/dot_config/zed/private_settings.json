@@ -1,0 +1,67 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+{
+  // AI Assistance
+  "show_edit_predictions": false,
+  // Language
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": true
+      }
+    }
+  },
+  // Keybindings
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  "vim": {
+    "use_smartcase_find": true,
+    "use_system_clipboard": "never"
+  },
+  // UI Configuration
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "selections_menu": false
+  },
+  "tabs": {
+    "git_status": true,
+    "file_icons": true
+  },
+  "project_panel": {
+    "indent_size": 24,
+    "folder_icons": false
+  },
+  "wrap_guides": [80, 120],
+  "relative_line_numbers": true,
+  "tab_bar": {
+    "show_nav_history_buttons": false, // Remove back/forward buttons in tabs
+    "show_tab_bar_buttons": false
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "buffer_font_family": "Monaspace Neon",
+  "icon_theme": "Catppuccin Mocha",
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha"
+  },
+  "indent_guides": {
+    "coloring": "indent_aware" // Rainbow indents
+  },
+  "terminal": {
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "env": {
+      "EDITOR": "zed --wait"
+    },
+    "shell": {
+      "program": "/opt/homebrew/bin/fish"
+    },
+    "line_height": "standard"
+  }
+}

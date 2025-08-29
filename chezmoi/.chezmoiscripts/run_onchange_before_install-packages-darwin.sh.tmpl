@@ -1,0 +1,62 @@
+{{- if eq .chezmoi.os "darwin"  -}}
+#!/usr/bin/env bash
+brew bundle --file=/dev/stdin <<EOF
+brew "7zip"
+brew "direnv"
+brew "eza"
+brew "fish"
+brew "fisher"
+brew "fzf"
+brew "ghq"
+brew "git"
+brew "git-delta"
+brew "htop"
+brew "just"
+brew "mise"
+brew "neofetch"
+brew "neovim"
+brew "starship"
+brew "wget"
+brew "yt-dlp"
+
+cask "alfred"
+cask "appcleaner"
+cask "hiddenbar"
+cask "iterm2"
+cask "orbstack"
+cask "rectangle"
+cask "zed"
+EOF
+{{ end -}}
+
+{{- if and (eq .chezmoi.os "darwin") (.isWorkMachine) -}}
+#!/usr/bin/env bash
+brew bundle --file=/dev/stdin <<EOF
+brew "pulumi"
+brew "terraform"
+
+cask "1password"
+cask "eloston-chromium"
+cask "firefox"
+cask "google-cloud-sdk"
+cask "jetbrains-toolbox"
+cask "obsidian"
+cask "postman"
+cask "shottr"
+cask "slack"
+cask "utm"
+cask "visual-studio-code"
+EOF
+{{ end -}}
+
+{{- if and (eq .chezmoi.os "darwin") (not .isWorkMachine) -}}
+#!/usr/bin/env bash
+brew bundle --file=/dev/stdin <<EOF
+cask "bambu-studio"
+cask "discord"
+cask "jagex"
+cask "modrinth"
+cask "parsec"
+cask "signal-desktop"
+EOF
+{{ end -}}
