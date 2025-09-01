@@ -1,0 +1,156 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+{
+  // AI Assistance
+  "context_servers": {},
+  "agent": {
+    "play_sound_when_agent_done": false,
+    "always_allow_tool_actions": true,
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "contents": true,
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "mcp-server-linear": {
+            "tools": {
+              "get_issue_git_branch_name": true,
+              "get_issue": true
+            }
+          },
+          "mcp-server-gitlab": {
+            "tools": {
+              "search_repositories": true,
+              "verify_namespace": true,
+              "get_namespace": true,
+              "get_repository_tree": true,
+              "get_project": true,
+              "get_merge_request_diffs": true,
+              "get_merge_request": true
+            }
+          }
+        }
+      },
+      "write": {
+        "name": "Write",
+        "tools": {
+          "edit_file": true,
+          "contents": true,
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "mcp-server-linear": {
+            "tools": {
+              "get_issue_git_branch_name": true,
+              "get_issue": true
+            }
+          },
+          "mcp-server-gitlab": {
+            "tools": {
+              "search_repositories": true,
+              "verify_namespace": true,
+              "get_namespace": true,
+              "get_repository_tree": true,
+              "get_project": true,
+              "get_merge_request_diffs": true,
+              "get_merge_request": true
+            }
+          }
+        }
+      }
+    },
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-latest"
+    },
+    "model_parameters": [],
+    "default_profile": "write"
+  },
+  "show_edit_predictions": false,
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  // Language
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": true
+      }
+    }
+  },
+  // Keybindings
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  "vim": {
+    "use_smartcase_find": true,
+    "use_system_clipboard": "never"
+  },
+  // UI Configuration
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "selections_menu": false
+  },
+  "tabs": {
+    "git_status": true,
+    "file_icons": true
+  },
+  "project_panel": {
+    "indent_size": 24,
+    "folder_icons": false
+  },
+  "wrap_guides": [80, 120],
+  "relative_line_numbers": true,
+  "tab_bar": {
+    "show_nav_history_buttons": false, // Remove back/forward buttons in tabs
+    "show_tab_bar_buttons": false
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "buffer_font_family": "Monaspace Neon",
+  "icon_theme": "Catppuccin Mocha",
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha"
+  },
+  "indent_guides": {
+    "coloring": "indent_aware" // Rainbow indents
+  },
+  "terminal": {
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "env": {
+      "EDITOR": "zed --wait"
+    },
+    "shell": {
+      "program": "/opt/homebrew/bin/fish"
+    },
+    "line_height": "standard"
+  }
+}
