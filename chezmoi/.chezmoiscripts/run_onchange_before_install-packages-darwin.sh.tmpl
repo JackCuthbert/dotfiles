@@ -19,6 +19,8 @@ brew "starship"
 brew "wget"
 brew "yt-dlp"
 
+cask "font-monaspace"
+
 cask "alfred"
 cask "appcleaner"
 cask "hiddenbar"
@@ -29,7 +31,7 @@ cask "zed"
 EOF
 {{ end -}}
 
-{{- if and (eq .chezmoi.os "darwin") (.isWorkMachine) -}}
+{{- if and (eq .chezmoi.os "darwin") (eq .isWorkMachine "true") -}}
 #!/usr/bin/env bash
 brew bundle --file=/dev/stdin <<EOF
 brew "pulumi"
@@ -49,7 +51,7 @@ cask "visual-studio-code"
 EOF
 {{ end -}}
 
-{{- if and (eq .chezmoi.os "darwin") (not .isWorkMachine) -}}
+{{- if and (eq .chezmoi.os "darwin") (eq .isWorkMachine "false") -}}
 #!/usr/bin/env bash
 brew bundle --file=/dev/stdin <<EOF
 cask "bambu-studio"
@@ -57,6 +59,6 @@ cask "discord"
 cask "jagex"
 cask "modrinth"
 cask "parsec"
-cask "signal-desktop"
+cask "signal"
 EOF
 {{ end -}}

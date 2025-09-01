@@ -28,7 +28,6 @@ fish_add_path ~/.bin
 starship init fish | source
 mise activate fish | source
 direnv hook fish | source
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 
 #   _____.__       .__
 # _/ ____\__| _____|  |__
@@ -78,4 +77,7 @@ alias g="git"
 # editing
 alias v="nvim"
 
+{{- if eq .isWorkMachine "true" -}}
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 alias tf="terraform"
+{{ end -}}
