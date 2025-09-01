@@ -3,6 +3,7 @@ tap "homebrew/bundle"
 # cli
 brew "7zip"
 brew "direnv"
+brew "dive"
 brew "eza"
 brew "ffmpeg"
 brew "figlet"
@@ -28,28 +29,20 @@ brew "yt-dlp"
 
 # Global casks
 cask "alfred"
-cask "appcleaner"
+cask "appclaner"
 cask "betterdisplay"
 cask "firefox"
 cask "hiddenbar"
 cask "iterm2"
 cask "rectangle"
-cask "sonos"
-cask "tailscale"
-cask "todoist"
 cask "utm"
 cask "visual-studio-code"
-cask "wezterm"
 cask "zed"
-
-cask "nikitabobko/tap/aerospace"
 
 # Work casks
 cask "1password" # Must be installed in /Applications
-cask "arc"
-cask "claude"
 cask "dbeaver-community"
-cask "google-chrome"
+cask "eloston-chromium"
 cask "google-cloud-sdk" # Must be installed in /Applications
 cask "jetbrains-toolbox"
 cask "obsidian"
@@ -59,13 +52,7 @@ cask "shottr"
 cask "slack"
 
 # Personal casks
-cask "autodesk-fusion"
-cask "bambu-studio"
-cask "blender"
-cask "discord"
-cask "iina"
-cask "signal"
-cask "transmission"
+cask "parsec"
 
 # not listed in brew
 # - Tinkertool
@@ -75,4 +62,5 @@ mas "amphetamine", id: 937984704
 mas "bitwarden", id: 1352778147 # must come from MAS for extensions
 mas "numbers", id: 409203825
 mas "velja", id: 1607635845
+mas "windows app", id: 1295203466
 mas "xcode", id: 497799835

@@ -7,3 +7,6 @@ python = ["3.13.1", "2.7.18"]
 usage = "latest"
 
 [env]
+
+[settings]
+idiomatic_version_file_enable_tools = []
