@@ -76,11 +76,12 @@ alias g="git"
 
 # editing
 alias v="nvim"
+alias dotfiles="EDITOR=zed chezmoi edit"
 
-{{- if and (eq .chezmoi.os "darwin") (eq .isWorkMachine "true") -}}
+{{ if and (eq .chezmoi.os "darwin") (eq .isWorkMachine "true") -}}
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 {{ end -}}
 
-{{- if eq .isWorkMachine "true" -}}
+{{ if eq .isWorkMachine "true" -}}
 alias tf="terraform"
 {{ end -}}
