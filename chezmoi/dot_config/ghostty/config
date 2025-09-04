@@ -2,7 +2,7 @@
 command = "/opt/homebrew/bin/fish"
 
 # UI
-theme = "catppuccin-mocha"
+theme = dark:catppuccin-mocha,light:catppuccin-latte
 font-family = "Monaspace Neon"
 font-size = 16
 cursor-style = "block"
