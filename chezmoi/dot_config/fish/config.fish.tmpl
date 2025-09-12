@@ -1,5 +1,6 @@
 # generate headings: `figlet -f graffiti your_text`
 
+{{ if eq .chezmoi.os "darwin" }}
 # .__                         ___.
 # |  |__   ____   _____   ____\_ |_________   ______  _  __
 # |  |  \ /  _ \ /     \_/ __ \| __ \_  __ \_/ __ \ \/ \/ /
@@ -7,17 +8,7 @@
 # |___|  /\____/|__|_|  /\___  >___  /__|    \___  >\/\_/
 #      \/             \/     \/    \/            \/
 fish_add_path "/opt/homebrew/bin"
-
-#             ___.             __                 __
-#   __________\_ |__   _______/  |______    ____ |  | __
-#  /  _ \_  __ \ __ \ /  ___/\   __\__  \ _/ ___\|  |/ /
-# (  <_> )  | \/ \_\ \\___ \  |  |  / __ \\  \___|    <
-#  \____/|__|  |___  /____  > |__| (____  /\___  >__|_ \
-#                  \/     \/            \/     \/     \/
-fish_add_path ~/.orbstack/bin
-
-# custom binaries
-fish_add_path ~/.bin
+{{ end }}
 
 # .__       .__  __
 # |__| ____ |__|/  |_
@@ -44,17 +35,6 @@ set -g fish_greeting # Disable greeting
 #      \/     \/
 set -gx EDITOR "nvim"
 
-
-#   _____          _____
-# _/ ____\________/ ____\
-# \   __\\___   /\   __\
-#  |  |   /    /  |  |
-#  |__|  /_____ \ |__|
-#              \/
-# If I want fzf theming back, then this might be a way to do it
-# requires `ghq get git@github.com:tinted-theming/base16-fzf.git`
-# source ~/Code/github.com/tinted-theming/tinted-fzf/fish/base16-onedark.fish
-
 #        .__  .__
 # _____  |  | |__|____    ______
 # \__  \ |  | |  \__  \  /  ___/
@@ -62,26 +42,26 @@ set -gx EDITOR "nvim"
 # (____  /____/__(____  /____  >
 #      \/             \/     \/
 
-# docker
 alias d='docker'
 alias c='docker compose'
-
-# files
-alias f="zi"
 alias l="eza --group-directories-first -gl"
 alias la="l -a"
-
-# version control
 alias g="git"
-
-# editing
 alias v="nvim"
 alias dotfiles="EDITOR=zed chezmoi edit"
 
-{{ if and (eq .chezmoi.os "darwin") (eq .isWorkMachine "true") -}}
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
-{{ end -}}
+{{ if eq .isWorkMachine "true" }}
+#                      __
+# __  _  _____________|  | __
+# \ \/ \/ /  _ \_  __ \  |/ /
+#  \     (  <_> )  | \/    <
+#   \/\_/ \____/|__|  |__|_ \
+#                          \/
 
-{{ if eq .isWorkMachine "true" -}}
 alias tf="terraform"
-{{ end -}}
+
+{{ if eq .chezmoi.os "darwin" }}
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+{{ end }}
+
+{{ end }}
