@@ -1,0 +1,8 @@
+{{ if eq .chezmoi.os "darwin" }}
+
+{{ end }}
+
+{{ if eq .chezmoi.os "linux" }}
+.config/aerospace/
+.config/ghosttty/
+{{ end -}}
