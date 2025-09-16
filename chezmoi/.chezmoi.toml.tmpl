@@ -11,5 +11,7 @@
   command = "zed"
   args = ["--wait"]
 
+{{ if eq .chezmoi.os "darwin" }}
 [cd]
   command = "/opt/homebrew/bin/fish"
+{{ end }}
