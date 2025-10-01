@@ -50,6 +50,19 @@ alias g="git"
 alias v="nvim"
 alias dotfiles="EDITOR=zed chezmoi edit"
 
+
+
+{{ if eq .chezmoi.os "darwin" }}
+#                                __
+# _______   ____   _____   _____/  |_  ____
+# \_  __ \_/ __ \ /     \ /  _ \   __\/ __ \
+#  |  | \/\  ___/|  Y Y  (  <_> )  | \  ___/
+#  |__|    \___  >__|_|  /\____/|__|  \___  >
+#              \/      \/                 \/
+fish_add_path "~/.local/share/bin"
+{{ end }}
+
+
 {{ if eq .isWorkMachine "true" }}
 #                      __
 # __  _  _____________|  | __
