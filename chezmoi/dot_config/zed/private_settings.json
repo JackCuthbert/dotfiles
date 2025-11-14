@@ -3,8 +3,17 @@
 // For information on how to configure Zed, see the Zed
 // documentation: https://zed.dev/docs/configuring-zed
 {
+  "lsp_document_colors": "inlay",
+  "inlay_hints": {
+    "show_value_hints": true,
+    "show_other_hints": true,
+    "show_parameter_hints": true,
+    "show_background": true,
+    "show_type_hints": false,
+    "enabled": false
+  },
   "agent_buffer_font_size": 14.0,
-  "agent_ui_font_size": 14.0,
+  "agent_ui_font_size": 16.0,
   "notification_panel": {
     "button": false
   },
@@ -49,7 +58,7 @@
     "folder_icons": false
   },
   "wrap_guides": [80, 120],
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "tab_bar": {
     "show_nav_history_buttons": false, // Remove back/forward buttons in tabs
     "show_tab_bar_buttons": false
