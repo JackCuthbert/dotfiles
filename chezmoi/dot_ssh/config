@@ -12,3 +12,11 @@ Host takako
 Host shizuka
     HostName 192.168.1.18
     User pi
+
+Host docker01
+    HostName 192.168.1.32
+    User ubuntu
+
+Host docker02
+    HostName 192.168.1.33
+    User ubuntu
