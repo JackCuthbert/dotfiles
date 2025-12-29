@@ -1,5 +1,6 @@
 # Startup
 command = "/opt/homebrew/bin/fish"
+shell-integration-features = title,sudo,ssh-env,ssh-terminfo
 
 # UI
 theme = dark:Catppuccin Mocha,light:Catppuccin Latte
