@@ -13,10 +13,19 @@ Host shizuka
     HostName 192.168.1.18
     User pi
 
-Host docker01
+# homelab
+Host docker-01
     HostName 192.168.1.32
     User ubuntu
 
-Host docker02
+Host docker-02
     HostName 192.168.1.33
+    User ubuntu
+
+Host plex
+    HostName 192.168.1.34
+    User ubuntu
+
+Host minecraft-server
+    HostName 192.168.1.40
     User ubuntu
