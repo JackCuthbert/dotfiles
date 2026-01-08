@@ -1,31 +1,32 @@
 Include ~/.orbstack/ssh/config
 
+# Global Defaults
 Host *
-   UseKeychain yes
-   AddKeysToAgent yes
-   IdentityFile ~/.ssh/id_ed25519
+    UseKeychain yes
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/id_ed25519
+    SetEnv TERM=xterm-256color # ghostty fix
 
-Host takako
-    HostName 192.168.1.17
-    User pi
+# --- Homelab Group Settings ---
+Host docker-01 docker-02 plex minecraft-server tailscale
+    User ubuntu
 
+# --- Host Definitions ---
 Host shizuka
     HostName 192.168.1.18
     User pi
 
-# homelab
 Host docker-01
     HostName 192.168.1.32
-    User ubuntu
 
 Host docker-02
     HostName 192.168.1.33
-    User ubuntu
 
 Host plex
     HostName 192.168.1.34
-    User ubuntu
+
+Host tailscale
+    HostName 192.168.1.188 # DHCP
 
 Host minecraft-server
     HostName 192.168.1.40
-    User ubuntu
