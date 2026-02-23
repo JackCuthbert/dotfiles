@@ -1,8 +1,12 @@
 [user]
   name = {{ .name }}
   email = {{ .email }}
+  signingkey = ~/.ssh/id_ed25519.pub
 [commit]
   template = ~/.gitmessage
+  gpgsign = true
+[gpg]
+  format = ssh
 [core]
   ignorecase = false
   excludesfile = ~/.gitignore_global
