@@ -1,9 +1,13 @@
-# Reference: https://github.com/i3/i3/blob/next/etc/config
+after-startup-command = [
+  # Add borders
+  'exec-and-forget borders'
+]
+
 enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
 
 [mode.main.binding]
-alt-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
+alt-enter = 'exec-and-forget open -n /Applications/Ghostty.app'
 
 alt-h = 'focus left'
 alt-j = 'focus down'
@@ -85,5 +89,9 @@ outer.right =      10
 
 # Always float windows
 [[on-window-detected]]
-if.app-id = 'tv.plex.plexamp'
-run = 'layout floating'
+  if.app-id = 'tv.plex.plexamp'
+  run = 'layout floating'
+
+[[on-window-detected]]
+  if.app-id = 'cc.ffitch.shottr'
+  run = 'layout floating'
