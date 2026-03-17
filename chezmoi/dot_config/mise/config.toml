@@ -1,6 +1,6 @@
 [tools]
-java = "openjdk-21"
-node = "24.9.0"
+java = "openjdk-25"
+node = "24.14.0"
 usage = "latest"
 
 [env]
