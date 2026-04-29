@@ -3,6 +3,12 @@
 // For information on how to configure Zed, see the Zed
 // documentation: https://zed.dev/docs/configuring-zed
 {
+  "outline_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "format_on_save": "on",
   "lsp": {
     "vtsls": {
@@ -39,9 +45,12 @@
     "button": false
   },
   "collaboration_panel": {
+    "dock": "left",
     "button": true
   },
   "agent": {
+    "dock": "right",
+    "sidebar_side": "right",
     "button": true,
     "play_sound_when_agent_done": "always",
     "single_file_review": false
@@ -74,6 +83,7 @@
     "file_icons": true
   },
   "project_panel": {
+    "dock": "left",
     "hide_gitignore": false,
     "indent_size": 24,
     "folder_icons": false
