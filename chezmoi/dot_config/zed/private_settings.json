@@ -43,13 +43,15 @@
   },
   "agent": {
     "button": true,
-    "play_sound_when_agent_done": true,
+    "play_sound_when_agent_done": "always",
     "single_file_review": false
   },
   "profiles": {
     "Screenshot": {
-      "wrap_guides": [],
-      "buffer_line_height": "comfortable"
+      "settings": {
+        "wrap_guides": [],
+        "buffer_line_height": "comfortable"
+      }
     }
   },
   // AI Assistance
