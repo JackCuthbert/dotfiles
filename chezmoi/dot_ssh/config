@@ -8,7 +8,7 @@ Host *
     SetEnv TERM=xterm-256color # ghostty fix
 
 # --- Homelab Group Settings ---
-Host docker-01 docker-02 plex minecraft-server tailscale forgejo coolify-01 nextcloud
+Host docker-01 docker-02 docker-foreign plex minecraft-server tailscale forgejo coolify-01 nextcloud
     User ubuntu
 
 # --- Host Definitions ---
@@ -21,6 +21,9 @@ Host docker-01
 
 Host docker-02
     HostName 10.255.102.11
+
+Host docker-foreign
+    HostName 10.255.103.10
 
 Host plex
     HostName 10.255.102.21
