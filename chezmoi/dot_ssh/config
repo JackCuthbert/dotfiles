@@ -8,14 +8,10 @@ Host *
     SetEnv TERM=xterm-256color # ghostty fix
 
 # --- Homelab Group Settings ---
-Host docker-01 docker-02 docker-foreign plex minecraft-server tailscale forgejo coolify-01 nextcloud
+Host docker-01 docker-02 docker-foreign plex tailscale coolify-01 syncthing
     User ubuntu
 
 # --- Host Definitions ---
-Host pi-aux
-    HostName 192.168.20.18
-    User pi
-
 Host docker-01
     HostName 10.255.102.10
 
@@ -33,6 +29,9 @@ Host nextcloud
 
 Host coolify-01
     HostName 10.255.102.12
+
+Host syncthing
+    HostName 10.255.102.23
 
 Host tailscale
     HostName 10.255.102.188
