@@ -1,7 +1,7 @@
 [tools]
 ghq = "latest"
 java = "openjdk-25"
-node = "24.15.0"
+node = "26"
 usage = "latest"
 
 [env]
