@@ -1,0 +1,10 @@
+{{ if ne .chezmoi.os "darwin" }}
+# Mac specific config
+.config/aerospace/
+.config/borders/
+{{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+# Linux
+.config/MangoHud/
+{{ end }}

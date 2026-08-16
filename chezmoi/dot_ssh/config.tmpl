@@ -1,11 +1,16 @@
+{{ if eq .chezmoi.os "darwin" }}
 Include ~/.orbstack/ssh/config
+{{ end }}
 
 # Global Defaults
 Host *
+    {{ if eq .chezmoi.os "darwin" }}
     UseKeychain yes
     AddKeysToAgent yes
-    IdentityFile ~/.ssh/id_ed25519
     SetEnv TERM=xterm-256color # ghostty fix
+    {{ end }}
+
+    IdentityFile ~/.ssh/id_ed25519
 
 # --- Homelab Group Settings ---
 Host docker-01 docker-02 docker-foreign plex tailscale coolify-01 syncthing
