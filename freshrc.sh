@@ -63,7 +63,7 @@ fresh config/xorg/xinit.sh --file=~/.xinitrc
 # Global Xorg server startup config
 fresh config/xorg/xserverrc.conf --file=~/.xserverrc
 
-# Colours and font configureation for Xorg
+# Colours and font configuration for Xorg
 fresh-options --file=~/.Xresources
   fresh pinpox/base16-xresources xresources/base16-default-dark-256.Xresources
   fresh config/xorg/xresources.conf
