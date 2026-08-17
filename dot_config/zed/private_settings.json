@@ -3,6 +3,10 @@
 // For information on how to configure Zed, see the Zed
 // documentation: https://zed.dev/docs/configuring-zed
 {
+  "disable_ai": true,
+  "title_bar": {
+    "show_sign_in": false
+  },
   "cli_default_open_behavior": "new_window",
   "outline_panel": {
     "dock": "left"
