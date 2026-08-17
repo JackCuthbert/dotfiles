@@ -1,6 +1,7 @@
 header.jpg
 README.md
 LICENSE
+systemd
 
 {{ if ne .chezmoi.os "darwin" }}
 # Mac specific config

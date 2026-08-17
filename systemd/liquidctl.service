@@ -1,0 +1,28 @@
+[Unit]
+Description=Liquidctl Quiet Kraken X52 Profile
+After=multi-user.target
+# Manual Installation Reference:
+# sudo cp liquidctl.service /etc/systemd/system/liquidctl.service
+# sudo chown root:root /etc/systemd/system/liquidctl.service
+# sudo chmod 644 /etc/systemd/system/liquidctl.service
+# sudo systemctl daemon-reload
+# sudo systemctl enable --now liquidctl.service
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+RemainAfterExit=yes
+
+# 1. Initialize all supported hardware at boot
+ExecStart=/usr/bin/liquidctl initialize all
+
+# 2. Apply the optimized fluid-temperature cooling curves
+ExecStart=/usr/bin/liquidctl --match kraken set fan speed 30 25 36 40 42 55 48 75 55 100
+ExecStart=/usr/bin/liquidctl --match kraken set pump speed 30 65 38 65 42 85 46 100 50 100
+
+# 3. Disable all RGB LEDs (Ring and Logo channels combined)
+ExecStart=/usr/bin/liquidctl --match kraken set sync color off
+
+[Install]
+WantedBy=multi-user.target
