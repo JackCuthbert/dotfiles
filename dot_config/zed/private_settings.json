@@ -121,10 +121,10 @@
       "breadcrumbs": false
     },
     "env": {
-      "EDITOR": "zed --wait"
+      "EDITOR": "nvim"
     },
     "shell": {
-      "program": "/opt/homebrew/bin/fish"
+      "program": "fish"
     },
     "line_height": "standard"
   }

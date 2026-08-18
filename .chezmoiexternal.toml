@@ -1,0 +1,11 @@
+{{- if ne .chezmoi.os "darwin" }}
+
+[".var/app/dev.zed.Zed/config/zed/settings.json"]
+    type = "file"
+    url = "file://{{ .chezmoi.homeDir }}/.config/zed/settings.json"
+
+[".var/app/dev.zed.Zed/config/zed/keymap.json"]
+    type = "file"
+    url = "file://{{ .chezmoi.homeDir }}/.config/zed/keymap.json"
+
+{{- end }}
