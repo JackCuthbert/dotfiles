@@ -1,3 +1,4 @@
+# OS Agnostic
 shell-integration-features = title,sudo,ssh-env,ssh-terminfo
 theme = dark:catppuccin-mocha,light:catppuccin-latte
 cursor-style = "block"
@@ -5,15 +6,17 @@ shell-integration-features = "no-cursor"
 window-padding-x = 10
 window-padding-y = 10
 
-{{ if eq .chezmoi.os "darwin" }}
+{{- if eq .chezmoi.os "darwin" }}
+# Mac Specific
 command = "/opt/homebrew/bin/fish"
 font-family = "Monaspace Neon"
 font-size = 16
 macos-titlebar-proxy-icon = "hidden"
 macos-titlebar-style = "tabs"
-{{ end }}
+{{ end -}}
 
-{{ if eq .chezmoi.os "linux" }}
+{{- if eq .chezmoi.os "linux" }}
+# Linux Specific
 font-family = "Monaspace Neon NF"
 font-size = 12
-{{ end }}
+{{ end -}}
