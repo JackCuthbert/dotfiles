@@ -18,8 +18,8 @@ RemainAfterExit=yes
 ExecStart=/usr/bin/liquidctl initialize all
 
 # 2. Apply the optimized fluid-temperature cooling curves
-ExecStart=/usr/bin/liquidctl --match kraken set fan speed 30 25 36 40 42 55 48 75 55 100
-ExecStart=/usr/bin/liquidctl --match kraken set pump speed 30 65 38 65 42 85 46 100 50 100
+ExecStart=/usr/bin/liquidctl --match kraken set fan speed 28 30  32 38  36 50  40 68  45 100
+ExecStart=/usr/bin/liquidctl --match kraken set pump speed 28 60  32 60  36 75  40 85  45 100
 
 # 3. Disable all RGB LEDs (Ring and Logo channels combined)
 ExecStart=/usr/bin/liquidctl --match kraken set sync color off
