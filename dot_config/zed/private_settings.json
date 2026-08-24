@@ -123,9 +123,6 @@
     "env": {
       "EDITOR": "nvim"
     },
-    "shell": {
-      "program": "fish"
-    },
     "line_height": "standard"
   }
 }
