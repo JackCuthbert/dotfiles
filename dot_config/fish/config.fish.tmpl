@@ -71,12 +71,10 @@ fish_add_path "~/.local/share/bin"
 #   \/\_/ \____/|__|  |__|_ \
 #                          \/
 
-alias tf="terraform"
-
 {{ if eq .chezmoi.os "darwin" }}
 
 # link google cloud sdk completions
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+source "$(brew --prefix)/Caskroom/gcloud-cli/latest/google-cloud-sdk/path.fish.inc"
 
 # claude code installs here
 fish_add_path ~/.local/bin
