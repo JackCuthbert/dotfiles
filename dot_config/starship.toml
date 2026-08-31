@@ -59,3 +59,32 @@ disabled = true
 
 [pulumi]
 format = '[$symbol ($version )$stack]($style) '
+
+# Nerd Font symbols in place of the emoji defaults of starship.
+#
+# Stock starship uses emoji for 29 modules that this file leaves enabled. Only the
+# modules that turn up on these machines are set here. Each other module is one
+# line to add later.
+#
+# It needs a patched font (https://www.nerdfonts.com), or the glyphs show as boxes.
+
+[hostname]
+ssh_symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = "󱘗 "
+
+[lua]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[git_commit]
+tag_symbol = "  "

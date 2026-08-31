@@ -1,0 +1,16 @@
+#!/bin/bash
+# Clone TPM and install the plugins pinned in tmux.conf. TPM cannot install
+# itself, and plugins/ is machine state (chezmoiignored), so this runs on apply
+# and again whenever the plugin pins change.
+# tmux.conf hash: {{ include "dot_config/tmux/tmux.conf" | sha256sum }}
+set -eu
+
+command -v tmux >/dev/null 2>&1 || { echo "tmux not installed, skipping plugins"; exit 0; }
+
+tpm_dir="${XDG_CONFIG_HOME:-$HOME/.config}/tmux/plugins/tpm"
+if [ ! -d "$tpm_dir" ]; then
+    git clone --depth 1 https://github.com/tmux-plugins/tpm "$tpm_dir"
+fi
+
+# Non-fatal: a failure here leaves an unthemed but working tmux.
+"$tpm_dir/bin/install_plugins" || echo "tpm install_plugins failed, run 'prefix I' in tmux"

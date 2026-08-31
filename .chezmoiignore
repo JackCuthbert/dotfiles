@@ -14,3 +14,10 @@ bin
 # Linux
 .config/MangoHud/
 {{ end }}
+
+# tmux plugins are machine state, managed by tpm
+.config/tmux/plugins/
+
+# Notes about this repo, not config to install
+.claude/README.md
+.config/tmux/README.md

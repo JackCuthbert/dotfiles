@@ -1,0 +1,15 @@
+{
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true,
+    "simple-english@simple-english": true
+  },
+  "extraKnownMarketplaces": {
+    "simple-english": {
+      "source": {
+        "source": "github",
+        "repo": "AminBlg/SimpleEnglish"
+      }
+    }
+  },
+  "outputStyle": "simple-english:simple-english"
+}
