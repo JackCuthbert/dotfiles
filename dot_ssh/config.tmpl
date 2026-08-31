@@ -12,36 +12,43 @@ Host *
 
     IdentityFile ~/.ssh/id_ed25519
 
-# --- Homelab Group Settings ---
-Host docker-01 docker-02 docker-foreign plex tailscale coolify-01 syncthing
-    User ubuntu
-
-# --- Host Definitions ---
+# --- Homelab Appliance Hosts ---
 Host docker-01
+    User ubuntu
     HostName 10.255.102.10
 
 Host docker-02
+    User ubuntu
     HostName 10.255.102.11
 
 Host docker-foreign
+    User ubuntu
     HostName 10.255.103.10
 
 Host plex
+    User ubuntu
     HostName 10.255.102.21
 
-Host nextcloud
-    HostName 10.255.102.22
-
 Host coolify-01
+    User ubuntu
     HostName 10.255.102.12
 
 Host syncthing
+    User ubuntu
     HostName 10.255.102.23
 
 Host tailscale
+    User ubuntu
     HostName 10.255.102.188
 
 Host ptero.cloud.jckcthbrt.io
     User ubuntu
     Port 2222
-    IdentityFile ~/.ssh/homelab_cloud_arm_id_rsa
+
+# --- Local AI Hosts ---
+Host claude-02
+    HostName 10.255.103.11
+    User jack
+Host claude-02-ts
+    HostName claude-02.stoat-istrian.ts.net
+    User jack
