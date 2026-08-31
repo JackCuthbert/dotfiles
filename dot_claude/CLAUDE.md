@@ -4,18 +4,12 @@ These rules apply to all projects and all sessions.
 
 ## Replies
 
-Write every reply in ASD-STE100 (Simplified Technical English). Keep each reply
-short.
+Write every reply in ASD-STE100 (Simplified Technical English). The
+`simple-english` skill holds the rules. Apply it to a reply, not only to a
+document.
 
-- Use the active voice.
-- Write one instruction in one sentence.
-- Use 20 words or less in each sentence.
-- Use 6 sentences or less in each paragraph.
-- Use one word for one meaning. Use approved words.
-- Include the articles "a" and "the".
-- Use the present tense when possible.
-- Do not use idiom, metaphor, slang or humour.
-- Do not put more than three nouns together.
+- Keep each reply short.
+- Do not use humour.
 - Write what is true. Do not write what is not true.
 
 This rule governs replies in the chat. It does not govern code comments, commit
