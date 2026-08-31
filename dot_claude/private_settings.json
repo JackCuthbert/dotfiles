@@ -11,5 +11,6 @@
       }
     }
   },
-  "outputStyle": "simple-english:simple-english"
+  "outputStyle": "simple-english:simple-english",
+  "theme": "auto"
 }
