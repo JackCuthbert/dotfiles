@@ -3,12 +3,12 @@ shell-integration-features = title,sudo,ssh-env,ssh-terminfo
 theme = dark:catppuccin-mocha,light:catppuccin-latte
 cursor-style = "block"
 shell-integration-features = "no-cursor"
-window-padding-x = 10
-window-padding-y = 10
+window-padding-x = 5
+window-padding-y = 5
+font-family = "Monaspace Neon"
 
 {{- if eq .chezmoi.os "darwin" }}
 # Mac Specific
-font-family = "Monaspace Neon"
 font-size = 16
 macos-titlebar-proxy-icon = "hidden"
 macos-titlebar-style = "tabs"
@@ -16,6 +16,6 @@ macos-titlebar-style = "tabs"
 
 {{- if eq .chezmoi.os "linux" }}
 # Linux Specific
-font-family = "Monaspace Neon NF"
 font-size = 12
+font-family = "Symbols Nerd Font Mono"
 {{ end -}}
