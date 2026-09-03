@@ -88,3 +88,9 @@ symbol = " "
 
 [git_commit]
 tag_symbol = "  "
+
+[gradle]
+symbol = "󰟆 "
+
+[kotlin]
+symbol = "󱈙 "
