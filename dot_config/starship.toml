@@ -89,8 +89,21 @@ symbol = " "
 [git_commit]
 tag_symbol = "  "
 
+# Prefer the wrapper version; otherwise show the Gradle version managed by mise.
 [gradle]
 symbol = "󰟆 "
+detect_extensions = []
+detect_files = ['gradlew', 'gradlew.bat']
+detect_folders = []
+
+[custom.mise_gradle]
+detect_files = ['build.gradle', 'build.gradle.kts', 'settings.gradle', 'settings.gradle.kts']
+when = """
+(test -f build.gradle || test -f build.gradle.kts || test -f settings.gradle || test -f settings.gradle.kts) \
+&& [ ! -f gradle/wrapper/gradle-wrapper.properties ]
+"""
+command = "mise ls gradle --current | awk '{print $2}'"
+format = "via [󰟆 $output](bold cyan) "
 
 [kotlin]
 symbol = "󱈙 "
