@@ -43,6 +43,11 @@
 * Distinguish failures caused by the change from pre-existing or environment-related failures.
 * Report unresolved failures clearly.
 
+## Processes
+
+* After interrupting or abandoning a command, verify its exact process tree; terminate verified PIDs or groups with `TERM`, then `KILL` if needed, and confirm exit. Never use broad `pkill`.
+* If a sandboxed process stalls or pins CPU, clean up its descendants before retrying unsandboxed. Check for leftovers before finishing.
+
 ## Communication
 
 * During work, only surface information that materially affects the task.
@@ -58,4 +63,3 @@
 * Optimize for minimal tool calls, context usage, and token consumption without sacrificing correctness.
 * Prefer deterministic inspection and targeted commands over broad exploratory reasoning.
 * If the requested task is already complete, say so rather than making unnecessary changes.
-
