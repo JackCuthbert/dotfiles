@@ -88,10 +88,10 @@
     "file_icons": true
   },
   "project_panel": {
+    "folder_indicator": "",
     "dock": "left",
     "hide_gitignore": false,
-    "indent_size": 24,
-    "folder_icons": false
+    "indent_size": 24
   },
   "wrap_guides": [80, 120],
   "relative_line_numbers": "enabled",
