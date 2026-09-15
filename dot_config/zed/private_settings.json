@@ -5,14 +5,14 @@
 {
   "disable_ai": true,
   "title_bar": {
-    "show_sign_in": false
+    "show_sign_in": false,
   },
   "cli_default_open_behavior": "new_window",
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "git_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "format_on_save": "on",
   "lsp": {
@@ -20,17 +20,17 @@
       "settings": {
         "typescript": {
           "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
+            "enabled": "always",
+          },
         },
         "javascript": {
           "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
-        }
+            "enabled": "always",
+          },
+        },
       },
-      "enable_lsp_tasks": true
-    }
+      "enable_lsp_tasks": true,
+    },
   },
   "lsp_document_colors": "inlay",
   "inlay_hints": {
@@ -39,34 +39,34 @@
     "show_parameter_hints": true,
     "show_background": true,
     "show_type_hints": false,
-    "enabled": false
+    "enabled": false,
   },
   "agent_buffer_font_size": 14.0,
   "agent_ui_font_size": 16.0,
   "notification_panel": {
-    "button": false
+    "button": false,
   },
   "search": {
-    "button": false
+    "button": false,
   },
   "collaboration_panel": {
     "dock": "left",
-    "button": true
+    "button": true,
   },
   "agent": {
     "dock": "right",
     "sidebar_side": "right",
     "button": true,
     "play_sound_when_agent_done": "always",
-    "single_file_review": false
+    "single_file_review": false,
   },
   "profiles": {
     "Screenshot": {
       "settings": {
         "wrap_guides": [],
-        "buffer_line_height": "comfortable"
-      }
-    }
+        "buffer_line_height": "comfortable",
+      },
+    },
   },
   // AI Assistance
   "show_edit_predictions": false,
@@ -75,29 +75,29 @@
   "vim_mode": true,
   "vim": {
     "use_smartcase_find": true,
-    "use_system_clipboard": "never"
+    "use_system_clipboard": "never",
   },
   // UI Configuration
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false,
-    "selections_menu": false
+    "selections_menu": false,
   },
   "tabs": {
     "git_status": true,
-    "file_icons": true
+    "file_icons": true,
   },
   "project_panel": {
-    "folder_indicator": "",
+    "folder_indicator": "chevron",
     "dock": "left",
     "hide_gitignore": false,
-    "indent_size": 24
+    "indent_size": 24,
   },
   "wrap_guides": [80, 120],
   "relative_line_numbers": "enabled",
   "tab_bar": {
     "show_nav_history_buttons": false, // Remove back/forward buttons in tabs
-    "show_tab_bar_buttons": false
+    "show_tab_bar_buttons": false,
   },
   "ui_font_size": 16,
   "buffer_line_height": "standard",
@@ -107,23 +107,23 @@
   "icon_theme": {
     "mode": "system",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha"
+    "dark": "Catppuccin Mocha",
   },
   "theme": {
     "mode": "system",
     "light": "Catppuccin Latte - No Italics",
-    "dark": "Catppuccin Mocha - No Italics"
+    "dark": "Catppuccin Mocha - No Italics",
   },
   "indent_guides": {
-    "coloring": "indent_aware" // Rainbow indents
+    "coloring": "indent_aware", // Rainbow indents
   },
   "terminal": {
     "toolbar": {
-      "breadcrumbs": false
+      "breadcrumbs": false,
     },
     "env": {
-      "EDITOR": "nvim"
+      "EDITOR": "nvim",
     },
-    "line_height": "standard"
-  }
+    "line_height": "standard",
+  },
 }
